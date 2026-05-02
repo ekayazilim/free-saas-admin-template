@@ -1,0 +1,70 @@
+.eka-table { width: 100%; border-collapse: collapse; }
+.eka-table thead th {
+    padding: 12px 16px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--eka-text-muted);
+    border-bottom: 1px solid var(--eka-border-color);
+    text-align: left;
+    white-space: nowrap;
+    background: var(--eka-gray-50);
+}
+.eka-table tbody td {
+    padding: 12px 16px;
+    font-size: 0.8125rem;
+    color: var(--eka-gray-600);
+    border-bottom: 1px solid var(--eka-border-color);
+    vertical-align: middle;
+}
+.eka-table tbody tr:last-child td { border-bottom: none; }
+.eka-table-hover tbody tr { transition: background var(--eka-transition-fast); }
+.eka-table-hover tbody tr:hover { background: var(--eka-table-hover-bg); }
+.eka-table-striped tbody tr:nth-child(even) { background: var(--eka-table-striped-bg); }
+.eka-table-bordered { border: 1px solid var(--eka-border-color); }
+.eka-table-bordered th, .eka-table-bordered td { border: 1px solid var(--eka-border-color); }
+.eka-table-sm th, .eka-table-sm td { padding: 8px 12px; }
+.eka-table-responsive { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.eka-table .eka-table-check { width: 44px; text-align: center; }
+.eka-table .eka-table-check input { width: 16px; height: 16px; accent-color: var(--eka-primary); cursor: pointer; }
+.eka-table .eka-table-actions { white-space: nowrap; }
+.eka-table .eka-table-actions .eka-btn { margin: 0 2px; }
+.eka-table .eka-table-user { display: flex; align-items: center; gap: 10px; }
+.eka-table .eka-table-user img { width: 34px; height: 34px; border-radius: 50%; object-fit: cover; }
+.eka-table .eka-table-user-info { line-height: 1.3; }
+.eka-table .eka-table-user-name { font-weight: 600; color: var(--eka-heading-color); font-size: 0.8125rem; }
+.eka-table .eka-table-user-email { font-size: 0.75rem; color: var(--eka-text-muted); }
+
+.eka-table-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+.eka-table-toolbar-left { display: flex; align-items: center; gap: 12px; }
+.eka-table-toolbar-right { display: flex; align-items: center; gap: 8px; }
+.eka-table-search {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--eka-input-border);
+    border-radius: var(--eka-radius);
+    padding: 0 10px;
+    height: 36px;
+    background: var(--eka-input-bg);
+    transition: border-color var(--eka-transition-fast);
+}
+.eka-table-search:focus-within { border-color: var(--eka-primary); }
+.eka-table-search i { color: var(--eka-gray-400); font-size: 0.8125rem; }
+.eka-table-search input { border: none; outline: none; background: transparent; padding: 0 8px; font-size: 0.8125rem; color: var(--eka-body-color); width: 200px; }
+.eka-table-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+.eka-table-info { font-size: 0.8125rem; color: var(--eka-text-muted); }

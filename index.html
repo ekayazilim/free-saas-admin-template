@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>EkaAdmin - Premium SaaS Admin Dashboard Template</title>
+    <meta name="description" content="EkaAdmin - 129+ pages, 20+ widgets, dark/light mode premium SaaS admin template.">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box
+        }
+
+        :root {
+            --p: #405189;
+            --s: #3577f1;
+            --g: #0ab39c;
+            --w: #f7b84b;
+            --d: #f06548;
+            --i: #299cdb;
+            --dk: #212529;
+            --gr: #878a99
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #495057;
+            overflow-x: hidden;
+            background: #fff
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit
+        }
+
+        .ctn {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px
+        }
+
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            padding: 14px 0;
+            transition: all .3s
+        }
+
+        .nav.sc {
+            background: rgba(255, 255, 255, .96);
+            backdrop-filter: blur(20px);
+            box-shadow: 0 1px 12px rgba(0, 0, 0, .06);
+            padding: 10px 0
+        }
+
+        .nav .ctn {
+            display: flex;
+            align-items: center;
+            justify-content: space-between
+        }
+
+        .nav-logo {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 8px
+        }
+
+        .nav.sc .nav-logo {
+            color: var(--p)
+        }
+
+        .nav-logo span {
+            width: 34px;
+            height: 34px;
+            background: rgba(255, 255, 255, .2);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: .75rem;
+            font-weight: 800
+        }
+
+        .nav.sc .nav-logo span {
+            background: var(--p);
+            color: #fff
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 28px
+        }
+
+        .nav-links a {
+            color: rgba(255, 255, 255, .8);
+            font-size: .85rem;
+            font-weight: 500;
+            transition: .2s
+        }
+
+        .nav.sc .nav-links a {
+            color: #495057
+        }
+
+        .nav-links a:hover {
+            color: #fff
+        }
+
+        .nav.sc .nav-links a:hover {
+            color: var(--p)
+        }
+
+        .nav-cta {
+            padding: 9px 24px;
+            background: #fff;
+            color: var(--p);
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: .85rem;
+            transition: .3s;
+            border: none;
+            cursor: pointer
+        }
+
+        .nav.sc .nav-cta {
+            background: var(--p);
+            color: #fff
+        }
+
+        .nav-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, .15)
+        }
+
+        @keyframes grd {
+            0% {
+                background-position: 0% 50%
+            }
+
+            50% {
+                background-position: 100% 50%
+            }
+
+            100% {
+                background-position: 0% 50%
+            }
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0) rotate(0)
+            }
+
+            50% {
+                transform: translateY(-20px) rotate(5deg)
+            }
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                opacity: .3;
+                transform: scale(1)
+            }
+
+            50% {
+                opacity: .6;
+                transform: scale(1.05)
+            }
+        }
+
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(-45deg, #1a1f4e, #405189, #2d5aa0, #1e3a6e);
+            background-size: 400% 400%;
+            animation: grd 12s ease infinite;
+            position: relative;
+            display: flex;
+            align-items: center;
+            overflow: hidden
+        }
+
+        .hero-glow {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(53, 119, 241, .25), transparent 70%);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            filter: blur(60px);
+            animation: pulse 6s ease infinite
+        }
+
+        .hero-shape {
+            position: absolute;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, .06);
+            backdrop-filter: blur(2px)
+        }
+
+        .hs1 {
+            width: 120px;
+            height: 120px;
+            top: 15%;
+            left: 8%;
+            animation: float 8s ease infinite;
+            background: rgba(255, 255, 255, .02)
+        }
+
+        .hs2 {
+            width: 80px;
+            height: 80px;
+            bottom: 20%;
+            right: 10%;
+            animation: float 6s ease infinite 1s;
+            background: rgba(255, 255, 255, .03)
+        }
+
+        .hs3 {
+            width: 60px;
+            height: 60px;
+            top: 25%;
+            right: 15%;
+            animation: float 10s ease infinite 2s;
+            background: rgba(255, 255, 255, .02);
+            border-radius: 50%
+        }
+
+        .hs4 {
+            width: 100px;
+            height: 100px;
+            bottom: 30%;
+            left: 12%;
+            animation: float 7s ease infinite .5s;
+            background: rgba(255, 255, 255, .015);
+            border-radius: 50%
+        }
+
+        .hero-c {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            color: #fff;
+            padding: 140px 0 80px
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 7px 18px;
+            background: rgba(255, 255, 255, .1);
+            border: 1px solid rgba(255, 255, 255, .15);
+            border-radius: 50px;
+            font-size: .75rem;
+            font-weight: 600;
+            margin-bottom: 28px;
+            backdrop-filter: blur(10px)
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 22px;
+            letter-spacing: -.04em
+        }
+
+        .hero h1 em {
+            font-style: normal;
+            background: linear-gradient(135deg, #f7b84b, #f06548, #f7b84b);
+            background-size: 200% 200%;
+            animation: grd 4s ease infinite;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent
+        }
+
+        .hero p {
+            font-size: 1.15rem;
+            opacity: .8;
+            max-width: 600px;
+            margin: 0 auto 40px;
+            line-height: 1.7
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 14px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 56px
+        }
+
+        .btn-h {
+            padding: 14px 32px;
+            border-radius: 10px;
+            font-weight: 700;
+            font-size: .9rem;
+            transition: .3s;
+            border: none;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px
+        }
+
+        .btn-hp {
+            background: #fff;
+            color: var(--p)
+        }
+
+        .btn-hp:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 36px rgba(0, 0, 0, .2)
+        }
+
+        .btn-ho {
+            background: transparent;
+            color: #fff;
+            border: 2px solid rgba(255, 255, 255, .3)
+        }
+
+        .btn-ho:hover {
+            background: rgba(255, 255, 255, .1);
+            border-color: #fff
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 56px;
+            flex-wrap: wrap
+        }
+
+        .h-stat-v {
+            font-size: 2.8rem;
+            font-weight: 900;
+            line-height: 1
+        }
+
+        .h-stat-l {
+            font-size: .75rem;
+            opacity: .6;
+            margin-top: 4px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px
+        }
+
+        .sec {
+            padding: 88px 0
+        }
+
+        .sec-dk {
+            background: #f8f9fb
+        }
+
+        .sec-t {
+            text-align: center;
+            margin-bottom: 56px
+        }
+
+        .sec-t h2 {
+            font-size: 2.4rem;
+            font-weight: 800;
+            color: var(--dk);
+            margin-bottom: 10px;
+            letter-spacing: -.03em
+        }
+
+        .sec-t p {
+            font-size: 1rem;
+            color: var(--gr);
+            max-width: 540px;
+            margin: 0 auto
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 5px 14px;
+            background: rgba(64, 81, 137, .07);
+            color: var(--p);
+            border-radius: 50px;
+            font-size: .7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 12px
+        }
+
+        .prev-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px
+        }
+
+        .prev-item {
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 8px 40px rgba(0, 0, 0, .08);
+            border: 1px solid #e9ebec;
+            transition: .4s;
+            position: relative;
+            cursor: pointer;
+            max-height: 280px
+        }
+
+        .prev-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, .12)
+        }
+
+        .prev-item img {
+            width: 100%;
+            display: block
+        }
+
+        .prev-label {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 16px 20px;
+            background: linear-gradient(transparent, rgba(0, 0, 0, .7));
+            color: #fff;
+            z-index: 2
+        }
+
+        .prev-label h5 {
+            font-size: .85rem;
+            font-weight: 700;
+            margin-bottom: 2px
+        }
+
+        .prev-label small {
+            font-size: .68rem;
+            opacity: .8
+        }
+
+        .uc-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px
+        }
+
+        .uc-card {
+            background: #fff;
+            border: 1px solid #e9ebec;
+            border-radius: 14px;
+            padding: 32px 24px;
+            text-align: center;
+            transition: .3s;
+            position: relative;
+            overflow: hidden
+        }
+
+        .uc-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--p), var(--s));
+            transform: scaleX(0);
+            transition: .3s;
+            transform-origin: left
+        }
+
+        .uc-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 48px rgba(0, 0, 0, .07);
+            border-color: transparent
+        }
+
+        .uc-card:hover::after {
+            transform: scaleX(1)
+        }
+
+        .uc-icon {
+            width: 64px;
+            height: 64px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin: 0 auto 16px;
+            transition: .3s
+        }
+
+        .uc-card:hover .uc-icon {
+            transform: scale(1.1) rotate(-5deg)
+        }
+
+        .uc-card h4 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: var(--dk)
+        }
+
+        .uc-card p {
+            font-size: .8rem;
+            color: var(--gr);
+            line-height: 1.6
+        }
+
+        .fh {
+            display: flex;
+            align-items: center;
+            gap: 56px;
+            margin-bottom: 64px
+        }
+
+        .fh:nth-child(even) {
+            flex-direction: row-reverse
+        }
+
+        .fh-txt {
+            flex: 1
+        }
+
+        .fh-img {
+            flex: 1
+        }
+
+        .fh-txt .tag {
+            margin-bottom: 8px
+        }
+
+        .fh-txt h3 {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: var(--dk);
+            margin-bottom: 12px;
+            letter-spacing: -.02em
+        }
+
+        .fh-txt p {
+            font-size: .9rem;
+            color: var(--gr);
+            line-height: 1.7;
+            margin-bottom: 20px
+        }
+
+        .fh-list {
+            list-style: none;
+            padding: 0
+        }
+
+        .fh-list li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: .85rem;
+            color: #495057;
+            padding: 6px 0
+        }
+
+        .fh-list li i {
+            color: var(--g);
+            font-size: .75rem
+        }
+
+        .fh-img img {
+            width: 100%;
+            border-radius: 14px;
+            box-shadow: 0 12px 40px rgba(0, 0, 0, .1)
+        }
+
+        .cta-mid {
+            background: linear-gradient(135deg, var(--p), var(--s));
+            border-radius: 16px;
+            padding: 48px;
+            text-align: center;
+            color: #fff;
+            margin: 24px 0
+        }
+
+        .cta-mid h3 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 10px
+        }
+
+        .cta-mid p {
+            opacity: .85;
+            margin-bottom: 24px;
+            font-size: .95rem
+        }
+
+        .f-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px
+        }
+
+        .f-card {
+            background: #fff;
+            border: 1px solid #e9ebec;
+            border-radius: 12px;
+            padding: 24px;
+            transition: .3s
+        }
+
+        .f-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, .06);
+            border-color: transparent
+        }
+
+        .f-card h4 {
+            font-size: .9rem;
+            font-weight: 700;
+            color: var(--dk);
+            margin-bottom: 4px;
+            display: flex;
+            align-items: center;
+            gap: 8px
+        }
+
+        .f-card h4 i {
+            color: var(--g);
+            font-size: .8rem
+        }
+
+        .f-card p {
+            font-size: .78rem;
+            color: var(--gr);
+            line-height: 1.5
+        }
+
+        .t-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 16px
+        }
+
+        .t-item {
+            text-align: center;
+            padding: 20px 12px;
+            border: 1px solid #e9ebec;
+            border-radius: 10px;
+            background: #fff;
+            transition: .3s
+        }
+
+        .t-item:hover {
+            border-color: var(--p);
+            transform: translateY(-3px)
+        }
+
+        .t-item i {
+            font-size: 1.8rem;
+            margin-bottom: 6px;
+            display: block
+        }
+
+        .t-item span {
+            font-size: .7rem;
+            font-weight: 600;
+            color: var(--dk)
+        }
+
+        .cta-sec {
+            background: linear-gradient(-45deg, #1a1f4e, #405189, #2d5aa0);
+            background-size: 300% 300%;
+            animation: grd 10s ease infinite;
+            padding: 88px 0;
+            text-align: center;
+            color: #fff;
+            position: relative;
+            overflow: hidden
+        }
+
+        .cta-sec h2 {
+            font-size: 2.8rem;
+            font-weight: 900;
+            margin-bottom: 14px
+        }
+
+        .cta-sec p {
+            font-size: 1.1rem;
+            opacity: .8;
+            max-width: 500px;
+            margin: 0 auto 36px
+        }
+
+        .foot {
+            background: var(--dk);
+            color: rgba(255, 255, 255, .5);
+            padding: 36px 0;
+            text-align: center;
+            font-size: .8rem
+        }
+
+        .foot a {
+            color: var(--s)
+        }
+
+        @media(max-width:992px) {
+
+            .f-grid,
+            .uc-grid {
+                grid-template-columns: repeat(2, 1fr)
+            }
+
+            .fh {
+                flex-direction: column !important;
+                gap: 32px
+            }
+
+            .hero h1 {
+                font-size: 2.8rem
+            }
+
+            .nav-links {
+                display: none
+            }
+
+            .t-grid {
+                grid-template-columns: repeat(3, 1fr)
+            }
+
+            .prev-grid {
+                grid-template-columns: repeat(2, 1fr)
+            }
+        }
+
+        @media(max-width:576px) {
+
+            .f-grid,
+            .uc-grid {
+                grid-template-columns: 1fr
+            }
+
+            .hero h1 {
+                font-size: 2rem
+            }
+
+            .hero-stats {
+                gap: 20px
+            }
+
+            .t-grid {
+                grid-template-columns: repeat(2, 1fr)
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="nav" id="N">
+        <div class="ctn"><a href="#" class="nav-logo"><span>EA</span>EkaAdmin</a>
+            <div class="nav-links"><a href="#previews">Previews</a><a href="#usecases">Use Cases</a><a
+                    href="#features">Features</a><a href="#tech">Tech</a></div><a href="auth/login.html"
+                class="nav-cta">Live Demo <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-glow"></div>
+        <div class="hero-shape hs1"></div>
+        <div class="hero-shape hs2"></div>
+        <div class="hero-shape hs3"></div>
+        <div class="hero-shape hs4"></div>
+        <div class="ctn">
+            <div class="hero-c">
+                <div class="hero-badge"><i class="fas fa-star" style="color:#f7b84b"></i> Premium Admin Template v1.0
+                </div>
+                <h1>Build Stunning<br><em>Admin Dashboards</em><br>In Minutes</h1>
+                <p>129+ pages, 20+ premium widgets, 5 dashboard variants, dark/light mode, and pixel-perfect responsive
+                    design. Everything you need to ship fast.</p>
+                <div class="hero-btns"><a href="auth/login.html" class="btn-h btn-hp"><i class="fas fa-play"></i> Live
+                        Demo</a><a href="#previews" class="btn-h btn-ho"><i class="fas fa-images"></i> View Previews</a>
+                </div>
+                <div class="hero-stats">
+                    <div>
+                        <div class="h-stat-v">129+</div>
+                        <div class="h-stat-l">Pages</div>
+                    </div>
+                    <div>
+                        <div class="h-stat-v">20+</div>
+                        <div class="h-stat-l">Widgets</div>
+                    </div>
+                    <div>
+                        <div class="h-stat-v">12</div>
+                        <div class="h-stat-l">Categories</div>
+                    </div>
+                    <div>
+                        <div class="h-stat-v">100%</div>
+                        <div class="h-stat-l">Responsive</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="sec sec-dk" id="previews">
+        <div class="ctn">
+            <div class="sec-t">
+                <div class="tag">Dashboard Previews</div>
+                <h2>Multiple Dashboard Variants</h2>
+                <p>Each dashboard is crafted with high-density widgets and premium visual design.</p>
+            </div>
+            <div class="prev-grid">
+                <div class="prev-item"><img src="assets/images/preview-dashboard.png" alt="Main Dashboard">
+                    <div class="prev-label">
+                        <h5>Main Dashboard</h5><small>20+ widgets · KPIs · Charts · Timeline</small>
+                    </div>
+                </div>
+                <div class="prev-item"><img src="assets/images/preview-crm.png" alt="CRM Dashboard">
+                    <div class="prev-label">
+                        <h5>CRM Dashboard</h5><small>Pipeline · Funnel · Deals · Contacts</small>
+                    </div>
+                </div>
+                <div class="prev-item"><img src="assets/images/preview-ecommerce.png" alt="E-Commerce">
+                    <div class="prev-label">
+                        <h5>E-Commerce Overview</h5><small>Revenue · Orders · Products · Channels</small>
+                    </div>
+                </div>
+                <div class="prev-item"><img src="assets/images/preview-analytics.png" alt="Analytics">
+                    <div class="prev-label">
+                        <h5>Analytics Dashboard</h5><small>Metrics · Trends · Performance · Reports</small>
+                    </div>
+                </div>
+                <div class="prev-item"><img src="assets/images/preview-chat.png" alt="Chat App">
+                    <div class="prev-label">
+                        <h5>Chat Application</h5><small>Messaging · Contacts · Groups · Files</small>
+                    </div>
+                </div>
+                <div class="prev-item"><img src="assets/images/preview-login.png" alt="Auth Pages">
+                    <div class="prev-label">
+                        <h5>Authentication</h5><small>Login · Register · 2FA · Lock Screen</small>
+                    </div>
+                </div>
+            </div>
+            <div class="cta-mid" style="margin-top:48px">
+                <h3>Want to see it in action?</h3>
+                <p>Explore every page, widget, and interaction in the live demo.</p><a href="auth/login.html"
+                    class="btn-h btn-hp" style="font-size:1rem;padding:16px 40px"><i class="fas fa-rocket"></i> Launch
+                    Live Demo</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="sec" id="usecases">
+        <div class="ctn">
+            <div class="sec-t">
+                <div class="tag">Use Cases</div>
+                <h2>Built For Every Industry</h2>
+                <p>EkaAdmin adapts to any SaaS product, internal tool, or admin panel you're building.</p>
+            </div>
+            <div class="uc-grid">
+                <div class="uc-card">
+                    <div class="uc-icon" style="background:rgba(64,81,137,.08);color:var(--p)"><i
+                            class="fas fa-cloud"></i></div>
+                    <h4>SaaS Platforms</h4>
+                    <p>User management, subscriptions, billing dashboards, API monitoring — all pre-built and ready.</p>
+                </div>
+                <div class="uc-card">
+                    <div class="uc-icon" style="background:rgba(10,179,156,.08);color:var(--g)"><i
+                            class="fas fa-handshake"></i></div>
+                    <h4>CRM Systems</h4>
+                    <p>Deal pipelines, contact management, sales funnels, lead scoring, and activity tracking.</p>
+                </div>
+                <div class="uc-card">
+                    <div class="uc-icon" style="background:rgba(247,184,75,.08);color:var(--w)"><i
+                            class="fas fa-shopping-cart"></i></div>
+                    <h4>E-Commerce</h4>
+                    <p>Product catalogs, order management, customer analytics, inventory, and revenue dashboards.</p>
+                </div>
+                <div class="uc-card">
+                    <div class="uc-icon" style="background:rgba(53,119,241,.08);color:var(--s)"><i
+                            class="fas fa-chart-line"></i></div>
+                    <h4>Analytics Panels</h4>
+                    <p>Real-time data visualization, performance metrics, reporting tools, and interactive charts.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="sec sec-dk" id="features">
+        <div class="ctn">
+            <div class="sec-t">
+                <div class="tag">Feature Highlights</div>
+                <h2>Premium Features, Zero Compromises</h2>
+            </div>
+            <div class="fh">
+                <div class="fh-txt">
+                    <div class="tag">Theming</div>
+                    <h3>Complete Theme Customization</h3>
+                    <p>Switch between dark and light modes, horizontal or vertical layouts, and customize every color
+                        with the built-in theme panel.</p>
+                    <ul class="fh-list">
+                        <li><i class="fas fa-check-circle"></i> Dark / Light mode with localStorage persistence</li>
+                        <li><i class="fas fa-check-circle"></i> Horizontal & Vertical menu layouts</li>
+                        <li><i class="fas fa-check-circle"></i> Live color customizer panel</li>
+                        <li><i class="fas fa-check-circle"></i> Sidebar color & style options</li>
+                    </ul>
+                </div>
+                <div class="fh-img"><img src="assets/images/preview-dashboard.png" alt="Theme Customization"></div>
+            </div>
+            <div class="fh">
+                <div class="fh-txt">
+                    <div class="tag">Charts & Data</div>
+                    <h3>Rich Data Visualization</h3>
+                    <p>6 chart types powered by ApexCharts — area, bar, line, donut, radial, and sparkline mini-charts
+                        inside KPI cards.</p>
+                    <ul class="fh-list">
+                        <li><i class="fas fa-check-circle"></i> ApexCharts with gradient fills</li>
+                        <li><i class="fas fa-check-circle"></i> Real-time sparkline mini-charts</li>
+                        <li><i class="fas fa-check-circle"></i> Interactive tooltips & legends</li>
+                        <li><i class="fas fa-check-circle"></i> Responsive chart containers</li>
+                    </ul>
+                </div>
+                <div class="fh-img"><img src="assets/images/preview-crm.png" alt="Charts"></div>
+            </div>
+            <div class="fh">
+                <div class="fh-txt">
+                    <div class="tag">E-Commerce</div>
+                    <h3>Complete Store Management</h3>
+                    <p>16 pages covering products, orders, customers, reviews, coupons, shipping, and revenue analytics
+                        — a full e-commerce admin suite.</p>
+                    <ul class="fh-list">
+                        <li><i class="fas fa-check-circle"></i> Product grid with filters</li>
+                        <li><i class="fas fa-check-circle"></i> Order tracking & details</li>
+                        <li><i class="fas fa-check-circle"></i> Customer management</li>
+                        <li><i class="fas fa-check-circle"></i> Revenue by channel breakdown</li>
+                    </ul>
+                </div>
+                <div class="fh-img"><img src="assets/images/preview-ecommerce.png" alt="E-Commerce"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="sec">
+        <div class="ctn">
+            <div class="sec-t">
+                <div class="tag">All Features</div>
+                <h2>Everything You Need</h2>
+            </div>
+            <div class="f-grid">
+                <div class="f-card">
+                    <h4><i class="fas fa-check-circle"></i> 129+ Pages</h4>
+                    <p>Production-ready HTML pages.</p>
+                </div>
+                <div class="f-card">
+                    <h4><i class="fas fa-check-circle"></i> 20+ Widgets</h4>
+                    <p>KPI, chart, timeline, table widgets.</p>
+                </div>
+                <div class="f-card">
+                    <h4><i class="fas fa-check-circle"></i> Dark / Light</h4>
+                    <p>Persistent theme via localStorage.</p>
+                </div>
+                <div class="f-card">
+                    <h4><i class="fas fa-check-circle"></i> Horizontal Menu</h4>
+                    <p>Alternative layout option.</p>
+                </div>
+                <div class="f-card">
+                    <h4><i class="fas fa-check-circle"></i> Theme Panel</h4>
+                    <p>Live color & layout settings.</p>
+                </div>
+                <div class="f-card">
+                    <h4><i class="fas fa-check-circle"></i> 6 Auth Pages</h4>
+                    <p>Login, Register, 2FA, Lock, etc.</p>
+                </div>
+                <div class="f-card">
+                    <h4><i class="fas fa-check-circle"></i> ApexCharts</h4>
+                    <p>6 chart types with gradients.</p>
+                </div>
+                <div class="f-card">
+                    <h4><i class="fas fa-check-circle"></i> E-Commerce</h4>
+                    <p>16 pages for store management.</p>
+                </div>
+                <div class="f-card">
+                    <h4><i class="fas fa-check-circle"></i> Data Tables</h4>
+                    <p>Sort, filter, and paginate.</p>
+                </div>
+                <div class="f-card">
+                    <h4><i class="fas fa-check-circle"></i> Form Wizard</h4>
+                    <p>Multi-step forms + validation.</p>
+                </div>
+                <div class="f-card">
+                    <h4><i class="fas fa-check-circle"></i> Kanban Board</h4>
+                    <p>Drag-and-drop project mgmt.</p>
+                </div>
+                <div class="f-card">
+                    <h4><i class="fas fa-check-circle"></i> Invoice System</h4>
+                    <p>Create, list, detail pages.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="sec sec-dk" id="tech">
+        <div class="ctn">
+            <div class="sec-t">
+                <div class="tag">Technology</div>
+                <h2>Built With Modern Stack</h2>
+            </div>
+            <div class="t-grid">
+                <div class="t-item"><i class="fab fa-html5" style="color:#e34f26"></i><span>HTML5</span></div>
+                <div class="t-item"><i class="fab fa-css3-alt" style="color:#1572b6"></i><span>CSS3</span></div>
+                <div class="t-item"><i class="fab fa-js" style="color:#f7df1e"></i><span>JavaScript</span></div>
+                <div class="t-item"><i class="fas fa-chart-area" style="color:var(--p)"></i><span>ApexCharts</span>
+                </div>
+                <div class="t-item"><i class="fab fa-font-awesome" style="color:#528dd7"></i><span>Font Awesome</span>
+                </div>
+                <div class="t-item"><i class="fas fa-feather" style="color:var(--g)"></i><span>Lordicon</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-sec">
+        <div class="hero-glow" style="opacity:.3"></div>
+        <div class="ctn" style="position:relative;z-index:2">
+            <h2>Ready to Build?</h2>
+            <p>Start building your next admin panel with EkaAdmin today.</p>
+            <a href="auth/login.html" class="btn-h btn-hp" style="font-size:1.1rem;padding:16px 48px"><i
+                    class="fas fa-rocket"></i> Launch Live Demo</a>
+        </div>
+    </section>
+
+    <footer class="foot">
+        <div class="ctn">
+            <p>&copy; 2026 EkaAdmin. Developed by <a href="#">Eka Software & IT Systems</a>.</p>
+        </div>
+    </footer>
+
+    <script>
+        var n = document.getElementById('N');
+        window.addEventListener('scroll', function () { n.classList.toggle('sc', window.scrollY > 50) });
+        document.querySelectorAll('a[href^="#"]').forEach(function (a) { a.addEventListener('click', function (e) { e.preventDefault(); var t = document.querySelector(this.getAttribute('href')); if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' }) }) });
+        var obs = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { e.target.style.opacity = '1'; e.target.style.transform = 'translateY(0)' } }) }, { threshold: .1 });
+        document.querySelectorAll('.prev-item,.uc-card,.f-card,.t-item,.fh').forEach(function (el) { el.style.opacity = '0'; el.style.transform = 'translateY(24px)'; el.style.transition = 'all .6s cubic-bezier(.4,0,.2,1)'; obs.observe(el) });
+    </script>
+</body>
+
+</html>

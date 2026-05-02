@@ -1,0 +1,14 @@
+﻿<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Coming Soon - EkaAdmin</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="../assets/css/eka-variables.css"><link rel="stylesheet" href="../assets/css/eka-base.css"><link rel="stylesheet" href="../assets/css/eka-components.css"><link rel="stylesheet" href="../assets/css/eka-forms.css"><link rel="stylesheet" href="../assets/css/eka-pages.css"><link rel="stylesheet" href="../assets/css/eka-animations.css">
+<script src="https://cdn.lordicon.com/lordicon.js"></script>
+</head><body>
+<div class="eka-page-coming-soon eka-animate-fade-in">
+<div style="max-width:600px"><lord-icon src="https://cdn.lordicon.com/lupuorrc.json" trigger="loop" delay="1000" colors="primary:#ffffff,secondary:#3577f1" style="width:150px;height:150px"></lord-icon>
+<h1 style="margin-top:20px">Coming Soon</h1><p style="font-size:1.1rem">We're working hard on something amazing. Stay tuned for updates!</p>
+<div class="eka-countdown" id="countdown"><div class="eka-countdown-item"><div class="eka-countdown-value" id="days">14</div><div class="eka-countdown-label">Days</div></div><div class="eka-countdown-item"><div class="eka-countdown-value" id="hours">08</div><div class="eka-countdown-label">Hours</div></div><div class="eka-countdown-item"><div class="eka-countdown-value" id="mins">45</div><div class="eka-countdown-label">Minutes</div></div><div class="eka-countdown-item"><div class="eka-countdown-value" id="secs">30</div><div class="eka-countdown-label">Seconds</div></div></div>
+<div style="max-width:400px;margin:24px auto 0"><div class="d-flex gap-2"><input type="email" class="eka-form-control" placeholder="Enter your email" style="background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.2);color:#fff"><button class="eka-btn eka-btn-light">Notify Me</button></div></div>
+<div style="margin-top:32px"><a href="../dashboards/index.html" style="color:rgba(255,255,255,.7)"><i class="fas fa-arrow-left me-2"></i>Back to Dashboard</a></div>
+</div></div>
+<script>setInterval(function(){var s=document.getElementById('secs'),v=parseInt(s.textContent);s.textContent=v>0?String(v-1).padStart(2,'0'):'59';},1000);</script>
+</body></html>

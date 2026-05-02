@@ -1,0 +1,145 @@
+.eka-stat-card { position: relative; overflow: hidden; }
+.eka-stat-card .eka-card-body { display: flex; align-items: center; justify-content: space-between; }
+.eka-stat-card .eka-stat-info { flex: 1; }
+.eka-stat-card .eka-stat-label { font-size: 0.8125rem; font-weight: 500; color: var(--eka-text-muted); text-transform: uppercase; letter-spacing: 0.02em; margin-bottom: 8px; }
+.eka-stat-card .eka-stat-value { font-size: 1.5rem; font-weight: 700; color: var(--eka-heading-color); margin-bottom: 8px; line-height: 1; }
+.eka-stat-card .eka-stat-trend { display: inline-flex; align-items: center; gap: 4px; font-size: 0.75rem; font-weight: 600; padding: 2px 8px; border-radius: var(--eka-radius-full); }
+.eka-stat-card .eka-stat-trend.eka-trend-up { background: var(--eka-success-bg-subtle); color: var(--eka-success); }
+.eka-stat-card .eka-stat-trend.eka-trend-down { background: var(--eka-danger-bg-subtle); color: var(--eka-danger); }
+.eka-stat-card .eka-stat-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: var(--eka-radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.375rem;
+    flex-shrink: 0;
+}
+.eka-stat-card .eka-stat-chart { position: absolute; bottom: 0; left: 0; right: 0; height: 60px; opacity: 0.15; }
+
+.eka-mini-stat {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 16px;
+    background: var(--eka-card-bg);
+    border: 1px solid var(--eka-card-border-color);
+    border-radius: var(--eka-radius-md);
+    box-shadow: var(--eka-card-shadow);
+}
+.eka-mini-stat-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: var(--eka-radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.125rem;
+    flex-shrink: 0;
+}
+.eka-mini-stat-info { flex: 1; min-width: 0; }
+.eka-mini-stat-title { font-size: 0.75rem; color: var(--eka-text-muted); font-weight: 500; margin-bottom: 2px; }
+.eka-mini-stat-value { font-size: 1.125rem; font-weight: 700; color: var(--eka-heading-color); }
+
+.eka-chart-widget {
+    background: var(--eka-card-bg);
+    border: 1px solid var(--eka-card-border-color);
+    border-radius: var(--eka-radius-md);
+    box-shadow: var(--eka-card-shadow);
+    margin-bottom: 24px;
+}
+.eka-chart-widget-header {
+    padding: 20px 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.eka-chart-widget-header h6 { margin: 0; font-size: 0.9375rem; }
+.eka-chart-widget-body { padding: 16px; }
+
+.eka-activity-feed { }
+.eka-activity-item {
+    display: flex;
+    gap: 14px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--eka-border-color);
+    align-items: flex-start;
+}
+.eka-activity-item:last-child { border-bottom: none; }
+.eka-activity-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.875rem;
+    flex-shrink: 0;
+    font-weight: 600;
+}
+.eka-activity-content { flex: 1; min-width: 0; }
+.eka-activity-text { font-size: 0.8125rem; color: var(--eka-gray-600); margin: 0; line-height: 1.5; }
+.eka-activity-text strong { color: var(--eka-heading-color); }
+.eka-activity-time { font-size: 0.6875rem; color: var(--eka-gray-400); margin-top: 4px; }
+
+.eka-revenue-card { background: linear-gradient(135deg, var(--eka-primary) 0%, var(--eka-secondary) 100%); color: #fff; border: none; }
+.eka-revenue-card .eka-stat-label { color: rgba(255,255,255,0.7); }
+.eka-revenue-card .eka-stat-value { color: #fff; }
+.eka-revenue-card .eka-stat-trend { background: rgba(255,255,255,0.2); color: #fff; }
+.eka-revenue-card .eka-stat-icon { background: rgba(255,255,255,0.15); color: #fff; }
+
+.eka-progress-widget { padding: 14px 0; }
+.eka-progress-widget + .eka-progress-widget { border-top: 1px solid var(--eka-border-color); }
+.eka-progress-widget-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+.eka-progress-widget-label { font-size: 0.8125rem; font-weight: 500; color: var(--eka-heading-color); }
+.eka-progress-widget-value { font-size: 0.8125rem; font-weight: 600; color: var(--eka-heading-color); }
+
+.eka-user-list-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--eka-border-color);
+}
+.eka-user-list-item:last-child { border-bottom: none; }
+.eka-user-list-info { flex: 1; min-width: 0; }
+.eka-user-list-name { font-size: 0.8125rem; font-weight: 600; color: var(--eka-heading-color); }
+.eka-user-list-role { font-size: 0.75rem; color: var(--eka-text-muted); }
+
+.eka-task-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--eka-border-color);
+}
+.eka-task-item:last-child { border-bottom: none; }
+.eka-task-checkbox { width: 18px; height: 18px; border: 2px solid var(--eka-border-color); border-radius: var(--eka-radius-sm); cursor: pointer; transition: all var(--eka-transition-fast); flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
+.eka-task-checkbox.checked { background: var(--eka-success); border-color: var(--eka-success); color: #fff; font-size: 0.625rem; }
+.eka-task-checkbox:hover { border-color: var(--eka-primary); }
+.eka-task-text { flex: 1; font-size: 0.8125rem; color: var(--eka-gray-600); }
+.eka-task-item.completed .eka-task-text { text-decoration: line-through; color: var(--eka-gray-400); }
+
+.eka-quick-action {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 16px 12px;
+    border-radius: var(--eka-radius-md);
+    cursor: pointer;
+    transition: all var(--eka-transition-fast);
+    text-align: center;
+}
+.eka-quick-action:hover { background: var(--eka-gray-50); transform: translateY(-2px); }
+.eka-quick-action-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: var(--eka-radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+}
+.eka-quick-action-label { font-size: 0.75rem; font-weight: 500; color: var(--eka-heading-color); }

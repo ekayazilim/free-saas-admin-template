@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Chat - EkaAdmin</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="../assets/css/eka-variables.css"><link rel="stylesheet" href="../assets/css/eka-base.css"><link rel="stylesheet" href="../assets/css/eka-layout.css"><link rel="stylesheet" href="../assets/css/eka-components.css"><link rel="stylesheet" href="../assets/css/eka-widgets.css"><link rel="stylesheet" href="../assets/css/eka-forms.css"><link rel="stylesheet" href="../assets/css/eka-pages.css"><link rel="stylesheet" href="../assets/css/eka-animations.css"><link rel="stylesheet" href="../assets/css/eka-dark.css"><link rel="stylesheet" href="../assets/css/eka-responsive.css">
+<style>
+.chat-search{padding:16px;border-bottom:1px solid var(--eka-border-color)}
+.chat-search input{width:100%;padding:10px 12px 10px 36px;border:1px solid var(--eka-border-color);border-radius:8px;font-size:.8125rem;background:var(--eka-gray-50)}
+.chat-search i{position:absolute;left:28px;top:50%;transform:translateY(-50%);color:var(--eka-gray-400)}
+.chat-contacts{overflow-y:auto;flex:1}
+.chat-contact{display:flex;align-items:center;gap:12px;padding:14px 16px;cursor:pointer;transition:background .15s;border-left:3px solid transparent}
+.chat-contact:hover{background:var(--eka-gray-50)}
+.chat-contact.active{background:rgba(64,81,137,.06);border-left-color:var(--eka-primary)}
+.chat-contact .avatar{width:44px;height:44px;border-radius:50%;position:relative;flex-shrink:0}
+.chat-contact .avatar img{width:100%;height:100%;border-radius:50%}
+.chat-contact .avatar .status{width:10px;height:10px;border-radius:50%;border:2px solid var(--eka-card-bg);position:absolute;bottom:0;right:0}
+.chat-contact .status.online{background:#0ab39c}
+.chat-contact .status.away{background:#f7b84b}
+.chat-contact .status.offline{background:#878a99}
+.chat-contact-info{flex:1;min-width:0}
+.chat-contact-name{font-size:.8125rem;font-weight:600;color:var(--eka-heading-color)}
+.chat-contact-msg{font-size:.75rem;color:var(--eka-text-muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.chat-contact-meta{text-align:right;flex-shrink:0}
+.chat-contact-time{font-size:.6875rem;color:var(--eka-text-muted)}
+.chat-contact-badge{width:18px;height:18px;border-radius:50%;background:var(--eka-primary);color:#fff;font-size:.625rem;display:flex;align-items:center;justify-content:center;margin-left:auto;margin-top:4px}
+.chat-header{display:flex;align-items:center;gap:12px;padding:14px 20px;border-bottom:1px solid var(--eka-border-color);background:var(--eka-card-bg)}
+.chat-header-avatar{width:40px;height:40px;border-radius:50%}
+.chat-header-info .name{font-size:.875rem;font-weight:600}
+.chat-header-info .typing{font-size:.75rem;color:var(--eka-success)}
+.chat-header-actions{margin-left:auto;display:flex;gap:8px}
+.chat-header-actions button{width:36px;height:36px;border-radius:8px;border:none;background:var(--eka-gray-100);color:var(--eka-gray-600);cursor:pointer;transition:all .15s}
+.chat-header-actions button:hover{background:var(--eka-primary);color:#fff}
+.chat-messages{flex:1;padding:24px;overflow-y:auto;display:flex;flex-direction:column;gap:16px;background:var(--eka-body-bg)}
+.chat-date{text-align:center;font-size:.6875rem;color:var(--eka-text-muted);padding:4px 12px;background:var(--eka-gray-100);border-radius:20px;align-self:center}
+.msg-wrapper{display:flex;gap:8px;max-width:70%}
+.msg-wrapper.sent{margin-left:auto;flex-direction:row-reverse}
+.msg-avatar{width:32px;height:32px;border-radius:50%;flex-shrink:0;margin-top:auto}
+.msg-bubble{padding:12px 16px;border-radius:12px;font-size:.8125rem;line-height:1.6;position:relative}
+.msg-wrapper.received .msg-bubble{background:var(--eka-card-bg);color:var(--eka-gray-700);border:1px solid var(--eka-border-color);border-bottom-left-radius:4px}
+.msg-wrapper.sent .msg-bubble{background:linear-gradient(135deg,#405189,#3577f1);color:#fff;border-bottom-right-radius:4px}
+.msg-time{font-size:.625rem;color:var(--eka-gray-400);margin-top:4px;display:block}
+.msg-wrapper.sent .msg-time{text-align:right;color:rgba(255,255,255,.6)}
+.chat-input{padding:16px 20px;border-top:1px solid var(--eka-border-color);display:flex;gap:10px;align-items:center;background:var(--eka-card-bg)}
+.chat-input input{flex:1;padding:10px 16px;border:1px solid var(--eka-border-color);border-radius:24px;font-size:.8125rem;background:var(--eka-gray-50)}
+.chat-input input:focus{border-color:var(--eka-primary);outline:none;box-shadow:0 0 0 3px rgba(64,81,137,.1)}
+.chat-input button{width:40px;height:40px;border-radius:50%;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .15s}
+.chat-input .btn-attach{background:var(--eka-gray-100);color:var(--eka-gray-500)}
+.chat-input .btn-send{background:linear-gradient(135deg,#405189,#3577f1);color:#fff;box-shadow:0 4px 12px rgba(64,81,137,.3)}
+.chat-input .btn-send:hover{transform:scale(1.05)}
+</style>
+</head><body><div class="eka-app" id="ekaApp"><div class="eka-sidebar" id="ekaSidebar"></div><div class="eka-overlay" id="ekaOverlay"></div><div class="eka-main"><header class="eka-topbar" id="ekaTopbar"></header><div class="eka-content">
+<div class="eka-page-header"><div><h4>Chat</h4><div class="eka-breadcrumb"><a href="../dashboards/index.html">Dashboard</a><span class="eka-breadcrumb-separator"><i class="fas fa-chevron-right"></i></span><span class="eka-breadcrumb-active">Chat</span></div></div></div>
+<div class="eka-chat-wrapper">
+<div class="eka-chat-sidebar">
+<div class="chat-search" style="position:relative"><i class="fas fa-search"></i><input type="text" placeholder="Search contacts..."></div>
+<div class="chat-contacts">
+<div class="chat-contact active"><div class="avatar"><img src="https://api.dicebear.com/7.x/avataaars/svg?seed=sarah" alt=""><div class="status online"></div></div><div class="chat-contact-info"><div class="chat-contact-name">Sarah Wilson</div><div class="chat-contact-msg">I've just sent the design files 📎</div></div><div class="chat-contact-meta"><div class="chat-contact-time">2m</div><div class="chat-contact-badge">3</div></div></div>
+<div class="chat-contact"><div class="avatar"><img src="https://api.dicebear.com/7.x/avataaars/svg?seed=michael" alt=""><div class="status online"></div></div><div class="chat-contact-info"><div class="chat-contact-name">Michael Chen</div><div class="chat-contact-msg">Sure, let's schedule it for tomorrow</div></div><div class="chat-contact-meta"><div class="chat-contact-time">15m</div></div></div>
+<div class="chat-contact"><div class="avatar"><img src="https://api.dicebear.com/7.x/avataaars/svg?seed=emma" alt=""><div class="status away"></div></div><div class="chat-contact-info"><div class="chat-contact-name">Emma Davis</div><div class="chat-contact-msg">The report looks great!</div></div><div class="chat-contact-meta"><div class="chat-contact-time">1h</div></div></div>
+<div class="chat-contact"><div class="avatar"><img src="https://api.dicebear.com/7.x/avataaars/svg?seed=james" alt=""><div class="status offline"></div></div><div class="chat-contact-info"><div class="chat-contact-name">James Miller</div><div class="chat-contact-msg">Can we discuss the API changes?</div></div><div class="chat-contact-meta"><div class="chat-contact-time">3h</div></div></div>
+<div class="chat-contact"><div class="avatar"><img src="https://api.dicebear.com/7.x/avataaars/svg?seed=olivia" alt=""><div class="status online"></div></div><div class="chat-contact-info"><div class="chat-contact-name">Olivia Brown</div><div class="chat-contact-msg">Thanks for the quick fix! 🎉</div></div><div class="chat-contact-meta"><div class="chat-contact-time">5h</div></div></div>
+<div class="chat-contact"><div class="avatar"><img src="https://api.dicebear.com/7.x/avataaars/svg?seed=alex" alt=""><div class="status away"></div></div><div class="chat-contact-info"><div class="chat-contact-name">Alex Thompson</div><div class="chat-contact-msg">Will review the PR today</div></div><div class="chat-contact-meta"><div class="chat-contact-time">1d</div></div></div>
+</div>
+</div>
+<div class="eka-chat-main">
+<div class="chat-header"><img src="https://api.dicebear.com/7.x/avataaars/svg?seed=sarah" alt="" class="chat-header-avatar"><div class="chat-header-info"><div class="name">Sarah Wilson</div><div class="typing"><i class="fas fa-circle fs-8 me-1"></i> Online</div></div>
+<div class="chat-header-actions"><button title="Voice Call"><i class="fas fa-phone"></i></button><button title="Video Call"><i class="fas fa-video"></i></button><button title="More"><i class="fas fa-ellipsis-v"></i></button></div></div>
+<div class="chat-messages">
+<div class="chat-date">Today</div>
+<div class="msg-wrapper received"><img src="https://api.dicebear.com/7.x/avataaars/svg?seed=sarah" alt="" class="msg-avatar"><div><div class="msg-bubble">Hey Richard! I've been working on the new dashboard design. Want to take a look?</div><span class="msg-time">10:24 AM</span></div></div>
+<div class="msg-wrapper sent"><img src="https://api.dicebear.com/7.x/avataaars/svg?seed=admin" alt="" class="msg-avatar"><div><div class="msg-bubble">Of course! I've been looking forward to seeing the updates. Share whenever you're ready.</div><span class="msg-time">10:26 AM</span></div></div>
+<div class="msg-wrapper received"><img src="https://api.dicebear.com/7.x/avataaars/svg?seed=sarah" alt="" class="msg-avatar"><div><div class="msg-bubble">Here's the updated mockup. I focused on improving the card layouts and added the new chart widgets you requested. Let me know your thoughts! 🎨</div><span class="msg-time">10:30 AM</span></div></div>
+<div class="msg-wrapper sent"><img src="https://api.dicebear.com/7.x/avataaars/svg?seed=admin" alt="" class="msg-avatar"><div><div class="msg-bubble">Wow, this looks amazing! The gradient accents on the stat cards are a nice touch. Can we also add hover effects?</div><span class="msg-time">10:33 AM</span></div></div>
+<div class="msg-wrapper received"><img src="https://api.dicebear.com/7.x/avataaars/svg?seed=sarah" alt="" class="msg-avatar"><div><div class="msg-bubble">I've just sent the design files 📎 Hover effects are already included! Check the interaction layer in Figma.</div><span class="msg-time">10:35 AM</span></div></div>
+</div>
+<div class="chat-input"><button class="btn-attach" title="Attach"><i class="fas fa-paperclip"></i></button><input type="text" placeholder="Type a message..."><button class="btn-send" title="Send"><i class="fas fa-paper-plane"></i></button></div>
+</div>
+</div>
+</div><footer class="eka-footer" id="ekaFooter"></footer></div></div>
+<div class="eka-theme-panel" id="ekaThemePanel"></div><button class="eka-theme-panel-trigger" id="ekaThemePanelTrigger"><i class="fas fa-cog"></i></button>
+<script>var EKA_BASE='../';var EKA_ACTIVE='apps/chat.html';</script><script src="../assets/js/eka-app.js"></script>
+<script>document.querySelectorAll('.chat-contact').forEach(function(c){c.addEventListener('click',function(){document.querySelectorAll('.chat-contact').forEach(function(x){x.classList.remove('active')});c.classList.add('active')})});</script>
+</body></html>

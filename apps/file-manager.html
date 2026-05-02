@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>File Manager - EkaAdmin</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="../assets/css/eka-variables.css"><link rel="stylesheet" href="../assets/css/eka-base.css"><link rel="stylesheet" href="../assets/css/eka-layout.css"><link rel="stylesheet" href="../assets/css/eka-components.css"><link rel="stylesheet" href="../assets/css/eka-forms.css"><link rel="stylesheet" href="../assets/css/eka-pages.css"><link rel="stylesheet" href="../assets/css/eka-animations.css"><link rel="stylesheet" href="../assets/css/eka-dark.css"><link rel="stylesheet" href="../assets/css/eka-responsive.css">
+</head><body><div class="eka-app" id="ekaApp"><div class="eka-sidebar" id="ekaSidebar"></div><div class="eka-overlay" id="ekaOverlay"></div><div class="eka-main"><header class="eka-topbar" id="ekaTopbar"></header><div class="eka-content">
+<div class="eka-page-header"><div><h4>File Manager</h4><div class="eka-breadcrumb"><a href="../dashboards/index.html">Dashboard</a><span class="eka-breadcrumb-separator"><i class="fas fa-chevron-right"></i></span><span class="eka-breadcrumb-active">Files</span></div></div>
+<div class="d-flex gap-2"><button class="eka-btn eka-btn-light eka-btn-sm"><i class="fas fa-upload me-1"></i>Upload</button><button class="eka-btn eka-btn-primary eka-btn-sm"><i class="fas fa-folder-plus me-1"></i>New Folder</button></div></div>
+<div class="eka-file-manager">
+<div class="eka-file-sidebar">
+<div class="mb-4"><div class="fw-semibold fs-13 mb-3">My Drive</div>
+<div class="email-nav-item active" style="display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:8px;cursor:pointer;font-size:.8125rem;font-weight:500;color:var(--eka-primary);background:rgba(64,81,137,.08);margin-bottom:2px"><i class="fas fa-folder"></i> All Files</div>
+<div class="email-nav-item" style="display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:8px;cursor:pointer;font-size:.8125rem;font-weight:500;color:var(--eka-gray-600);margin-bottom:2px"><i class="fas fa-clock"></i> Recent</div>
+<div class="email-nav-item" style="display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:8px;cursor:pointer;font-size:.8125rem;font-weight:500;color:var(--eka-gray-600);margin-bottom:2px"><i class="fas fa-star"></i> Starred</div>
+<div class="email-nav-item" style="display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:8px;cursor:pointer;font-size:.8125rem;font-weight:500;color:var(--eka-gray-600);margin-bottom:2px"><i class="fas fa-trash"></i> Trash</div>
+</div>
+<div style="border-top:1px solid var(--eka-border-color);padding-top:16px"><div class="fw-semibold fs-13 mb-3">Storage</div><div class="eka-progress mb-2" style="height:8px"><div class="eka-progress-bar" style="width:62%;background:linear-gradient(90deg,#405189,#3577f1)"></div></div><div class="fs-11 text-muted">6.2 GB of 10 GB used</div></div>
+</div>
+<div class="eka-file-content">
+<div class="d-flex justify-between align-center mb-4"><div class="fw-semibold">All Files</div><div class="d-flex gap-2"><button class="eka-btn eka-btn-light eka-btn-sm" title="Grid view"><i class="fas fa-th"></i></button><button class="eka-btn eka-btn-light eka-btn-sm" title="List view"><i class="fas fa-list"></i></button></div></div>
+<div class="fw-medium fs-12 text-muted mb-3" style="text-transform:uppercase;letter-spacing:.05em">Folders</div>
+<div class="eka-file-grid mb-4">
+<div class="eka-file-item"><i class="fas fa-folder" style="color:#f7b84b"></i><div class="eka-file-name">Documents</div><div class="eka-file-size">48 files</div></div>
+<div class="eka-file-item"><i class="fas fa-folder" style="color:#f7b84b"></i><div class="eka-file-name">Design Assets</div><div class="eka-file-size">124 files</div></div>
+<div class="eka-file-item"><i class="fas fa-folder" style="color:#f7b84b"></i><div class="eka-file-name">Projects</div><div class="eka-file-size">86 files</div></div>
+<div class="eka-file-item"><i class="fas fa-folder" style="color:#f7b84b"></i><div class="eka-file-name">Backups</div><div class="eka-file-size">12 files</div></div>
+</div>
+<div class="fw-medium fs-12 text-muted mb-3" style="text-transform:uppercase;letter-spacing:.05em">Recent Files</div>
+<div class="eka-file-grid">
+<div class="eka-file-item"><i class="fas fa-file-image" style="color:#3577f1"></i><div class="eka-file-name">dashboard-v3.fig</div><div class="eka-file-size">2.4 MB</div></div>
+<div class="eka-file-item"><i class="fas fa-file-pdf" style="color:#f06548"></i><div class="eka-file-name">Q1-report.pdf</div><div class="eka-file-size">1.8 MB</div></div>
+<div class="eka-file-item"><i class="fas fa-file-excel" style="color:#0ab39c"></i><div class="eka-file-name">revenue-data.xlsx</div><div class="eka-file-size">420 KB</div></div>
+<div class="eka-file-item"><i class="fas fa-file-code" style="color:#405189"></i><div class="eka-file-name">api-docs.md</div><div class="eka-file-size">64 KB</div></div>
+<div class="eka-file-item"><i class="fas fa-file-archive" style="color:#f7b84b"></i><div class="eka-file-name">assets-v2.zip</div><div class="eka-file-size">18.6 MB</div></div>
+<div class="eka-file-item"><i class="fas fa-file-powerpoint" style="color:#f06548"></i><div class="eka-file-name">pitch-deck.pptx</div><div class="eka-file-size">5.2 MB</div></div>
+</div>
+</div>
+</div>
+</div><footer class="eka-footer" id="ekaFooter"></footer></div></div>
+<div class="eka-theme-panel" id="ekaThemePanel"></div><button class="eka-theme-panel-trigger" id="ekaThemePanelTrigger"><i class="fas fa-cog"></i></button>
+<script>var EKA_BASE='../';var EKA_ACTIVE='apps/file-manager.html';</script><script src="../assets/js/eka-app.js"></script>
+</body></html>

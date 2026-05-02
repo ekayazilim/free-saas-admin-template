@@ -1,0 +1,138 @@
+.eka-page-error {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px;
+    background: var(--eka-body-bg);
+}
+.eka-page-error h1 { font-size: 6rem; font-weight: 800; color: var(--eka-primary); margin-bottom: 16px; line-height: 1; }
+.eka-page-error h4 { margin-bottom: 12px; }
+.eka-page-error p { color: var(--eka-text-muted); max-width: 440px; margin: 0 auto 24px; }
+
+.eka-page-coming-soon {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px;
+    background: linear-gradient(135deg, #405189 0%, #2a3a6e 100%);
+    color: #fff;
+}
+.eka-page-coming-soon h1 { color: #fff; font-size: 3rem; }
+.eka-page-coming-soon p { color: rgba(255,255,255,0.7); }
+.eka-countdown { display: flex; gap: 20px; justify-content: center; margin: 32px 0; }
+.eka-countdown-item { text-align: center; }
+.eka-countdown-value {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,0.1);
+    border-radius: var(--eka-radius-lg);
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 8px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+.eka-countdown-label { font-size: 0.75rem; color: rgba(255,255,255,0.6); text-transform: uppercase; letter-spacing: 0.05em; }
+
+.eka-page-maintenance {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px;
+    background: var(--eka-body-bg);
+}
+
+.eka-pricing-card { text-align: center; position: relative; transition: transform var(--eka-transition-smooth); }
+.eka-pricing-card:hover { transform: translateY(-8px); }
+.eka-pricing-card.eka-popular { border-color: var(--eka-primary); border-width: 2px; }
+.eka-pricing-badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); }
+.eka-pricing-price { font-size: 2.5rem; font-weight: 800; color: var(--eka-heading-color); line-height: 1; }
+.eka-pricing-period { font-size: 0.875rem; color: var(--eka-text-muted); font-weight: 400; }
+.eka-pricing-features { text-align: left; margin: 24px 0; }
+.eka-pricing-feature { display: flex; align-items: center; gap: 10px; padding: 8px 0; font-size: 0.8125rem; color: var(--eka-gray-600); }
+.eka-pricing-feature i.fa-check { color: var(--eka-success); }
+.eka-pricing-feature i.fa-xmark { color: var(--eka-gray-400); }
+.eka-pricing-feature.disabled { color: var(--eka-gray-400); }
+
+.eka-faq-item { margin-bottom: 12px; }
+
+.eka-search-results .eka-search-item { padding: 20px; border-bottom: 1px solid var(--eka-border-color); }
+.eka-search-results .eka-search-item:last-child { border-bottom: none; }
+.eka-search-results .eka-search-item h5 a { color: var(--eka-secondary); }
+.eka-search-results .eka-search-item h5 a:hover { text-decoration: underline; }
+.eka-search-results .eka-search-item .eka-search-url { font-size: 0.8125rem; color: var(--eka-success); margin-bottom: 6px; }
+.eka-search-results .eka-search-item p { font-size: 0.875rem; color: var(--eka-gray-600); margin: 0; }
+
+.eka-testimonial { text-align: center; padding: 32px 24px; }
+.eka-testimonial-avatar { width: 64px; height: 64px; border-radius: 50%; margin: 0 auto 16px; border: 3px solid var(--eka-primary-bg-subtle); }
+.eka-testimonial-text { font-size: 1rem; color: var(--eka-gray-600); font-style: italic; max-width: 480px; margin: 0 auto 16px; line-height: 1.7; }
+.eka-testimonial-stars { color: var(--eka-warning); margin-bottom: 8px; }
+.eka-testimonial-name { font-weight: 600; color: var(--eka-heading-color); }
+.eka-testimonial-role { font-size: 0.8125rem; color: var(--eka-text-muted); }
+
+.eka-chat-wrapper { display: flex; height: calc(100vh - var(--eka-topbar-height) - var(--eka-footer-height) - 48px); border: 1px solid var(--eka-border-color); border-radius: var(--eka-radius-md); overflow: hidden; background: var(--eka-card-bg); }
+.eka-chat-sidebar { width: 320px; border-right: 1px solid var(--eka-border-color); display: flex; flex-direction: column; }
+.eka-chat-main { flex: 1; display: flex; flex-direction: column; }
+.eka-chat-messages { flex: 1; padding: 24px; overflow-y: auto; }
+.eka-chat-input-area { padding: 16px; border-top: 1px solid var(--eka-border-color); display: flex; gap: 12px; align-items: center; }
+.eka-chat-contact { display: flex; align-items: center; gap: 12px; padding: 12px 16px; cursor: pointer; transition: background var(--eka-transition-fast); }
+.eka-chat-contact:hover, .eka-chat-contact.eka-active { background: var(--eka-gray-50); }
+.eka-chat-bubble { max-width: 70%; padding: 12px 16px; border-radius: var(--eka-radius-lg); margin-bottom: 12px; font-size: 0.8125rem; line-height: 1.5; }
+.eka-chat-bubble.eka-sent { background: var(--eka-primary); color: #fff; margin-left: auto; border-bottom-right-radius: 4px; }
+.eka-chat-bubble.eka-received { background: var(--eka-gray-100); color: var(--eka-gray-700); border-bottom-left-radius: 4px; }
+
+.eka-email-wrapper { display: flex; height: calc(100vh - var(--eka-topbar-height) - var(--eka-footer-height) - 48px); border: 1px solid var(--eka-border-color); border-radius: var(--eka-radius-md); overflow: hidden; background: var(--eka-card-bg); }
+.eka-email-sidebar { width: 240px; border-right: 1px solid var(--eka-border-color); padding: 16px; }
+.eka-email-list { width: 380px; border-right: 1px solid var(--eka-border-color); overflow-y: auto; }
+.eka-email-content { flex: 1; overflow-y: auto; padding: 24px; }
+.eka-email-item { display: flex; align-items: center; gap: 12px; padding: 14px 16px; border-bottom: 1px solid var(--eka-border-color); cursor: pointer; transition: background var(--eka-transition-fast); }
+.eka-email-item:hover { background: var(--eka-gray-50); }
+.eka-email-item.eka-unread { background: rgba(var(--eka-primary-rgb), 0.03); }
+.eka-email-item.eka-unread .eka-email-sender { font-weight: 600; }
+
+.eka-kanban-board { display: flex; gap: 20px; overflow-x: auto; padding-bottom: 16px; min-height: 500px; }
+.eka-kanban-column { min-width: 300px; width: 300px; background: var(--eka-gray-50); border-radius: var(--eka-radius-md); padding: 16px; flex-shrink: 0; }
+.eka-kanban-column-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; }
+.eka-kanban-column-title { font-size: 0.875rem; font-weight: 600; color: var(--eka-heading-color); }
+.eka-kanban-card {
+    background: var(--eka-card-bg);
+    border: 1px solid var(--eka-card-border-color);
+    border-radius: var(--eka-radius);
+    padding: 14px;
+    margin-bottom: 10px;
+    cursor: grab;
+    transition: box-shadow var(--eka-transition-fast);
+}
+.eka-kanban-card:hover { box-shadow: var(--eka-shadow-md); }
+
+.eka-file-manager { display: flex; height: calc(100vh - var(--eka-topbar-height) - var(--eka-footer-height) - 48px); border: 1px solid var(--eka-border-color); border-radius: var(--eka-radius-md); overflow: hidden; background: var(--eka-card-bg); }
+.eka-file-sidebar { width: 260px; border-right: 1px solid var(--eka-border-color); padding: 16px; }
+.eka-file-content { flex: 1; overflow-y: auto; padding: 24px; }
+.eka-file-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 16px; }
+.eka-file-item {
+    border: 1px solid var(--eka-border-color);
+    border-radius: var(--eka-radius-md);
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: all var(--eka-transition-fast);
+}
+.eka-file-item:hover { border-color: var(--eka-primary); background: var(--eka-primary-bg-subtle); }
+.eka-file-item i { font-size: 2rem; margin-bottom: 10px; }
+.eka-file-item .eka-file-name { font-size: 0.8125rem; font-weight: 500; color: var(--eka-heading-color); margin-bottom: 4px; }
+.eka-file-item .eka-file-size { font-size: 0.6875rem; color: var(--eka-text-muted); }
+
+.eka-calendar-wrapper { border: 1px solid var(--eka-border-color); border-radius: var(--eka-radius-md); overflow: hidden; background: var(--eka-card-bg); }
+
+.eka-invoice-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 32px; }
+.eka-invoice-logo { font-size: 1.5rem; font-weight: 800; color: var(--eka-primary); }

@@ -1,0 +1,244 @@
+@media (min-width: 768px) {
+    .eka-col-md-2 { width: 16.667%; }
+    .eka-col-md-3 { width: 25%; }
+    .eka-col-md-4 { width: 33.333%; }
+    .eka-col-md-6 { width: 50%; }
+    .eka-col-md-8 { width: 66.667%; }
+    .eka-col-md-12 { width: 100%; }
+}
+
+@media (min-width: 992px) {
+    .d-lg-none { display: none !important; }
+    .d-lg-block { display: block !important; }
+    .d-lg-flex { display: flex !important; }
+    .eka-col-lg-2 { width: 16.667%; }
+    .eka-col-lg-3 { width: 25%; }
+    .eka-col-lg-4 { width: 33.333%; }
+    .eka-col-lg-6 { width: 50%; }
+    .eka-col-lg-8 { width: 66.667%; }
+    .eka-col-lg-9 { width: 75%; }
+    .eka-col-lg-12 { width: 100%; }
+}
+
+@media (min-width: 1200px) {
+    .eka-col-xl-2 { width: calc(100% / 6); }
+    .eka-col-xl-3 { width: 25%; }
+    .eka-col-xl-4 { width: 33.333%; }
+    .eka-col-xl-5 { width: 41.667%; }
+    .eka-col-xl-6 { width: 50%; }
+    .eka-col-xl-7 { width: 58.333%; }
+    .eka-col-xl-8 { width: 66.667%; }
+    .eka-col-xl-9 { width: 75%; }
+}
+
+@media (min-width: 1400px) {
+    .eka-col-xxl-2 { width: 16.667%; }
+    .eka-col-xxl-3 { width: 25%; }
+    .eka-col-xxl-4 { width: 33.333%; }
+    .eka-col-xxl-6 { width: 50%; }
+}
+
+@media (max-width: 1399.98px) {
+    .eka-col-2 { width: 33.333%; }
+}
+
+@media (max-width: 1199.98px) {
+    .eka-topbar-search { width: 200px; }
+    .eka-col-2 { width: 33.333%; }
+    .eka-col-3 { width: 50%; }
+
+    .eka-horizontal .eka-sidebar-menu { gap: 0; }
+    .eka-horizontal .eka-menu-item > a { padding: 8px 10px; font-size: 0.75rem; }
+    .eka-horizontal .eka-menu-item > a .eka-menu-text { display: none; }
+    .eka-horizontal .eka-menu-item > a .eka-menu-icon { font-size: 1rem; width: 22px; height: 22px; }
+    .eka-horizontal .eka-menu-item > a .eka-menu-arrow { display: none; }
+}
+
+@media (max-width: 991.98px) {
+    .eka-sidebar {
+        transform: translateX(-100%);
+        z-index: var(--eka-z-sidebar);
+    }
+    .eka-sidebar.eka-mobile-show { transform: translateX(0); }
+    .eka-main { margin-left: 0 !important; }
+    .eka-sidebar-collapsed .eka-sidebar { width: var(--eka-sidebar-width); }
+    .eka-sidebar-collapsed .eka-sidebar .eka-logo-text { opacity: 1; width: auto; }
+    .eka-sidebar-collapsed .eka-sidebar .eka-menu-heading { opacity: 1; height: auto; padding: 12px 20px 6px; }
+    .eka-sidebar-collapsed .eka-sidebar .eka-menu-item > a .eka-menu-text { opacity: 1; width: auto; }
+    .eka-sidebar-collapsed .eka-sidebar .eka-menu-item > a .eka-menu-arrow { opacity: 1; }
+    .eka-sidebar-collapsed .eka-sidebar .eka-menu-item > a { justify-content: flex-start; padding: 8px 20px; }
+    .eka-sidebar-collapsed .eka-sidebar .eka-sidebar-logo { justify-content: flex-start; padding: 0 20px; }
+    .eka-sidebar-collapsed .eka-sidebar .eka-sidebar-logo a { justify-content: flex-start; }
+
+    .eka-horizontal .eka-sidebar {
+        width: var(--eka-sidebar-width) !important;
+        height: 100vh !important;
+        min-height: 100vh !important;
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        flex-direction: column !important;
+        transform: translateX(-100%);
+        border-bottom: none;
+        overflow-y: auto !important;
+        overflow-x: hidden !important;
+        z-index: var(--eka-z-sidebar) !important;
+    }
+    .eka-horizontal .eka-sidebar.eka-mobile-show { transform: translateX(0) !important; }
+    .eka-horizontal .eka-sidebar-logo {
+        height: var(--eka-topbar-height) !important;
+        border-bottom: 1px solid rgba(255,255,255,0.08) !important;
+        flex-shrink: 0;
+    }
+    .eka-horizontal .eka-sidebar-menu {
+        flex-direction: column !important;
+        overflow-x: hidden !important;
+        overflow-y: auto !important;
+        padding: 10px 0 !important;
+        gap: 0 !important;
+        align-items: stretch !important;
+        height: auto !important;
+    }
+    .eka-horizontal .eka-menu-heading { display: block !important; }
+    .eka-horizontal .eka-menu-item { flex-shrink: initial !important; }
+    .eka-horizontal .eka-menu-item > a .eka-menu-text { display: inline !important; }
+    .eka-horizontal .eka-menu-item > a .eka-menu-arrow { display: inline !important; transform: none !important; margin-left: auto !important; }
+    .eka-horizontal .eka-menu-item > a { border-radius: 0 !important; white-space: normal !important; padding: 8px 20px !important; }
+    .eka-horizontal .eka-submenu {
+        position: static !important;
+        box-shadow: none !important;
+        border-radius: 0 !important;
+        background: rgba(0,0,0,0.1) !important;
+        min-width: auto !important;
+    }
+    .eka-horizontal .eka-submenu .eka-menu-item > a { padding-left: 52px !important; }
+    .eka-horizontal .eka-main { margin-left: 0 !important; }
+    .eka-horizontal .eka-topbar { order: 0 !important; position: sticky !important; top: 0 !important; }
+    .eka-horizontal { flex-direction: column !important; }
+
+    .eka-icon-hover .eka-sidebar,
+    .eka-icon-default .eka-sidebar {
+        width: var(--eka-sidebar-width);
+        transform: translateX(-100%);
+    }
+    .eka-icon-hover .eka-sidebar.eka-mobile-show,
+    .eka-icon-default .eka-sidebar.eka-mobile-show { transform: translateX(0); }
+    .eka-icon-hover .eka-sidebar .eka-logo-text,
+    .eka-icon-default .eka-sidebar .eka-logo-text { opacity: 1; width: auto; }
+    .eka-icon-hover .eka-sidebar .eka-menu-heading,
+    .eka-icon-default .eka-sidebar .eka-menu-heading { display: block; opacity: 1; height: auto; padding: 12px 20px 6px; }
+    .eka-icon-hover .eka-sidebar .eka-menu-item > a .eka-menu-text,
+    .eka-icon-default .eka-sidebar .eka-menu-item > a .eka-menu-text { opacity: 1; width: auto; display: inline; }
+    .eka-icon-hover .eka-sidebar .eka-menu-item > a .eka-menu-arrow,
+    .eka-icon-default .eka-sidebar .eka-menu-item > a .eka-menu-arrow { opacity: 1; display: inline; }
+    .eka-icon-hover .eka-sidebar .eka-menu-item > a .eka-menu-badge,
+    .eka-icon-default .eka-sidebar .eka-menu-item > a .eka-menu-badge { opacity: 1; width: auto; display: inline; }
+    .eka-icon-hover .eka-sidebar .eka-menu-item > a,
+    .eka-icon-default .eka-sidebar .eka-menu-item > a { justify-content: flex-start; padding: 8px 20px; font-size: 0.8125rem; }
+    .eka-icon-hover .eka-sidebar .eka-submenu,
+    .eka-icon-default .eka-sidebar .eka-submenu { display: block; max-height: none !important; }
+    .eka-icon-hover .eka-main,
+    .eka-icon-default .eka-main { margin-left: 0 !important; }
+    .eka-icon-hover .eka-sidebar-logo,
+    .eka-icon-default .eka-sidebar-logo { justify-content: flex-start; padding: 0 20px; }
+
+    .eka-boxed { max-width: 100%; box-shadow: none; }
+
+    .eka-topbar-search { display: none; }
+    .eka-topbar-user-info { display: none; }
+
+    .eka-col-2 { width: 50%; }
+    .eka-col-md-6 { width: 50%; }
+    .eka-col-md-12 { width: 100%; }
+
+    .d-md-none { display: none !important; }
+    .d-md-block { display: block !important; }
+    .d-md-flex { display: flex !important; }
+
+    .eka-auth-page { flex-direction: column; }
+    .eka-auth-left { min-height: 300px; flex: none; }
+    .eka-auth-right { width: 100%; flex: 1; }
+}
+
+@media (max-width: 767.98px) {
+    .eka-content { padding: 16px; }
+    .eka-page-header { flex-direction: column; align-items: flex-start; }
+    .eka-topbar { padding: 0 12px; gap: 8px; }
+    .eka-footer {
+        padding: 12px 16px;
+        flex-direction: column;
+        gap: 4px;
+        height: auto;
+        text-align: center;
+    }
+
+    .eka-row { margin: 0 -8px; }
+    .eka-col, [class*="eka-col-"] { padding: 0 8px; }
+
+    .eka-col-2 { width: 50%; }
+    .eka-col-3 { width: 50%; }
+    .eka-col-4 { width: 100%; }
+    .eka-col-6 { width: 100%; }
+    .eka-col-8 { width: 100%; }
+    .eka-col-9 { width: 100%; }
+    .eka-col-sm-6 { width: 50%; }
+    .eka-col-sm-12 { width: 100%; }
+
+    .eka-greeting h3 { font-size: 1.15rem; }
+    .eka-greeting p { font-size: 0.8rem; }
+    .eka-greeting .d-flex.justify-between { flex-direction: column; gap: 12px; }
+    .eka-greeting .d-flex.gap-3 { justify-content: flex-start; }
+
+    .eka-stat-card .eka-stat-value { font-size: 1.25rem; }
+    .eka-stat-card .eka-stat-icon { width: 44px; height: 44px; font-size: 1.125rem; }
+
+    .eka-form-row { flex-direction: column; gap: 0; }
+    .eka-table-toolbar { flex-direction: column; align-items: stretch; }
+    .eka-table-footer { flex-direction: column; align-items: center; text-align: center; }
+
+    .eka-auth-left { display: none; }
+    .eka-auth-right { width: 100%; min-height: 100vh; }
+    .eka-auth-form-wrapper { max-width: 100%; padding: 0 8px; }
+    .eka-otp-inputs { gap: 8px; }
+    .eka-otp-input { width: 42px; height: 42px; }
+
+    .eka-modal { padding: 16px; }
+    .eka-modal-dialog { max-height: 90vh; }
+    .eka-notification-dropdown { min-width: 280px; right: -80px; }
+
+    .eka-theme-panel { width: 300px; right: -300px; }
+
+    .d-sm-none { display: none !important; }
+    .d-sm-block { display: block !important; }
+}
+
+@media (max-width: 575.98px) {
+    .eka-content { padding: 12px; }
+
+    .eka-col-2 { width: 100%; }
+    .eka-col-3 { width: 100%; }
+    .eka-col-4 { width: 100%; }
+
+    .eka-topbar-right .eka-topbar-btn:not(:last-child):not(#ekaThemeToggle) { display: none; }
+    .eka-topbar-toggle { font-size: 1.1rem; }
+
+    .eka-greeting { padding: 16px; }
+    .eka-greeting h3 { font-size: 1rem; }
+
+    .eka-auth-stats { flex-direction: column; gap: 16px; }
+    .eka-social-login { flex-direction: column; }
+    .eka-pagination { flex-wrap: wrap; justify-content: center; }
+
+    .eka-theme-panel { width: 280px; right: -280px; }
+    .eka-theme-toggle-group { flex-direction: column; }
+    .eka-theme-toggle-group .eka-theme-toggle-btn { flex: none !important; }
+
+    .eka-card-header { flex-direction: column; align-items: flex-start; gap: 8px; }
+}
+
+@media print {
+    .eka-sidebar, .eka-topbar, .eka-footer, .eka-theme-panel, .eka-theme-panel-trigger { display: none !important; }
+    .eka-main { margin-left: 0 !important; }
+    .eka-content { padding: 0; }
+    .eka-card { box-shadow: none; border: 1px solid #ddd; }
+}

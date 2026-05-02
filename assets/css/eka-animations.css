@@ -1,0 +1,50 @@
+@keyframes ekaFadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes ekaFadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes ekaFadeInDown { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes ekaFadeInLeft { from { opacity: 0; transform: translateX(-20px); } to { opacity: 1; transform: translateX(0); } }
+@keyframes ekaFadeInRight { from { opacity: 0; transform: translateX(20px); } to { opacity: 1; transform: translateX(0); } }
+@keyframes ekaSlideInDown { from { transform: translateY(-100%); } to { transform: translateY(0); } }
+@keyframes ekaSlideInUp { from { transform: translateY(100%); } to { transform: translateY(0); } }
+@keyframes ekaSlideInLeft { from { transform: translateX(-100%); } to { transform: translateX(0); } }
+@keyframes ekaSlideInRight { from { transform: translateX(100%); } to { transform: translateX(0); } }
+@keyframes ekaZoomIn { from { opacity: 0; transform: scale(0.9); } to { opacity: 1; transform: scale(1); } }
+@keyframes ekaScaleUp { from { transform: scale(0); } to { transform: scale(1); } }
+@keyframes ekaBounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+@keyframes ekaPulse { 0% { transform: scale(1); } 50% { transform: scale(1.05); } 100% { transform: scale(1); } }
+@keyframes ekaSpin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+@keyframes ekaShake { 0%, 100% { transform: translateX(0); } 25% { transform: translateX(-4px); } 75% { transform: translateX(4px); } }
+@keyframes ekaRipple { 0% { transform: scale(0); opacity: 0.5; } 100% { transform: scale(4); opacity: 0; } }
+@keyframes ekaSkeletonLoading { 0% { background-position: -200px 0; } 100% { background-position: calc(200px + 100%) 0; } }
+@keyframes ekaProgressStripe { 0% { background-position: 1rem 0; } 100% { background-position: 0 0; } }
+@keyframes ekaDotBounce { 0%, 80%, 100% { transform: scale(0); } 40% { transform: scale(1); } }
+@keyframes ekaCountUp { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes ekaGlow { 0%, 100% { box-shadow: 0 0 5px rgba(var(--eka-primary-rgb), 0.2); } 50% { box-shadow: 0 0 20px rgba(var(--eka-primary-rgb), 0.4); } }
+@keyframes ekaNotificationPulse { 0% { box-shadow: 0 0 0 0 rgba(var(--eka-danger-rgb), 0.4); } 70% { box-shadow: 0 0 0 10px rgba(var(--eka-danger-rgb), 0); } 100% { box-shadow: 0 0 0 0 rgba(var(--eka-danger-rgb), 0); } }
+@keyframes ekaWidgetLoad { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
+
+.eka-animate-fade-in { animation: ekaFadeIn 0.3s ease forwards; }
+.eka-animate-fade-in-up { animation: ekaFadeInUp 0.4s ease forwards; }
+.eka-animate-fade-in-down { animation: ekaFadeInDown 0.4s ease forwards; }
+.eka-animate-zoom-in { animation: ekaZoomIn 0.3s ease forwards; }
+.eka-animate-bounce { animation: ekaBounce 2s infinite; }
+.eka-animate-pulse { animation: ekaPulse 2s infinite; }
+.eka-animate-spin { animation: ekaSpin 1s linear infinite; }
+.eka-animate-shake { animation: ekaShake 0.5s ease; }
+
+.eka-skeleton { background: linear-gradient(90deg, var(--eka-gray-200) 25%, var(--eka-gray-100) 50%, var(--eka-gray-200) 75%); background-size: 200px 100%; animation: ekaSkeletonLoading 1.5s infinite; border-radius: var(--eka-radius-sm); }
+
+.eka-hover-lift { transition: transform var(--eka-transition-smooth), box-shadow var(--eka-transition-smooth); }
+.eka-hover-lift:hover { transform: translateY(-4px); box-shadow: var(--eka-shadow-lg); }
+.eka-hover-scale { transition: transform var(--eka-transition-smooth); }
+.eka-hover-scale:hover { transform: scale(1.02); }
+.eka-hover-glow { transition: box-shadow var(--eka-transition-smooth); }
+.eka-hover-glow:hover { box-shadow: 0 0 20px rgba(var(--eka-primary-rgb), 0.15); }
+
+.eka-stagger-1 { animation-delay: 0.05s; } .eka-stagger-2 { animation-delay: 0.1s; }
+.eka-stagger-3 { animation-delay: 0.15s; } .eka-stagger-4 { animation-delay: 0.2s; }
+.eka-stagger-5 { animation-delay: 0.25s; } .eka-stagger-6 { animation-delay: 0.3s; }
+.eka-stagger-7 { animation-delay: 0.35s; } .eka-stagger-8 { animation-delay: 0.4s; }
+
+.eka-transition { transition: all var(--eka-transition-base); }
+.eka-transition-smooth { transition: all var(--eka-transition-smooth); }
+.eka-transition-colors { transition: color var(--eka-transition-fast), background-color var(--eka-transition-fast), border-color var(--eka-transition-fast); }

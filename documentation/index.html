@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>EkaAdmin Documentation</title>
+<link rel="icon" type="image/x-icon" href="../favicon.ico">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--p:#405189;--s:#3577f1;--g:#0ab39c;--dk:#212529;--gr:#878a99;--bg:#f8f9fb;--border:#e9ebec}
+body{font-family:'Inter',sans-serif;color:#495057;background:var(--bg);line-height:1.7}
+a{color:var(--s);text-decoration:none}a:hover{text-decoration:underline}
+.doc-layout{display:flex;min-height:100vh}
+.doc-sidebar{width:280px;background:#fff;border-right:1px solid var(--border);position:fixed;top:0;left:0;bottom:0;overflow-y:auto;padding:24px 0;z-index:10}
+.doc-sidebar-logo{padding:0 24px 24px;border-bottom:1px solid var(--border);margin-bottom:16px;display:flex;align-items:center;gap:10px;font-size:1.1rem;font-weight:800;color:var(--p)}
+.doc-sidebar-logo span{width:32px;height:32px;background:var(--p);color:#fff;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:.7rem;font-weight:800}
+.doc-nav{padding:0 16px}
+.doc-nav-title{font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--gr);padding:12px 8px 6px;margin-top:8px}
+.doc-nav a{display:flex;align-items:center;gap:8px;padding:8px 12px;border-radius:8px;font-size:.82rem;font-weight:500;color:#495057;transition:.2s}
+.doc-nav a:hover{background:rgba(64,81,137,.06);color:var(--p);text-decoration:none}
+.doc-nav a.active{background:rgba(64,81,137,.1);color:var(--p);font-weight:600}
+.doc-nav a i{width:16px;text-align:center;font-size:.75rem;opacity:.7}
+.doc-main{margin-left:280px;flex:1;padding:40px 48px;max-width:900px}
+.doc-main h1{font-size:2rem;font-weight:800;color:var(--dk);margin-bottom:8px;letter-spacing:-.03em}
+.doc-main h2{font-size:1.4rem;font-weight:700;color:var(--dk);margin:40px 0 16px;padding-bottom:8px;border-bottom:2px solid var(--border);letter-spacing:-.02em}
+.doc-main h3{font-size:1.05rem;font-weight:700;color:var(--dk);margin:24px 0 10px}
+.doc-main p{margin-bottom:16px;font-size:.9rem}
+.doc-main ul,.doc-main ol{margin:0 0 16px 20px;font-size:.9rem}
+.doc-main li{margin-bottom:6px}
+.doc-badge{display:inline-block;padding:4px 12px;background:rgba(64,81,137,.08);color:var(--p);border-radius:50px;font-size:.7rem;font-weight:700;margin-bottom:16px}
+.doc-card{background:#fff;border:1px solid var(--border);border-radius:12px;padding:24px;margin-bottom:20px}
+.doc-card h4{font-size:.95rem;font-weight:700;color:var(--dk);margin-bottom:8px;display:flex;align-items:center;gap:8px}
+.doc-card h4 i{color:var(--p)}
+.doc-table{width:100%;border-collapse:collapse;margin-bottom:20px;font-size:.85rem}
+.doc-table th{background:var(--bg);padding:10px 14px;text-align:left;font-weight:600;font-size:.8rem;color:var(--dk);border-bottom:2px solid var(--border)}
+.doc-table td{padding:10px 14px;border-bottom:1px solid var(--border)}
+.doc-table tr:hover td{background:rgba(64,81,137,.02)}
+.doc-alert{padding:14px 18px;border-radius:10px;margin-bottom:20px;font-size:.85rem;display:flex;align-items:flex-start;gap:10px}
+.doc-alert i{margin-top:2px}
+.doc-alert-info{background:rgba(41,156,219,.08);color:#1a7cb8;border-left:3px solid #299cdb}
+.doc-alert-success{background:rgba(10,179,156,.08);color:#078a6a;border-left:3px solid #0ab39c}
+.doc-alert-warning{background:rgba(247,184,75,.08);color:#b58515;border-left:3px solid #f7b84b}
+pre[class*="language-"]{border-radius:10px!important;margin-bottom:20px!important;font-size:.82rem!important}
+code:not([class*="language-"]){background:rgba(64,81,137,.07);padding:2px 6px;border-radius:4px;font-size:.82rem;color:var(--p)}
+.doc-footer{margin-top:60px;padding-top:24px;border-top:1px solid var(--border);text-align:center;font-size:.8rem;color:var(--gr)}
+@media(max-width:768px){.doc-sidebar{display:none}.doc-main{margin-left:0;padding:24px 20px}}
+</style>
+</head>
+<body>
+<div class="doc-layout">
+<aside class="doc-sidebar">
+<div class="doc-sidebar-logo"><span>EA</span>EkaAdmin Docs</div>
+<nav class="doc-nav">
+<div class="doc-nav-title">Getting Started</div>
+<a href="#introduction" class="active"><i class="fas fa-home"></i> Introduction</a>
+<a href="#installation"><i class="fas fa-download"></i> Installation</a>
+<a href="#structure"><i class="fas fa-folder-tree"></i> File Structure</a>
+<div class="doc-nav-title">Customization</div>
+<a href="#theme"><i class="fas fa-palette"></i> Theme Settings</a>
+<a href="#darkmode"><i class="fas fa-moon"></i> Dark Mode</a>
+<a href="#layout"><i class="fas fa-columns"></i> Layouts</a>
+<a href="#colors"><i class="fas fa-swatchbook"></i> Colors</a>
+<div class="doc-nav-title">Components</div>
+<a href="#css"><i class="fas fa-css3-alt"></i> CSS Architecture</a>
+<a href="#pages"><i class="fas fa-file"></i> Pages</a>
+<a href="#charts"><i class="fas fa-chart-pie"></i> Charts</a>
+<div class="doc-nav-title">Reference</div>
+<a href="#libraries"><i class="fas fa-cubes"></i> Libraries</a>
+<a href="#support"><i class="fas fa-life-ring"></i> Support</a>
+<a href="#changelog"><i class="fas fa-history"></i> Changelog</a>
+</nav>
+</aside>
+
+<main class="doc-main">
+<div class="doc-badge">v1.0.0</div>
+<h1>EkaAdmin Documentation</h1>
+<p>Complete guide to setting up, customizing, and extending the EkaAdmin Premium SaaS Admin Template.</p>
+
+<h2 id="introduction">Introduction</h2>
+<p>EkaAdmin is a premium HTML5 admin dashboard template with 129+ pages, 20+ widgets, and 5 dashboard variants. Built with vanilla HTML, CSS, and JavaScript — no frameworks or build tools required.</p>
+<div class="doc-alert doc-alert-info"><i class="fas fa-info-circle"></i><div>This template is designed for developers who want a quick start for admin panels, SaaS dashboards, CRM systems, and e-commerce backends.</div></div>
+
+<h3>Key Features</h3>
+<div class="doc-card"><h4><i class="fas fa-check-circle"></i> 129+ HTML Pages</h4><p>Dashboards, e-commerce, authentication, components, forms, tables, charts, and more.</p></div>
+<div class="doc-card"><h4><i class="fas fa-check-circle"></i> Dark & Light Mode</h4><p>One-click theme toggle with localStorage persistence across page reloads.</p></div>
+<div class="doc-card"><h4><i class="fas fa-check-circle"></i> Multiple Layouts</h4><p>Vertical sidebar, horizontal menu, boxed, and full-width layout options.</p></div>
+<div class="doc-card"><h4><i class="fas fa-check-circle"></i> Theme Customizer</h4><p>Live settings panel for colors, layout, sidebar style, and header options.</p></div>
+
+<h2 id="installation">Installation</h2>
+<h3>Quick Start</h3>
+<ol>
+<li>Extract the downloaded ZIP file to your web server directory.</li>
+<li>Open <code>index.html</code> in your browser — or point your domain to the extracted folder.</li>
+<li>Navigate to <code>auth/login.html</code> to access the admin dashboard.</li>
+<li>Use the default demo credentials: <code>admin@ekadmin.com</code> / <code>password123</code></li>
+</ol>
+<div class="doc-alert doc-alert-success"><i class="fas fa-check-circle"></i><div>No build tools, npm, or package managers required. Simply extract and open in a browser.</div></div>
+
+<h2 id="structure">File Structure</h2>
+<pre><code class="language-text">admin-panel/
+├── assets/
+│   ├── css/
+│   │   ├── eka-variables.css    → CSS custom properties & tokens
+│   │   ├── eka-base.css         → Reset, typography, utilities
+│   │   ├── eka-layout.css       → Sidebar, topbar, content layout
+│   │   ├── eka-components.css   → Cards, badges, buttons, etc.
+│   │   ├── eka-widgets.css      → Dashboard widget styles
+│   │   ├── eka-tables.css       → Table styles
+│   │   ├── eka-forms.css        → Form elements & inputs
+│   │   ├── eka-animations.css   → Transitions & keyframes
+│   │   ├── eka-dark.css         → Dark mode overrides
+│   │   └── eka-responsive.css   → Media queries
+│   ├── js/
+│   │   └── eka-app.js           → Core app logic, menu, theme
+│   └── images/
+├── dashboards/                   → 5 dashboard variants
+├── ecommerce/                    → 16 e-commerce pages
+├── auth/                         → 6 authentication pages
+├── components/                   → 21 UI component pages
+├── apps/                         → 15 application pages
+├── forms/                        → 9 form pages
+├── tables/                       → 4 table pages
+├── charts/                       → 8 chart pages
+├── pages/                        → 20 utility pages
+├── management/                   → 18 management pages
+├── blog/                         → 3 blog pages
+└── invoices/                     → 3 invoice pages</code></pre>
+
+<h2 id="theme">Theme Settings</h2>
+<p>EkaAdmin includes a built-in theme customizer panel. Click the <i class="fas fa-cog"></i> gear icon on the right side of any page to open it.</p>
+<h3>Available Options</h3>
+<table class="doc-table">
+<thead><tr><th>Setting</th><th>Options</th><th>Description</th></tr></thead>
+<tbody>
+<tr><td>Theme Mode</td><td>Light / Dark</td><td>Toggle between light and dark color schemes</td></tr>
+<tr><td>Layout</td><td>Vertical / Horizontal</td><td>Switch sidebar position</td></tr>
+<tr><td>Layout Width</td><td>Full / Boxed</td><td>Constrain or expand content area</td></tr>
+<tr><td>Sidebar Style</td><td>Default / Compact / Icon</td><td>Control sidebar display</td></tr>
+<tr><td>Menu Position</td><td>Fixed / Scrollable</td><td>Sidebar scroll behavior</td></tr>
+<tr><td>Header Position</td><td>Fixed / Scrollable</td><td>Topbar scroll behavior</td></tr>
+<tr><td>Primary Color</td><td>Color picker</td><td>Change the primary brand color</td></tr>
+</tbody></table>
+
+<h2 id="darkmode">Dark Mode</h2>
+<p>Dark mode is controlled via the <code>data-theme</code> attribute on the <code>&lt;html&gt;</code> element. All dark mode styles are in <code>eka-dark.css</code>.</p>
+<pre><code class="language-html">&lt;!-- Light mode --&gt;
+&lt;html lang="en" data-theme="light"&gt;
+
+&lt;!-- Dark mode --&gt;
+&lt;html lang="en" data-theme="dark"&gt;</code></pre>
+<p>The theme preference is automatically saved to <code>localStorage</code> and persists across page reloads.</p>
+
+<h2 id="layout">Layouts</h2>
+<h3>Vertical (Default)</h3>
+<p>The default layout uses a left sidebar with collapsible navigation. The sidebar automatically collapses on smaller screens.</p>
+<h3>Horizontal</h3>
+<p>The horizontal layout places the navigation in the topbar area. Activate by adding <code>data-layout="horizontal"</code> to the HTML element.</p>
+
+<h2 id="colors">Colors</h2>
+<p>All colors are defined as CSS custom properties in <code>eka-variables.css</code>:</p>
+<pre><code class="language-css">:root {
+  --eka-primary: #405189;
+  --eka-secondary: #3577f1;
+  --eka-success: #0ab39c;
+  --eka-warning: #f7b84b;
+  --eka-danger: #f06548;
+  --eka-info: #299cdb;
+}</code></pre>
+<p>To change the color scheme globally, simply update these values in the variables file.</p>
+
+<h2 id="css">CSS Architecture</h2>
+<p>EkaAdmin uses a modular CSS approach with separate files for each concern:</p>
+<table class="doc-table">
+<thead><tr><th>File</th><th>Purpose</th></tr></thead>
+<tbody>
+<tr><td><code>eka-variables.css</code></td><td>Design tokens, colors, spacing, typography scales</td></tr>
+<tr><td><code>eka-base.css</code></td><td>CSS reset, base typography, utility classes</td></tr>
+<tr><td><code>eka-layout.css</code></td><td>App shell: sidebar, topbar, content area, footer</td></tr>
+<tr><td><code>eka-components.css</code></td><td>Reusable UI components (cards, badges, buttons)</td></tr>
+<tr><td><code>eka-widgets.css</code></td><td>Dashboard-specific widget styles</td></tr>
+<tr><td><code>eka-dark.css</code></td><td>Dark mode color overrides</td></tr>
+<tr><td><code>eka-responsive.css</code></td><td>Breakpoints and responsive adjustments</td></tr>
+</tbody></table>
+
+<h2 id="pages">Pages Overview</h2>
+<table class="doc-table">
+<thead><tr><th>Category</th><th>Count</th><th>Examples</th></tr></thead>
+<tbody>
+<tr><td>Dashboards</td><td>5</td><td>Main, Analytics, CRM, Sales, Projects</td></tr>
+<tr><td>E-Commerce</td><td>16</td><td>Products, Orders, Customers, Cart, Reviews</td></tr>
+<tr><td>Components</td><td>21</td><td>Alerts, Buttons, Cards, Modals, Tabs</td></tr>
+<tr><td>Pages</td><td>20</td><td>Profile, Pricing, FAQ, Timeline, Error pages</td></tr>
+<tr><td>Management</td><td>18</td><td>Users, Roles, Permissions, Settings</td></tr>
+<tr><td>Apps</td><td>15</td><td>Chat, Calendar, Contacts, File Manager</td></tr>
+<tr><td>Forms</td><td>9</td><td>Basic, Advanced, Wizard, Editor, Uploads</td></tr>
+<tr><td>Charts</td><td>8</td><td>Area, Bar, Line, Donut, Radial, Mixed</td></tr>
+<tr><td>Auth</td><td>6</td><td>Login, Register, Forgot, Lock, 2FA, Verify</td></tr>
+<tr><td>Tables</td><td>4</td><td>Basic, Data Tables, Editable, Responsive</td></tr>
+<tr><td>Blog</td><td>3</td><td>List, Details, Editor</td></tr>
+<tr><td>Invoices</td><td>3</td><td>List, Details, Create</td></tr>
+</tbody></table>
+
+<h2 id="charts">Charts (ApexCharts)</h2>
+<p>All charts are powered by <a href="https://apexcharts.com" target="_blank">ApexCharts</a>. Include the library and initialize:</p>
+<pre><code class="language-html">&lt;script src="https://cdn.jsdelivr.net/npm/apexcharts"&gt;&lt;/script&gt;
+&lt;div id="myChart"&gt;&lt;/div&gt;
+&lt;script&gt;
+new ApexCharts(document.querySelector('#myChart'), {
+  chart: { type: 'area', height: 350 },
+  series: [{ name: 'Revenue', data: [31, 40, 28, 51, 42] }],
+  colors: ['#405189']
+}).render();
+&lt;/script&gt;</code></pre>
+
+<h2 id="libraries">Third-Party Libraries</h2>
+<table class="doc-table">
+<thead><tr><th>Library</th><th>Version</th><th>Usage</th><th>URL</th></tr></thead>
+<tbody>
+<tr><td>Font Awesome</td><td>6.5.1</td><td>Icons</td><td><a href="https://fontawesome.com">fontawesome.com</a></td></tr>
+<tr><td>ApexCharts</td><td>Latest</td><td>Charts</td><td><a href="https://apexcharts.com">apexcharts.com</a></td></tr>
+<tr><td>Inter Font</td><td>Latest</td><td>Typography</td><td><a href="https://fonts.google.com/specimen/Inter">Google Fonts</a></td></tr>
+<tr><td>Lordicon</td><td>Latest</td><td>Animated icons</td><td><a href="https://lordicon.com">lordicon.com</a></td></tr>
+<tr><td>Prism.js</td><td>1.29</td><td>Code highlighting</td><td><a href="https://prismjs.com">prismjs.com</a></td></tr>
+</tbody></table>
+
+<h2 id="support">Support</h2>
+<div class="doc-alert doc-alert-warning"><i class="fas fa-envelope"></i><div>For support, bugs, or feature requests please contact: <strong>info@ekayazilim.com</strong></div></div>
+<p>Before reaching out, please check if your question is covered in this documentation. When reporting a bug, include:</p>
+<ul>
+<li>Browser name and version</li>
+<li>Steps to reproduce the issue</li>
+<li>Screenshots if applicable</li>
+</ul>
+
+<h2 id="changelog">Changelog</h2>
+<div class="doc-card">
+<h4><i class="fas fa-tag"></i> v1.0.0 — April 2026</h4>
+<ul>
+<li>Initial release</li>
+<li>129+ HTML pages across 12 categories</li>
+<li>5 dashboard variants (Main, Analytics, CRM, Sales, Projects)</li>
+<li>Dark / Light mode with localStorage persistence</li>
+<li>Horizontal & Vertical layout options</li>
+<li>Live theme customizer panel</li>
+<li>16 e-commerce pages</li>
+<li>6 authentication pages</li>
+<li>21 UI component pages</li>
+<li>ApexCharts integration (8 chart types)</li>
+<li>Full responsive design (mobile, tablet, desktop)</li>
+<li>Production-grade .htaccess security configuration</li>
+</ul>
+</div>
+
+<div class="doc-footer">
+<p>&copy; 2026 EkaAdmin. Built by <a href="#">Eka Software & IT Systems</a>.</p>
+</div>
+</main>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-markup.min.js"></script>
+<script>
+document.querySelectorAll('.doc-nav a[href^="#"]').forEach(function(a){
+a.addEventListener('click',function(e){e.preventDefault();var t=document.querySelector(this.getAttribute('href'));if(t){t.scrollIntoView({behavior:'smooth',block:'start'});document.querySelectorAll('.doc-nav a').forEach(function(x){x.classList.remove('active')});this.classList.add('active')}});
+});
+</script>
+</body>
+</html>

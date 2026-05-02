@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Code Snippets - EkaAdmin</title><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"><link rel="stylesheet" href="../assets/css/eka-variables.css"><link rel="stylesheet" href="../assets/css/eka-base.css"><link rel="stylesheet" href="../assets/css/eka-layout.css"><link rel="stylesheet" href="../assets/css/eka-components.css"><link rel="stylesheet" href="../assets/css/eka-widgets.css"><link rel="stylesheet" href="../assets/css/eka-forms.css"><link rel="stylesheet" href="../assets/css/eka-tables.css"><link rel="stylesheet" href="../assets/css/eka-pages.css"><link rel="stylesheet" href="../assets/css/eka-animations.css"><link rel="stylesheet" href="../assets/css/eka-dark.css"><link rel="stylesheet" href="../assets/css/eka-responsive.css"><style>.eka-code-block{position:relative;margin:0}.eka-code-block pre{margin:0;border-radius:8px;font-size:.8125rem !important;line-height:1.7 !important;max-height:400px}.eka-code-block pre code{font-family:"Fira Code","Cascadia Code",Consolas,monospace !important}.eka-code-copy{position:absolute;top:8px;right:8px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);color:#adb5bd;padding:4px 10px;border-radius:6px;font-size:.7rem;cursor:pointer;transition:all .2s;z-index:5}.eka-code-copy:hover{background:rgba(255,255,255,.2);color:#fff}.eka-code-copy.copied{background:rgba(10,179,156,.3);color:#0ab39c}.eka-code-label{position:absolute;top:8px;left:12px;font-size:.65rem;text-transform:uppercase;letter-spacing:1px;color:#878a99;font-weight:600;z-index:5}</style></head><body><div class="eka-app" id="ekaApp"><div class="eka-sidebar" id="ekaSidebar"></div><div class="eka-overlay" id="ekaOverlay"></div><div class="eka-main"><header class="eka-topbar" id="ekaTopbar"></header><div class="eka-content"><div class="eka-page-header"><div><h4>Code Snippets</h4><div class="eka-breadcrumb"><a href="../dashboards/index.html">Dashboard</a><span class="eka-breadcrumb-separator"><i class="fas fa-chevron-right"></i></span><span class="eka-breadcrumb-active">Snippets</span></div></div></div>
+
+<div class="eka-card mb-4"><div class="eka-card-body"><div class="d-flex align-center gap-3"><div style="width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,#0ab39c,#10c7a8);display:flex;align-items:center;justify-content:center"><i class="fas fa-terminal" style="color:#fff;font-size:1.1rem"></i></div><div><h6 class="mb-1">Developer Code Snippets</h6><p class="fs-12 text-muted mb-0">Production-ready code snippets with <strong>Prism.js</strong> syntax highlighting. All code uses the EkaAdmin design system.</p></div></div></div></div>
+
+<div class="eka-card mb-4"><div class="eka-card-header"><h6><i class="fab fa-js-square me-2" style="color:#f7df1e"></i>JavaScript - API Service</h6><span class="eka-badge eka-badge-soft-warning">JavaScript</span></div><div class="eka-code-block"><span class="eka-code-label">JS</span><button class="eka-code-copy"><i class="fas fa-copy me-1"></i>Copy</button><pre class="language-javascript"><code class="language-javascript">const ekaFetch = async (url, options = {}) =&gt; {
+  try {
+    const response = await fetch(url, {
+      headers: {
+        &quot;Content-Type&quot;: &quot;application/json&quot;,
+        &quot;Authorization&quot;: `Bearer ${getToken()}`
+      },
+      ...options
+    });
+
+    if (!response.ok) {
+      throw new Error(`HTTP ${response.status}`);
+    }
+
+    return await response.json();
+  } catch (error) {
+    console.error(&quot;API Error:&quot;, error);
+    ekaToast(&quot;error&quot;, error.message);
+    throw error;
+  }
+};</code></pre></div></div>
+
+<div class="eka-card mb-4"><div class="eka-card-header"><h6><i class="fas fa-chart-area me-2 text-primary"></i>ApexCharts - Revenue Chart</h6><span class="eka-badge eka-badge-soft-primary">JavaScript</span></div><div class="eka-code-block"><span class="eka-code-label">JS</span><button class="eka-code-copy"><i class="fas fa-copy me-1"></i>Copy</button><pre class="language-javascript"><code class="language-javascript">const renderChart = (elementId, data) =&gt; {
+  const options = {
+    chart: {
+      type: &quot;area&quot;,
+      height: 350,
+      toolbar: { show: false },
+      fontFamily: &quot;Inter, sans-serif&quot;
+    },
+    series: [{
+      name: &quot;Revenue&quot;,
+      data: data
+    }],
+    colors: [&quot;#405189&quot;],
+    stroke: { width: 2, curve: &quot;smooth&quot; },
+    fill: {
+      type: &quot;gradient&quot;,
+      gradient: { opacityFrom: 0.4, opacityTo: 0.05 }
+    },
+    xaxis: {
+      categories: [&quot;Jan&quot;,&quot;Feb&quot;,&quot;Mar&quot;,&quot;Apr&quot;,
+                    &quot;May&quot;,&quot;Jun&quot;,&quot;Jul&quot;]
+    },
+    tooltip: {
+      y: { formatter: (v) =&gt; `$${v.toLocaleString()}` }
+    }
+  };
+
+  new ApexCharts(
+    document.querySelector(`#${elementId}`),
+    options
+  ).render();
+};</code></pre></div></div>
+
+<div class="eka-card mb-4"><div class="eka-card-header"><h6><i class="fab fa-css3-alt me-2" style="color:#2965f1"></i>CSS - Design Tokens</h6><span class="eka-badge eka-badge-soft-info">CSS</span></div><div class="eka-code-block"><span class="eka-code-label">CSS</span><button class="eka-code-copy"><i class="fas fa-copy me-1"></i>Copy</button><pre class="language-css"><code class="language-css">:root {
+  --eka-primary: #405189;
+  --eka-success: #0AB39C;
+  --eka-danger: #F06548;
+  --eka-warning: #F7B84B;
+  --eka-info: #299CDB;
+  --eka-card-bg: #ffffff;
+  --eka-border-color: #e9ebec;
+  --eka-border-radius: 6px;
+  --eka-shadow: 0 1px 2px rgba(0,0,0,.05);
+}
+
+.eka-card {
+  background: var(--eka-card-bg);
+  border: 1px solid var(--eka-border-color);
+  border-radius: var(--eka-border-radius);
+  box-shadow: var(--eka-shadow);
+  transition: all 0.2s ease;
+}
+
+.eka-card.eka-hover-lift:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0,0,0,.08);
+}</code></pre></div></div>
+
+<div class="eka-card mb-4"><div class="eka-card-header"><h6><i class="fas fa-database me-2 text-success"></i>API Response - JSON Format</h6><span class="eka-badge eka-badge-soft-success">JSON</span></div><div class="eka-code-block"><span class="eka-code-label">JSON</span><button class="eka-code-copy"><i class="fas fa-copy me-1"></i>Copy</button><pre class="language-json"><code class="language-json">{
+  &quot;status&quot;: &quot;success&quot;,
+  &quot;data&quot;: {
+    &quot;users&quot;: [
+      {
+        &quot;id&quot;: 1,
+        &quot;name&quot;: &quot;Richard Davis&quot;,
+        &quot;email&quot;: &quot;richard@ekadmin.com&quot;,
+        &quot;role&quot;: &quot;admin&quot;,
+        &quot;status&quot;: &quot;active&quot;,
+        &quot;created_at&quot;: &quot;2026-01-15T08:30:00Z&quot;
+      }
+    ],
+    &quot;pagination&quot;: {
+      &quot;total&quot;: 156,
+      &quot;per_page&quot;: 10,
+      &quot;current_page&quot;: 1,
+      &quot;last_page&quot;: 16
+    }
+  }
+}</code></pre></div></div>
+
+</div><footer class="eka-footer" id="ekaFooter"></footer></div></div><div class="eka-theme-panel" id="ekaThemePanel"></div><button class="eka-theme-panel-trigger" id="ekaThemePanelTrigger"><i class="fas fa-cog"></i></button><script>var EKA_BASE="../";var EKA_ACTIVE="pages/snippets.html";</script><script src="../assets/js/eka-app.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-markup.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-json.min.js"></script><script>document.querySelectorAll(".eka-code-copy").forEach(function(b){b.addEventListener("click",function(){var c=b.closest(".eka-code-block").querySelector("code").textContent;navigator.clipboard.writeText(c).then(function(){b.textContent="Copied!";b.classList.add("copied");setTimeout(function(){b.innerHTML="<i class=\"fas fa-copy me-1\"></i>Copy";b.classList.remove("copied")},2000)})})})</script></body></html>

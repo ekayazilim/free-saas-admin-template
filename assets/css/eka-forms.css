@@ -1,0 +1,135 @@
+.eka-form-group { margin-bottom: 20px; }
+.eka-form-label {
+    display: block;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: var(--eka-heading-color);
+    margin-bottom: 6px;
+}
+.eka-form-label .eka-required { color: var(--eka-danger); margin-left: 2px; }
+.eka-form-text { font-size: 0.75rem; color: var(--eka-text-muted); margin-top: 4px; }
+.eka-form-control {
+    width: 100%;
+    padding: 8px 14px;
+    font-size: 0.8125rem;
+    color: var(--eka-body-color);
+    background: var(--eka-input-bg);
+    border: 1px solid var(--eka-input-border);
+    border-radius: var(--eka-radius);
+    transition: border-color var(--eka-transition-fast), box-shadow var(--eka-transition-fast);
+    outline: none;
+    line-height: 1.5;
+}
+.eka-form-control:focus {
+    border-color: var(--eka-input-focus-border);
+    box-shadow: 0 0 0 3px rgba(var(--eka-primary-rgb), 0.1);
+}
+.eka-form-control::placeholder { color: var(--eka-input-placeholder); }
+.eka-form-control:disabled { background: var(--eka-gray-100); cursor: not-allowed; opacity: 0.7; }
+.eka-form-control.eka-is-valid { border-color: var(--eka-success); }
+.eka-form-control.eka-is-valid:focus { box-shadow: 0 0 0 3px rgba(var(--eka-success-rgb), 0.1); }
+.eka-form-control.eka-is-invalid { border-color: var(--eka-danger); }
+.eka-form-control.eka-is-invalid:focus { box-shadow: 0 0 0 3px rgba(var(--eka-danger-rgb), 0.1); }
+.eka-form-control-sm { padding: 5px 10px; font-size: 0.75rem; }
+.eka-form-control-lg { padding: 11px 18px; font-size: 0.9375rem; }
+.eka-valid-feedback { font-size: 0.75rem; color: var(--eka-success); margin-top: 4px; display: none; }
+.eka-invalid-feedback { font-size: 0.75rem; color: var(--eka-danger); margin-top: 4px; display: none; }
+.eka-is-valid ~ .eka-valid-feedback { display: block; }
+.eka-is-invalid ~ .eka-invalid-feedback { display: block; }
+
+textarea.eka-form-control { min-height: 100px; resize: vertical; }
+select.eka-form-control { appearance: none; background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e"); background-repeat: no-repeat; background-position: right 12px center; background-size: 12px; padding-right: 36px; }
+
+.eka-input-group { display: flex; }
+.eka-input-group .eka-form-control { border-radius: 0; }
+.eka-input-group .eka-form-control:first-child { border-radius: var(--eka-radius) 0 0 var(--eka-radius); }
+.eka-input-group .eka-form-control:last-child { border-radius: 0 var(--eka-radius) var(--eka-radius) 0; }
+.eka-input-group-text {
+    display: flex;
+    align-items: center;
+    padding: 8px 14px;
+    font-size: 0.8125rem;
+    background: var(--eka-gray-100);
+    border: 1px solid var(--eka-input-border);
+    color: var(--eka-gray-600);
+    white-space: nowrap;
+}
+.eka-input-group-text:first-child { border-radius: var(--eka-radius) 0 0 var(--eka-radius); border-right: 0; }
+.eka-input-group-text:last-child { border-radius: 0 var(--eka-radius) var(--eka-radius) 0; border-left: 0; }
+
+.eka-form-check {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-size: 0.8125rem;
+    color: var(--eka-gray-600);
+    margin-bottom: 8px;
+}
+.eka-form-check input[type="checkbox"],
+.eka-form-check input[type="radio"] {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--eka-primary);
+    cursor: pointer;
+    flex-shrink: 0;
+}
+.eka-form-switch {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+.eka-form-switch-input {
+    width: 40px;
+    height: 22px;
+    background: var(--eka-gray-300);
+    border-radius: 11px;
+    position: relative;
+    appearance: none;
+    cursor: pointer;
+    transition: background var(--eka-transition-fast);
+    flex-shrink: 0;
+    border: none;
+    outline: none;
+}
+.eka-form-switch-input::before {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 16px;
+    height: 16px;
+    background: #fff;
+    border-radius: 50%;
+    transition: transform var(--eka-transition-fast);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+.eka-form-switch-input:checked { background: var(--eka-primary); }
+.eka-form-switch-input:checked::before { transform: translateX(18px); }
+.eka-form-switch-label { font-size: 0.8125rem; color: var(--eka-gray-600); }
+
+.eka-form-floating { position: relative; }
+.eka-form-floating .eka-form-control { padding-top: 24px; padding-bottom: 6px; }
+.eka-form-floating .eka-form-label {
+    position: absolute;
+    top: 50%;
+    left: 14px;
+    transform: translateY(-50%);
+    transition: all var(--eka-transition-fast);
+    pointer-events: none;
+    margin: 0;
+    color: var(--eka-input-placeholder);
+    font-weight: 400;
+}
+.eka-form-floating .eka-form-control:focus ~ .eka-form-label,
+.eka-form-floating .eka-form-control:not(:placeholder-shown) ~ .eka-form-label {
+    top: 12px;
+    font-size: 0.6875rem;
+    color: var(--eka-primary);
+    font-weight: 500;
+}
+
+.eka-form-row { display: flex; gap: 16px; }
+.eka-form-row .eka-form-group { flex: 1; }
+.eka-form-actions { display: flex; gap: 12px; padding-top: 8px; }

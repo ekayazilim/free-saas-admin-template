@@ -1,0 +1,186 @@
+.eka-auth-page {
+    min-height: 100vh;
+    display: flex;
+    background: var(--eka-body-bg);
+}
+.eka-auth-left {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #405189 0%, #2a3a6e 40%, #1e2d5a 100%);
+    position: relative;
+    overflow: hidden;
+    padding: 40px;
+}
+.eka-auth-left::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at 20% 80%, rgba(53,119,241,0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(10,179,156,0.1) 0%, transparent 50%),
+        radial-gradient(circle at 50% 50%, rgba(255,255,255,0.03) 0%, transparent 70%);
+}
+.eka-auth-left::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+.eka-auth-left-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: #fff;
+    max-width: 440px;
+}
+.eka-auth-left-content h2 { color: #fff; font-size: 2rem; margin-bottom: 16px; font-weight: 700; }
+.eka-auth-left-content p { color: rgba(255,255,255,0.7); font-size: 1rem; line-height: 1.7; margin-bottom: 32px; }
+.eka-auth-illustration {
+    width: 320px;
+    height: 260px;
+    margin: 0 auto 32px;
+    background: rgba(255,255,255,0.05);
+    border-radius: var(--eka-radius-xl);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+.eka-auth-illustration lord-icon { width: 200px; height: 200px; }
+.eka-auth-stats { display: flex; gap: 32px; justify-content: center; }
+.eka-auth-stat { text-align: center; }
+.eka-auth-stat-value { font-size: 1.5rem; font-weight: 700; color: #fff; }
+.eka-auth-stat-label { font-size: 0.75rem; color: rgba(255,255,255,0.6); margin-top: 4px; }
+
+.eka-auth-right {
+    width: 520px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    background: var(--eka-card-bg);
+    flex-shrink: 0;
+}
+.eka-auth-form-wrapper { width: 100%; max-width: 400px; }
+.eka-auth-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 36px;
+}
+.eka-auth-logo .eka-logo-icon {
+    width: 40px;
+    height: 40px;
+    background: var(--eka-primary);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 800;
+    font-size: 1rem;
+}
+.eka-auth-logo span { font-size: 1.25rem; font-weight: 700; color: var(--eka-heading-color); }
+.eka-auth-form-wrapper h4 { margin-bottom: 6px; }
+.eka-auth-form-wrapper .eka-auth-subtitle { color: var(--eka-text-muted); font-size: 0.875rem; margin-bottom: 28px; }
+
+.eka-auth-form .eka-form-group { margin-bottom: 20px; }
+.eka-auth-form .eka-form-control { height: 44px; }
+.eka-auth-form .eka-password-toggle {
+    position: relative;
+}
+.eka-auth-form .eka-password-toggle .eka-form-control { padding-right: 44px; }
+.eka-auth-form .eka-password-toggle-btn {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--eka-gray-400);
+    cursor: pointer;
+    transition: color var(--eka-transition-fast);
+}
+.eka-auth-form .eka-password-toggle-btn:hover { color: var(--eka-primary); }
+.eka-auth-form .eka-form-options {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+.eka-auth-form .eka-form-options a { font-size: 0.8125rem; color: var(--eka-primary); }
+.eka-auth-form .eka-form-options a:hover { text-decoration: underline; }
+.eka-auth-form .eka-btn-block { height: 44px; font-size: 0.875rem; font-weight: 600; }
+
+.eka-auth-divider {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 24px 0;
+    color: var(--eka-text-muted);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+.eka-auth-divider::before, .eka-auth-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--eka-border-color);
+}
+
+.eka-social-login { display: flex; gap: 12px; }
+.eka-social-btn {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px;
+    border: 1px solid var(--eka-border-color);
+    border-radius: var(--eka-radius);
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: var(--eka-gray-700);
+    cursor: pointer;
+    transition: all var(--eka-transition-fast);
+    background: var(--eka-card-bg);
+}
+.eka-social-btn:hover { background: var(--eka-gray-50); border-color: var(--eka-gray-300); }
+.eka-social-btn img { width: 20px; height: 20px; }
+
+.eka-auth-footer {
+    text-align: center;
+    margin-top: 28px;
+    font-size: 0.8125rem;
+    color: var(--eka-text-muted);
+}
+.eka-auth-footer a { color: var(--eka-primary); font-weight: 500; }
+.eka-auth-footer a:hover { text-decoration: underline; }
+
+.eka-otp-inputs { display: flex; gap: 12px; justify-content: center; margin-bottom: 24px; }
+.eka-otp-input {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: 700;
+    border: 2px solid var(--eka-border-color);
+    border-radius: var(--eka-radius-md);
+    outline: none;
+    transition: border-color var(--eka-transition-fast);
+    color: var(--eka-heading-color);
+}
+.eka-otp-input:focus { border-color: var(--eka-primary); box-shadow: 0 0 0 3px rgba(var(--eka-primary-rgb), 0.1); }
+
+.eka-lock-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 0 auto 16px;
+    border: 3px solid var(--eka-primary-bg-subtle);
+}

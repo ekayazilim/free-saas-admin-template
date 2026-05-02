@@ -1,0 +1,59 @@
+[data-theme="dark"] {
+    --eka-body-bg: #1A1D21;
+    --eka-body-color: #CED4DA;
+    --eka-heading-color: #E9ECEF;
+    --eka-text-muted: #878A99;
+    --eka-border-color: #32383E;
+    --eka-link-color: #6C95E7;
+
+    --eka-card-bg: #212529;
+    --eka-card-border-color: #32383E;
+    --eka-card-shadow: 0 1px 2px rgba(0,0,0,0.3);
+
+    --eka-input-bg: #2A2F34;
+    --eka-input-border: #32383E;
+    --eka-input-placeholder: #6C757D;
+
+    --eka-topbar-bg: #212529;
+    --eka-topbar-shadow: 0 1px 2px rgba(0,0,0,0.3);
+
+    --eka-footer-bg: #212529;
+    --eka-footer-color: #878A99;
+
+    --eka-gray-50: #2A2F34;
+    --eka-gray-100: #32383E;
+    --eka-gray-200: #3A4046;
+    --eka-gray-300: #495057;
+    --eka-gray-400: #6C757D;
+
+    --eka-table-striped-bg: rgba(255,255,255,0.02);
+    --eka-table-hover-bg: rgba(255,255,255,0.04);
+
+    --eka-primary-bg-subtle: rgba(64,81,137,0.2);
+    --eka-secondary-bg-subtle: rgba(53,119,241,0.15);
+    --eka-success-bg-subtle: rgba(10,179,156,0.15);
+    --eka-warning-bg-subtle: rgba(247,184,75,0.15);
+    --eka-danger-bg-subtle: rgba(240,101,72,0.15);
+    --eka-info-bg-subtle: rgba(41,156,219,0.15);
+}
+[data-theme="dark"] body { color-scheme: dark; }
+[data-theme="dark"] .eka-topbar-search { background: var(--eka-gray-50); }
+[data-theme="dark"] .eka-topbar-search:focus-within { background: var(--eka-input-bg); }
+[data-theme="dark"] .eka-topbar-search kbd { background: var(--eka-gray-100); color: var(--eka-gray-400); }
+[data-theme="dark"] .eka-topbar-btn:hover { background: var(--eka-gray-100); }
+[data-theme="dark"] .eka-topbar-user:hover { background: var(--eka-gray-100); }
+[data-theme="dark"] .eka-topbar-btn .eka-badge-dot { border-color: var(--eka-topbar-bg); }
+[data-theme="dark"] .eka-btn-light { background: var(--eka-gray-100); color: var(--eka-gray-300); border-color: var(--eka-gray-200); }
+[data-theme="dark"] .eka-btn-light:hover { background: var(--eka-gray-200); }
+[data-theme="dark"] .eka-btn-white { background: var(--eka-gray-100); color: var(--eka-body-color); border-color: var(--eka-border-color); }
+[data-theme="dark"] .eka-table thead th { background: var(--eka-gray-50); }
+[data-theme="dark"] .eka-auth-right { background: var(--eka-card-bg); }
+[data-theme="dark"] .eka-social-btn { background: var(--eka-gray-50); color: var(--eka-body-color); border-color: var(--eka-border-color); }
+[data-theme="dark"] .eka-social-btn:hover { background: var(--eka-gray-100); }
+[data-theme="dark"] select.eka-form-control { background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23ced4da' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e"); }
+[data-theme="dark"] .eka-accordion-header { background: var(--eka-card-bg); }
+[data-theme="dark"] .eka-accordion-header:hover { background: var(--eka-gray-50); }
+[data-theme="dark"] .eka-quick-action:hover { background: var(--eka-gray-100); }
+[data-theme="dark"] .eka-search-result-item:hover { background: var(--eka-gray-100); }
+[data-theme="dark"] ::-webkit-scrollbar-thumb { background: var(--eka-gray-200); }
+[data-theme="dark"] ::-webkit-scrollbar-thumb:hover { background: var(--eka-gray-300); }

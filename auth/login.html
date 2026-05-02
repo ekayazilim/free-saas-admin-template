@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8"><link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In - EkaAdmin</title>
+    <meta name="description" content="Sign in to your EkaAdmin dashboard">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/eka-variables.css">
+    <link rel="stylesheet" href="../assets/css/eka-base.css">
+    <link rel="stylesheet" href="../assets/css/eka-components.css">
+    <link rel="stylesheet" href="../assets/css/eka-forms.css">
+    <link rel="stylesheet" href="../assets/css/eka-auth.css">
+    <link rel="stylesheet" href="../assets/css/eka-animations.css">
+    <link rel="stylesheet" href="../assets/css/eka-dark.css">
+    <link rel="stylesheet" href="../assets/css/eka-responsive.css">
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
+</head>
+<body>
+    <div class="eka-auth-page">
+        <div class="eka-auth-left">
+            <div class="eka-auth-left-content eka-animate-fade-in">
+                <div class="eka-auth-illustration">
+                    <lord-icon src="https://cdn.lordicon.com/dycatgju.json" trigger="loop" delay="1500" colors="primary:#ffffff,secondary:#3577f1" style="width:200px;height:200px"></lord-icon>
+                </div>
+                <h2>Welcome to EkaAdmin</h2>
+                <p>Premium SaaS admin dashboard with powerful tools for managing your business, analytics, and customer relationships.</p>
+                <div class="eka-auth-stats">
+                    <div class="eka-auth-stat"><div class="eka-auth-stat-value">24K+</div><div class="eka-auth-stat-label">Active Users</div></div>
+                    <div class="eka-auth-stat"><div class="eka-auth-stat-value">99.9%</div><div class="eka-auth-stat-label">Uptime SLA</div></div>
+                    <div class="eka-auth-stat"><div class="eka-auth-stat-value">150+</div><div class="eka-auth-stat-label">Integrations</div></div>
+                </div>
+            </div>
+        </div>
+        <div class="eka-auth-right">
+            <div class="eka-auth-form-wrapper eka-animate-fade-in-up">
+                <div class="eka-auth-logo">
+                    <div class="eka-logo-icon">EA</div>
+                    <span>EkaAdmin</span>
+                </div>
+                <h4>Sign In</h4>
+                <p class="eka-auth-subtitle">Enter your credentials to access your dashboard.</p>
+                <form class="eka-auth-form" id="loginForm">
+                    <div class="eka-form-group">
+                        <label class="eka-form-label">Email Address</label>
+                        <input type="email" class="eka-form-control" placeholder="admin@ekadmin.com" value="admin@ekadmin.com">
+                    </div>
+                    <div class="eka-form-group">
+                        <label class="eka-form-label">Password</label>
+                        <div class="eka-password-toggle">
+                            <input type="password" class="eka-form-control" placeholder="Enter your password" value="password123">
+                            <span class="eka-password-toggle-btn"><i class="fas fa-eye"></i></span>
+                        </div>
+                    </div>
+                    <div class="eka-form-options">
+                        <label class="eka-form-check"><input type="checkbox" checked> Remember me</label>
+                        <a href="forgot-password.html">Forgot password?</a>
+                    </div>
+                    <a href="../dashboards/index.html" class="eka-btn eka-btn-primary eka-btn-block">Sign In</a>
+                </form>
+                <div class="eka-auth-divider">Or sign in with</div>
+                <div class="eka-social-login">
+                    <button class="eka-social-btn"><i class="fab fa-google" style="color:#EA4335"></i> Google</button>
+                    <button class="eka-social-btn"><i class="fab fa-github" style="color:#333"></i> GitHub</button>
+                </div>
+                <div class="eka-auth-footer">Don't have an account? <a href="register.html">Sign Up</a></div>
+            </div>
+        </div>
+    </div>
+    <script>
+    document.querySelectorAll('.eka-password-toggle-btn').forEach(function(btn){
+        btn.addEventListener('click',function(){
+            var input=btn.parentElement.querySelector('input');
+            var icon=btn.querySelector('i');
+            if(input.type==='password'){input.type='text';icon.className='fas fa-eye-slash';}
+            else{input.type='password';icon.className='fas fa-eye';}
+        });
+    });
+    </script>
+</body>
+</html>

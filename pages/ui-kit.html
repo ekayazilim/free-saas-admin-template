@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>UI Kit Examples - EkaAdmin</title><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"><link rel="stylesheet" href="../assets/css/eka-variables.css"><link rel="stylesheet" href="../assets/css/eka-base.css"><link rel="stylesheet" href="../assets/css/eka-layout.css"><link rel="stylesheet" href="../assets/css/eka-components.css"><link rel="stylesheet" href="../assets/css/eka-widgets.css"><link rel="stylesheet" href="../assets/css/eka-forms.css"><link rel="stylesheet" href="../assets/css/eka-tables.css"><link rel="stylesheet" href="../assets/css/eka-pages.css"><link rel="stylesheet" href="../assets/css/eka-animations.css"><link rel="stylesheet" href="../assets/css/eka-dark.css"><link rel="stylesheet" href="../assets/css/eka-responsive.css"><style>.eka-code-block{position:relative;margin:0}.eka-code-block pre{margin:0;border-radius:8px;font-size:.8125rem !important;line-height:1.7 !important;max-height:400px}.eka-code-block pre code{font-family:"Fira Code","Cascadia Code","JetBrains Mono",Consolas,monospace !important}.eka-code-copy{position:absolute;top:8px;right:8px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);color:#adb5bd;padding:4px 10px;border-radius:6px;font-size:.7rem;cursor:pointer;transition:all .2s;z-index:5;backdrop-filter:blur(4px)}.eka-code-copy:hover{background:rgba(255,255,255,.2);color:#fff}.eka-code-copy.copied{background:rgba(10,179,156,.3);color:#0ab39c;border-color:rgba(10,179,156,.4)}.eka-code-label{position:absolute;top:8px;left:12px;font-size:.65rem;text-transform:uppercase;letter-spacing:1px;color:#878a99;font-weight:600;z-index:5}.eka-preview{border:1px solid var(--eka-border-color);border-radius:8px 8px 0 0;padding:24px;background:var(--eka-card-bg)}.eka-preview+.eka-code-block pre{border-radius:0 0 8px 8px;border-top:1px solid rgba(255,255,255,.05)}</style></head><body><div class="eka-app" id="ekaApp"><div class="eka-sidebar" id="ekaSidebar"></div><div class="eka-overlay" id="ekaOverlay"></div><div class="eka-main"><header class="eka-topbar" id="ekaTopbar"></header><div class="eka-content"><div class="eka-page-header"><div><h4>UI Kit &amp; Code Examples</h4><div class="eka-breadcrumb"><a href="../dashboards/index.html">Dashboard</a><span class="eka-breadcrumb-separator"><i class="fas fa-chevron-right"></i></span><span class="eka-breadcrumb-active">UI Kit</span></div></div></div>
+
+<div class="eka-card mb-4"><div class="eka-card-body"><div class="d-flex align-center gap-3"><div style="width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,#405189,#3577f1);display:flex;align-items:center;justify-content:center"><i class="fas fa-code" style="color:#fff;font-size:1.2rem"></i></div><div><h6 class="mb-1">EkaAdmin UI Kit Reference</h6><p class="fs-12 text-muted mb-0">Complete code examples with live preview and copy-paste ready snippets. Click <strong>Copy</strong> to copy code.</p></div></div></div></div>
+
+<div class="eka-card mb-4" id="buttons"><div class="eka-card-header"><h6><i class="fas fa-hand-pointer me-2 text-primary"></i>Buttons</h6><span class="eka-badge eka-badge-soft-primary">Component</span></div><div class="eka-preview"><div class="d-flex flex-wrap gap-2 mb-3"><button class="eka-btn eka-btn-primary"><i class="fas fa-plus me-1"></i>Primary</button><button class="eka-btn eka-btn-success">Success</button><button class="eka-btn eka-btn-danger">Danger</button><button class="eka-btn eka-btn-warning">Warning</button></div><div class="d-flex flex-wrap gap-2 mb-3"><button class="eka-btn eka-btn-outline-primary">Outline</button><button class="eka-btn eka-btn-soft-primary">Soft Primary</button><button class="eka-btn eka-btn-soft-success">Soft Success</button></div><div class="d-flex flex-wrap gap-2"><button class="eka-btn eka-btn-primary eka-btn-sm">Small</button><button class="eka-btn eka-btn-primary">Default</button></div></div><div class="eka-code-block"><span class="eka-code-label">HTML</span><button class="eka-code-copy"><i class="fas fa-copy me-1"></i>Copy</button><pre class="language-markup"><code class="language-markup">&lt;button class=&quot;eka-btn eka-btn-primary&quot;&gt;
+  &lt;i class=&quot;fas fa-plus me-1&quot;&gt;&lt;/i&gt;Primary Button
+&lt;/button&gt;
+
+&lt;button class=&quot;eka-btn eka-btn-success&quot;&gt;Success&lt;/button&gt;
+&lt;button class=&quot;eka-btn eka-btn-danger&quot;&gt;Danger&lt;/button&gt;
+&lt;button class=&quot;eka-btn eka-btn-warning&quot;&gt;Warning&lt;/button&gt;
+
+&lt;!-- Outline Variants --&gt;
+&lt;button class=&quot;eka-btn eka-btn-outline-primary&quot;&gt;Outline&lt;/button&gt;
+
+&lt;!-- Soft Variants --&gt;
+&lt;button class=&quot;eka-btn eka-btn-soft-primary&quot;&gt;Soft Primary&lt;/button&gt;
+
+&lt;!-- Sizes --&gt;
+&lt;button class=&quot;eka-btn eka-btn-primary eka-btn-sm&quot;&gt;Small&lt;/button&gt;
+&lt;button class=&quot;eka-btn eka-btn-primary eka-btn-lg&quot;&gt;Large&lt;/button&gt;</code></pre></div></div>
+
+<div class="eka-card mb-4" id="cards"><div class="eka-card-header"><h6><i class="fas fa-square me-2 text-success"></i>Cards</h6><span class="eka-badge eka-badge-soft-success">Component</span></div><div class="eka-preview"><div style="max-width:400px"><div class="eka-card eka-hover-lift" style="margin:0"><div class="eka-card-header"><h6>Card Title</h6><span class="eka-badge eka-badge-soft-primary">New</span></div><div class="eka-card-body"><p class="text-muted fs-13">Card content goes here. Cards support headers, bodies, and footers.</p></div></div></div></div><div class="eka-code-block"><span class="eka-code-label">HTML</span><button class="eka-code-copy"><i class="fas fa-copy me-1"></i>Copy</button><pre class="language-markup"><code class="language-markup">&lt;div class=&quot;eka-card eka-hover-lift&quot;&gt;
+  &lt;div class=&quot;eka-card-header&quot;&gt;
+    &lt;h6&gt;Card Title&lt;/h6&gt;
+    &lt;span class=&quot;eka-badge eka-badge-soft-primary&quot;&gt;New&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;eka-card-body&quot;&gt;
+    &lt;p class=&quot;text-muted fs-13&quot;&gt;Card content here...&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;eka-card-footer&quot;&gt;
+    &lt;button class=&quot;eka-btn eka-btn-primary eka-btn-sm&quot;&gt;Save&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre></div></div>
+
+<div class="eka-card mb-4" id="alerts"><div class="eka-card-header"><h6><i class="fas fa-exclamation-triangle me-2 text-warning"></i>Alerts</h6><span class="eka-badge eka-badge-soft-warning">Component</span></div><div class="eka-preview"><div class="eka-alert eka-alert-primary"><i class="fas fa-info-circle me-2"></i>This is a primary alert message.</div><div class="eka-alert eka-alert-success"><i class="fas fa-check-circle me-2"></i>Operation completed successfully!</div><div class="eka-alert eka-alert-danger" style="margin-bottom:0"><i class="fas fa-exclamation-circle me-2"></i>An error occurred.</div></div><div class="eka-code-block"><span class="eka-code-label">HTML</span><button class="eka-code-copy"><i class="fas fa-copy me-1"></i>Copy</button><pre class="language-markup"><code class="language-markup">&lt;div class=&quot;eka-alert eka-alert-primary&quot;&gt;
+  &lt;i class=&quot;fas fa-info-circle me-2&quot;&gt;&lt;/i&gt;
+  This is a primary alert message.
+&lt;/div&gt;
+
+&lt;div class=&quot;eka-alert eka-alert-success&quot;&gt;
+  &lt;i class=&quot;fas fa-check-circle me-2&quot;&gt;&lt;/i&gt;
+  Operation completed successfully!
+&lt;/div&gt;
+
+&lt;div class=&quot;eka-alert eka-alert-danger&quot;&gt;
+  &lt;i class=&quot;fas fa-exclamation-circle me-2&quot;&gt;&lt;/i&gt;
+  An error occurred. Please try again.
+&lt;/div&gt;</code></pre></div></div>
+
+<div class="eka-card mb-4" id="badges"><div class="eka-card-header"><h6><i class="fas fa-tag me-2 text-info"></i>Badges</h6><span class="eka-badge eka-badge-soft-info">Component</span></div><div class="eka-preview"><div class="d-flex flex-wrap gap-2"><span class="eka-badge eka-badge-soft-primary">Primary</span><span class="eka-badge eka-badge-soft-success">Success</span><span class="eka-badge eka-badge-soft-danger">Danger</span><span class="eka-badge eka-badge-soft-warning">Warning</span><span class="eka-badge eka-badge-soft-info">Info</span></div></div><div class="eka-code-block"><span class="eka-code-label">HTML</span><button class="eka-code-copy"><i class="fas fa-copy me-1"></i>Copy</button><pre class="language-markup"><code class="language-markup">&lt;span class=&quot;eka-badge eka-badge-soft-primary&quot;&gt;Primary&lt;/span&gt;
+&lt;span class=&quot;eka-badge eka-badge-soft-success&quot;&gt;Success&lt;/span&gt;
+&lt;span class=&quot;eka-badge eka-badge-soft-danger&quot;&gt;Danger&lt;/span&gt;
+&lt;span class=&quot;eka-badge eka-badge-soft-warning&quot;&gt;Warning&lt;/span&gt;
+&lt;span class=&quot;eka-badge eka-badge-soft-info&quot;&gt;Info&lt;/span&gt;</code></pre></div></div>
+
+<div class="eka-card mb-4" id="tables"><div class="eka-card-header"><h6><i class="fas fa-table me-2 text-danger"></i>Tables</h6><span class="eka-badge eka-badge-soft-danger">Component</span></div><div class="eka-preview"><div class="eka-table-responsive"><table class="eka-table eka-table-hover"><thead><tr><th>Name</th><th>Email</th><th>Status</th></tr></thead><tbody><tr><td class="fw-semibold">John Doe</td><td class="text-muted">john@mail.com</td><td><span class="eka-badge eka-badge-soft-success">Active</span></td></tr><tr><td class="fw-semibold">Jane Smith</td><td class="text-muted">jane@mail.com</td><td><span class="eka-badge eka-badge-soft-warning">Pending</span></td></tr></tbody></table></div></div><div class="eka-code-block"><span class="eka-code-label">HTML</span><button class="eka-code-copy"><i class="fas fa-copy me-1"></i>Copy</button><pre class="language-markup"><code class="language-markup">&lt;div class=&quot;eka-table-responsive&quot;&gt;
+  &lt;table class=&quot;eka-table eka-table-hover&quot;&gt;
+    &lt;thead&gt;
+      &lt;tr&gt;
+        &lt;th&gt;Name&lt;/th&gt;
+        &lt;th&gt;Email&lt;/th&gt;
+        &lt;th&gt;Status&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td class=&quot;fw-semibold&quot;&gt;John Doe&lt;/td&gt;
+        &lt;td class=&quot;text-muted&quot;&gt;john@mail.com&lt;/td&gt;
+        &lt;td&gt;
+          &lt;span class=&quot;eka-badge eka-badge-soft-success&quot;&gt;
+            Active
+          &lt;/span&gt;
+        &lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;</code></pre></div></div>
+
+<div class="eka-card mb-4" id="forms"><div class="eka-card-header"><h6><i class="fas fa-edit me-2 text-primary"></i>Forms</h6><span class="eka-badge eka-badge-soft-primary">Component</span></div><div class="eka-preview"><div style="max-width:500px"><div class="eka-form-group"><label class="eka-form-label">Email Address</label><input class="eka-form-control" type="email" placeholder="Enter email..."></div><div class="eka-form-group"><label class="eka-form-label">Password</label><input class="eka-form-control" type="password" placeholder="Enter password..."></div><div class="eka-form-row"><div class="eka-form-group"><label class="eka-form-label">First Name</label><input class="eka-form-control"></div><div class="eka-form-group"><label class="eka-form-label">Last Name</label><input class="eka-form-control"></div></div></div></div><div class="eka-code-block"><span class="eka-code-label">HTML</span><button class="eka-code-copy"><i class="fas fa-copy me-1"></i>Copy</button><pre class="language-markup"><code class="language-markup">&lt;div class=&quot;eka-form-group&quot;&gt;
+  &lt;label class=&quot;eka-form-label&quot;&gt;Email Address&lt;/label&gt;
+  &lt;input class=&quot;eka-form-control&quot;
+         type=&quot;email&quot;
+         placeholder=&quot;Enter email...&quot;&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;eka-form-group&quot;&gt;
+  &lt;label class=&quot;eka-form-label&quot;&gt;Password&lt;/label&gt;
+  &lt;input class=&quot;eka-form-control&quot;
+         type=&quot;password&quot;
+         placeholder=&quot;Enter password...&quot;&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;eka-form-row&quot;&gt;
+  &lt;div class=&quot;eka-form-group&quot;&gt;
+    &lt;label class=&quot;eka-form-label&quot;&gt;First Name&lt;/label&gt;
+    &lt;input class=&quot;eka-form-control&quot;&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;eka-form-group&quot;&gt;
+    &lt;label class=&quot;eka-form-label&quot;&gt;Last Name&lt;/label&gt;
+    &lt;input class=&quot;eka-form-control&quot;&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre></div></div>
+
+</div><footer class="eka-footer" id="ekaFooter"></footer></div></div><div class="eka-theme-panel" id="ekaThemePanel"></div><button class="eka-theme-panel-trigger" id="ekaThemePanelTrigger"><i class="fas fa-cog"></i></button><script>var EKA_BASE="../";var EKA_ACTIVE="pages/ui-kit.html";</script><script src="../assets/js/eka-app.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-markup.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script><script>document.querySelectorAll(".eka-code-copy").forEach(function(btn){btn.addEventListener("click",function(){var code=btn.closest(".eka-code-block").querySelector("code").textContent;navigator.clipboard.writeText(code).then(function(){btn.textContent="Copied!";btn.classList.add("copied");setTimeout(function(){btn.innerHTML="<i class=\"fas fa-copy me-1\"></i>Copy";btn.classList.remove("copied")},2000)})})})</script></body></html>

@@ -1,0 +1,342 @@
+.eka-card {
+    background: var(--eka-card-bg);
+    border: 1px solid var(--eka-card-border-color);
+    border-radius: var(--eka-radius-md);
+    box-shadow: var(--eka-card-shadow);
+    transition: box-shadow var(--eka-transition-smooth);
+    margin-bottom: 24px;
+}
+.eka-card:hover { box-shadow: var(--eka-shadow-md); }
+.eka-card-header {
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--eka-border-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+.eka-card-header h5, .eka-card-header h6 { margin: 0; font-size: 0.9375rem; }
+.eka-card-body { padding: 20px; }
+.eka-card-footer { padding: 16px 20px; border-top: 1px solid var(--eka-border-color); }
+.eka-card-ribbon { position: absolute; top: 12px; right: -5px; padding: 4px 12px; font-size: 0.6875rem; font-weight: 600; color: #fff; border-radius: 4px 0 0 4px; }
+.eka-card-ribbon::after { content: ''; position: absolute; bottom: -5px; right: 0; border-top: 5px solid; border-right: 5px solid transparent; }
+.eka-card-ribbon.eka-ribbon-primary { background: var(--eka-primary); }
+.eka-card-ribbon.eka-ribbon-primary::after { border-top-color: var(--eka-primary-dark); }
+.eka-card-ribbon.eka-ribbon-success { background: var(--eka-success); }
+.eka-card-ribbon.eka-ribbon-danger { background: var(--eka-danger); }
+
+.eka-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 8px 18px;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    border-radius: var(--eka-radius);
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: all var(--eka-transition-fast);
+    white-space: nowrap;
+    line-height: 1.5;
+    position: relative;
+    overflow: hidden;
+}
+.eka-btn:active { transform: scale(0.97); }
+.eka-btn-sm { padding: 5px 12px; font-size: 0.75rem; }
+.eka-btn-lg { padding: 11px 24px; font-size: 0.9375rem; }
+.eka-btn-icon { width: 36px; height: 36px; padding: 0; }
+.eka-btn-icon.eka-btn-sm { width: 30px; height: 30px; }
+.eka-btn-icon.eka-btn-lg { width: 44px; height: 44px; }
+.eka-btn-block { width: 100%; }
+
+.eka-btn-primary { background: var(--eka-primary); color: #fff; border-color: var(--eka-primary); }
+.eka-btn-primary:hover { background: var(--eka-primary-dark); border-color: var(--eka-primary-dark); color: #fff; box-shadow: 0 4px 8px rgba(var(--eka-primary-rgb), 0.3); }
+.eka-btn-secondary { background: var(--eka-secondary); color: #fff; border-color: var(--eka-secondary); }
+.eka-btn-secondary:hover { background: var(--eka-secondary-dark); border-color: var(--eka-secondary-dark); color: #fff; box-shadow: 0 4px 8px rgba(var(--eka-secondary-rgb), 0.3); }
+.eka-btn-success { background: var(--eka-success); color: #fff; border-color: var(--eka-success); }
+.eka-btn-success:hover { background: var(--eka-success-dark); border-color: var(--eka-success-dark); color: #fff; }
+.eka-btn-warning { background: var(--eka-warning); color: #fff; border-color: var(--eka-warning); }
+.eka-btn-warning:hover { background: var(--eka-warning-dark); border-color: var(--eka-warning-dark); color: #fff; }
+.eka-btn-danger { background: var(--eka-danger); color: #fff; border-color: var(--eka-danger); }
+.eka-btn-danger:hover { background: var(--eka-danger-dark); border-color: var(--eka-danger-dark); color: #fff; }
+.eka-btn-info { background: var(--eka-info); color: #fff; border-color: var(--eka-info); }
+.eka-btn-info:hover { background: var(--eka-info-dark); border-color: var(--eka-info-dark); color: #fff; }
+.eka-btn-light { background: var(--eka-light); color: var(--eka-gray-700); border-color: var(--eka-border-color); }
+.eka-btn-light:hover { background: var(--eka-gray-200); color: var(--eka-gray-800); }
+.eka-btn-dark { background: var(--eka-dark); color: #fff; border-color: var(--eka-dark); }
+.eka-btn-dark:hover { background: var(--eka-gray-900); }
+.eka-btn-white { background: #fff; color: var(--eka-gray-700); border-color: var(--eka-border-color); box-shadow: var(--eka-shadow-sm); }
+.eka-btn-white:hover { background: var(--eka-gray-50); }
+.eka-btn-ghost { background: transparent; color: var(--eka-primary); }
+.eka-btn-ghost:hover { background: var(--eka-primary-bg-subtle); }
+
+.eka-btn-soft-primary { background: var(--eka-primary-bg-subtle); color: var(--eka-primary); }
+.eka-btn-soft-primary:hover { background: var(--eka-primary); color: #fff; }
+.eka-btn-soft-success { background: var(--eka-success-bg-subtle); color: var(--eka-success); }
+.eka-btn-soft-success:hover { background: var(--eka-success); color: #fff; }
+.eka-btn-soft-warning { background: var(--eka-warning-bg-subtle); color: var(--eka-warning); }
+.eka-btn-soft-warning:hover { background: var(--eka-warning); color: #fff; }
+.eka-btn-soft-danger { background: var(--eka-danger-bg-subtle); color: var(--eka-danger); }
+.eka-btn-soft-danger:hover { background: var(--eka-danger); color: #fff; }
+.eka-btn-soft-info { background: var(--eka-info-bg-subtle); color: var(--eka-info); }
+.eka-btn-soft-info:hover { background: var(--eka-info); color: #fff; }
+.eka-btn-soft-secondary { background: var(--eka-secondary-bg-subtle); color: var(--eka-secondary); }
+.eka-btn-soft-secondary:hover { background: var(--eka-secondary); color: #fff; }
+
+.eka-btn-outline-primary { border-color: var(--eka-primary); color: var(--eka-primary); background: transparent; }
+.eka-btn-outline-primary:hover { background: var(--eka-primary); color: #fff; }
+.eka-btn-outline-secondary { border-color: var(--eka-secondary); color: var(--eka-secondary); background: transparent; }
+.eka-btn-outline-secondary:hover { background: var(--eka-secondary); color: #fff; }
+.eka-btn-outline-success { border-color: var(--eka-success); color: var(--eka-success); background: transparent; }
+.eka-btn-outline-success:hover { background: var(--eka-success); color: #fff; }
+.eka-btn-outline-danger { border-color: var(--eka-danger); color: var(--eka-danger); background: transparent; }
+.eka-btn-outline-danger:hover { background: var(--eka-danger); color: #fff; }
+
+.eka-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 3px 8px;
+    font-size: 0.6875rem;
+    font-weight: 600;
+    border-radius: var(--eka-radius-sm);
+    line-height: 1.4;
+    white-space: nowrap;
+}
+.eka-badge-pill { border-radius: var(--eka-radius-full); }
+.eka-badge-primary { background: var(--eka-primary); color: #fff; }
+.eka-badge-secondary { background: var(--eka-secondary); color: #fff; }
+.eka-badge-success { background: var(--eka-success); color: #fff; }
+.eka-badge-warning { background: var(--eka-warning); color: #fff; }
+.eka-badge-danger { background: var(--eka-danger); color: #fff; }
+.eka-badge-info { background: var(--eka-info); color: #fff; }
+.eka-badge-dark { background: var(--eka-dark); color: #fff; }
+.eka-badge-light { background: var(--eka-gray-200); color: var(--eka-gray-700); }
+.eka-badge-soft-primary { background: var(--eka-primary-bg-subtle); color: var(--eka-primary); }
+.eka-badge-soft-secondary { background: var(--eka-secondary-bg-subtle); color: var(--eka-secondary); }
+.eka-badge-soft-success { background: var(--eka-success-bg-subtle); color: var(--eka-success); }
+.eka-badge-soft-warning { background: var(--eka-warning-bg-subtle); color: var(--eka-warning); }
+.eka-badge-soft-danger { background: var(--eka-danger-bg-subtle); color: var(--eka-danger); }
+.eka-badge-soft-info { background: var(--eka-info-bg-subtle); color: var(--eka-info); }
+
+.eka-alert {
+    padding: 14px 18px;
+    border-radius: var(--eka-radius-md);
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 0.8125rem;
+    margin-bottom: 16px;
+    border: 1px solid;
+    position: relative;
+}
+.eka-alert-primary { background: var(--eka-primary-bg-subtle); color: var(--eka-primary); border-color: rgba(var(--eka-primary-rgb), 0.2); }
+.eka-alert-success { background: var(--eka-success-bg-subtle); color: var(--eka-success); border-color: rgba(var(--eka-success-rgb), 0.2); }
+.eka-alert-warning { background: var(--eka-warning-bg-subtle); color: var(--eka-warning-dark); border-color: rgba(var(--eka-warning-rgb), 0.2); }
+.eka-alert-danger { background: var(--eka-danger-bg-subtle); color: var(--eka-danger); border-color: rgba(var(--eka-danger-rgb), 0.2); }
+.eka-alert-info { background: var(--eka-info-bg-subtle); color: var(--eka-info); border-color: rgba(var(--eka-info-rgb), 0.2); }
+.eka-alert-close {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity var(--eka-transition-fast);
+}
+.eka-alert-close:hover { opacity: 1; }
+
+.eka-avatar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+    background: var(--eka-primary-bg-subtle);
+    color: var(--eka-primary);
+    font-weight: 600;
+}
+.eka-avatar img { width: 100%; height: 100%; object-fit: cover; }
+.eka-avatar-xs { width: 24px; height: 24px; font-size: 0.625rem; }
+.eka-avatar-sm { width: 32px; height: 32px; font-size: 0.75rem; }
+.eka-avatar-md { width: 40px; height: 40px; font-size: 0.875rem; }
+.eka-avatar-lg { width: 48px; height: 48px; font-size: 1rem; }
+.eka-avatar-xl { width: 64px; height: 64px; font-size: 1.25rem; }
+.eka-avatar-xxl { width: 80px; height: 80px; font-size: 1.5rem; }
+.eka-avatar-group { display: flex; }
+.eka-avatar-group .eka-avatar { margin-left: -10px; border: 2px solid var(--eka-card-bg); }
+.eka-avatar-group .eka-avatar:first-child { margin-left: 0; }
+.eka-avatar-online { position: relative; }
+.eka-avatar-online::after { content: ''; width: 10px; height: 10px; background: var(--eka-success); border: 2px solid var(--eka-card-bg); border-radius: 50%; position: absolute; bottom: 0; right: 0; }
+
+.eka-modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: var(--eka-z-modal-backdrop);
+    opacity: 0;
+    visibility: hidden;
+    transition: all var(--eka-transition-smooth);
+    backdrop-filter: blur(4px);
+}
+.eka-modal-backdrop.eka-show { opacity: 1; visibility: visible; }
+.eka-modal {
+    position: fixed;
+    inset: 0;
+    z-index: var(--eka-z-modal);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all var(--eka-transition-smooth);
+}
+.eka-modal.eka-show { opacity: 1; visibility: visible; }
+.eka-modal-dialog {
+    background: var(--eka-card-bg);
+    border-radius: var(--eka-radius-lg);
+    box-shadow: var(--eka-shadow-xl);
+    width: 100%;
+    max-width: 540px;
+    max-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    animation: ekaZoomIn 0.3s ease;
+}
+.eka-modal-sm .eka-modal-dialog { max-width: 380px; }
+.eka-modal-lg .eka-modal-dialog { max-width: 720px; }
+.eka-modal-xl .eka-modal-dialog { max-width: 960px; }
+.eka-modal-header { padding: 20px; border-bottom: 1px solid var(--eka-border-color); display: flex; align-items: center; justify-content: space-between; }
+.eka-modal-header h5 { margin: 0; }
+.eka-modal-body { padding: 20px; overflow-y: auto; }
+.eka-modal-footer { padding: 16px 20px; border-top: 1px solid var(--eka-border-color); display: flex; justify-content: flex-end; gap: 8px; }
+
+.eka-tabs { display: flex; border-bottom: 2px solid var(--eka-border-color); gap: 0; margin-bottom: 20px; }
+.eka-tab-item {
+    padding: 10px 20px;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: var(--eka-text-muted);
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -2px;
+    transition: all var(--eka-transition-fast);
+    white-space: nowrap;
+}
+.eka-tab-item:hover { color: var(--eka-primary); }
+.eka-tab-item.eka-active { color: var(--eka-primary); border-bottom-color: var(--eka-primary); }
+.eka-tab-content { display: none; animation: ekaFadeIn 0.3s ease; }
+.eka-tab-content.eka-active { display: block; }
+
+.eka-tabs-pills { border-bottom: none; gap: 6px; }
+.eka-tabs-pills .eka-tab-item { border-bottom: none; border-radius: var(--eka-radius); }
+.eka-tabs-pills .eka-tab-item.eka-active { background: var(--eka-primary); color: #fff; }
+
+.eka-accordion-item { border: 1px solid var(--eka-border-color); border-radius: var(--eka-radius-md); margin-bottom: 8px; overflow: hidden; }
+.eka-accordion-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 18px;
+    cursor: pointer;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--eka-heading-color);
+    background: var(--eka-card-bg);
+    transition: background var(--eka-transition-fast);
+}
+.eka-accordion-header:hover { background: var(--eka-gray-50); }
+.eka-accordion-header i { transition: transform var(--eka-transition-smooth); font-size: 0.75rem; color: var(--eka-text-muted); }
+.eka-accordion-item.eka-open .eka-accordion-header i { transform: rotate(180deg); }
+.eka-accordion-body { max-height: 0; overflow: hidden; transition: max-height var(--eka-transition-smooth); }
+.eka-accordion-item.eka-open .eka-accordion-body { max-height: 500px; }
+.eka-accordion-body-inner { padding: 16px 18px; font-size: 0.8125rem; color: var(--eka-gray-600); border-top: 1px solid var(--eka-border-color); }
+
+.eka-progress { height: 8px; background: var(--eka-gray-200); border-radius: var(--eka-radius-full); overflow: hidden; }
+.eka-progress-sm { height: 4px; }
+.eka-progress-lg { height: 12px; }
+.eka-progress-bar {
+    height: 100%;
+    border-radius: var(--eka-radius-full);
+    transition: width 0.6s ease;
+    background: var(--eka-primary);
+}
+.eka-progress-bar-striped { background-image: linear-gradient(45deg, rgba(255,255,255,0.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.15) 50%, rgba(255,255,255,0.15) 75%, transparent 75%); background-size: 1rem 1rem; }
+.eka-progress-bar-animated { animation: ekaProgressStripe 1s linear infinite; }
+
+.eka-tooltip { position: relative; }
+.eka-tooltip::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 6px 10px;
+    background: var(--eka-gray-800);
+    color: #fff;
+    font-size: 0.6875rem;
+    border-radius: var(--eka-radius-sm);
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all var(--eka-transition-fast);
+    pointer-events: none;
+}
+.eka-tooltip:hover::after { opacity: 1; visibility: visible; }
+
+.eka-timeline { position: relative; padding-left: 28px; }
+.eka-timeline::before { content: ''; position: absolute; left: 10px; top: 0; bottom: 0; width: 2px; background: var(--eka-border-color); }
+.eka-timeline-item { position: relative; padding-bottom: 24px; }
+.eka-timeline-item:last-child { padding-bottom: 0; }
+.eka-timeline-dot {
+    position: absolute;
+    left: -24px;
+    top: 4px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--eka-card-bg);
+    border: 2px solid var(--eka-primary);
+    z-index: 1;
+}
+.eka-timeline-dot.eka-dot-success { border-color: var(--eka-success); }
+.eka-timeline-dot.eka-dot-warning { border-color: var(--eka-warning); }
+.eka-timeline-dot.eka-dot-danger { border-color: var(--eka-danger); }
+.eka-timeline-dot.eka-dot-info { border-color: var(--eka-info); }
+.eka-timeline-content h6 { font-size: 0.875rem; margin-bottom: 4px; }
+.eka-timeline-content p { font-size: 0.8125rem; color: var(--eka-text-muted); margin: 0; }
+.eka-timeline-time { font-size: 0.6875rem; color: var(--eka-gray-400); margin-top: 4px; }
+
+.eka-pagination { display: flex; gap: 4px; align-items: center; }
+.eka-page-item {
+    min-width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--eka-radius);
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: var(--eka-gray-600);
+    cursor: pointer;
+    transition: all var(--eka-transition-fast);
+    border: 1px solid var(--eka-border-color);
+    background: var(--eka-card-bg);
+}
+.eka-page-item:hover { background: var(--eka-gray-100); color: var(--eka-primary); border-color: var(--eka-primary); }
+.eka-page-item.eka-active { background: var(--eka-primary); color: #fff; border-color: var(--eka-primary); }
+.eka-page-item.disabled { opacity: 0.5; cursor: not-allowed; pointer-events: none; }
+
+.eka-spinner { width: 24px; height: 24px; border: 3px solid var(--eka-border-color); border-top-color: var(--eka-primary); border-radius: 50%; animation: ekaSpin 0.8s linear infinite; display: inline-block; }
+.eka-spinner-sm { width: 16px; height: 16px; border-width: 2px; }
+.eka-spinner-lg { width: 36px; height: 36px; border-width: 4px; }
+.eka-dot-loader { display: flex; gap: 6px; }
+.eka-dot-loader span { width: 8px; height: 8px; border-radius: 50%; background: var(--eka-primary); animation: ekaDotBounce 1.4s ease-in-out infinite; }
+.eka-dot-loader span:nth-child(2) { animation-delay: 0.2s; }
+.eka-dot-loader span:nth-child(3) { animation-delay: 0.4s; }
+
+.eka-empty-state { text-align: center; padding: 48px 24px; }
+.eka-empty-state i { font-size: 3rem; color: var(--eka-gray-300); margin-bottom: 16px; }
+.eka-empty-state h5 { color: var(--eka-heading-color); margin-bottom: 8px; }
+.eka-empty-state p { color: var(--eka-text-muted); font-size: 0.875rem; max-width: 360px; margin: 0 auto 20px; }

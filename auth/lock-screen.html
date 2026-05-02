@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8"><link rel="icon" type="image/x-icon" href="../favicon.ico"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lock Screen - EkaAdmin</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/eka-variables.css">
+    <link rel="stylesheet" href="../assets/css/eka-base.css">
+    <link rel="stylesheet" href="../assets/css/eka-components.css">
+    <link rel="stylesheet" href="../assets/css/eka-forms.css">
+    <link rel="stylesheet" href="../assets/css/eka-auth.css">
+    <link rel="stylesheet" href="../assets/css/eka-animations.css">
+    <link rel="stylesheet" href="../assets/css/eka-dark.css">
+    <link rel="stylesheet" href="../assets/css/eka-responsive.css">
+</head>
+<body>
+    <div class="eka-auth-page">
+        <div class="eka-auth-left">
+            <div class="eka-auth-left-content eka-animate-fade-in">
+                <div class="eka-auth-illustration">
+                    <i class="fas fa-lock" style="font-size:80px;color:rgba(255,255,255,0.3)"></i>
+                </div>
+                <h2>Screen Locked</h2>
+                <p>Your session has been locked for security. Enter your password to continue working.</p>
+            </div>
+        </div>
+        <div class="eka-auth-right">
+            <div class="eka-auth-form-wrapper eka-animate-fade-in-up" style="text-align:center">
+                <div class="eka-auth-logo" style="justify-content:center"><div class="eka-logo-icon">EA</div><span>EkaAdmin</span></div>
+                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=admin" alt="Admin" class="eka-lock-avatar">
+                <h4>Richard Davis</h4>
+                <p class="eka-auth-subtitle">Enter your password to unlock the screen.</p>
+                <form class="eka-auth-form" style="text-align:left">
+                    <div class="eka-form-group"><label class="eka-form-label">Password</label><div class="eka-password-toggle"><input type="password" class="eka-form-control" placeholder="Enter your password"><span class="eka-password-toggle-btn"><i class="fas fa-eye"></i></span></div></div>
+                    <a href="../dashboards/index.html" class="eka-btn eka-btn-primary eka-btn-block">Unlock</a>
+                </form>
+                <div class="eka-auth-footer" style="margin-top:20px">Not Richard? <a href="login.html">Sign in as different user</a></div>
+            </div>
+        </div>
+    </div>
+    <script>document.querySelectorAll('.eka-password-toggle-btn').forEach(function(b){b.addEventListener('click',function(){var i=b.parentElement.querySelector('input'),c=b.querySelector('i');if(i.type==='password'){i.type='text';c.className='fas fa-eye-slash';}else{i.type='password';c.className='fas fa-eye';}});});</script>
+</body>
+</html>

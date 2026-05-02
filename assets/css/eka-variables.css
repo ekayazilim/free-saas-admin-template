@@ -1,0 +1,161 @@
+:root {
+    --eka-primary: #405189;
+    --eka-primary-rgb: 64, 81, 137;
+    --eka-primary-light: #4f5f97;
+    --eka-primary-dark: #354370;
+    --eka-primary-bg-subtle: #e9ebf1;
+
+    --eka-secondary: #3577F1;
+    --eka-secondary-rgb: 53, 119, 241;
+    --eka-secondary-light: #5a90f3;
+    --eka-secondary-dark: #2a5fc1;
+    --eka-secondary-bg-subtle: #e0ebfd;
+
+    --eka-success: #0AB39C;
+    --eka-success-rgb: 10, 179, 156;
+    --eka-success-light: #2bc2b0;
+    --eka-success-dark: #08907d;
+    --eka-success-bg-subtle: #daf4ef;
+
+    --eka-warning: #F7B84B;
+    --eka-warning-rgb: 247, 184, 75;
+    --eka-warning-light: #f8c56f;
+    --eka-warning-dark: #c5933c;
+    --eka-warning-bg-subtle: #fef4e4;
+
+    --eka-danger: #F06548;
+    --eka-danger-rgb: 240, 101, 72;
+    --eka-danger-light: #f3846d;
+    --eka-danger-dark: #c0513a;
+    --eka-danger-bg-subtle: #fde8e4;
+
+    --eka-info: #299CDB;
+    --eka-info-rgb: 41, 156, 219;
+    --eka-info-light: #54b0e2;
+    --eka-info-dark: #217daf;
+    --eka-info-bg-subtle: #e0f2fb;
+
+    --eka-dark: #212529;
+    --eka-dark-rgb: 33, 37, 41;
+    --eka-light: #F3F6F9;
+    --eka-white: #FFFFFF;
+    --eka-black: #000000;
+
+    --eka-gray-50: #F3F3F9;
+    --eka-gray-100: #EFF2F7;
+    --eka-gray-200: #E9EBEC;
+    --eka-gray-300: #CED4DA;
+    --eka-gray-400: #ADB5BD;
+    --eka-gray-500: #878A99;
+    --eka-gray-600: #495057;
+    --eka-gray-700: #343A40;
+    --eka-gray-800: #212529;
+    --eka-gray-900: #141821;
+
+    --eka-body-bg: #F3F3F9;
+    --eka-body-color: #212529;
+    --eka-body-color-rgb: 33, 37, 41;
+    --eka-heading-color: #495057;
+    --eka-text-muted: #878A99;
+    --eka-border-color: #E9EBEC;
+    --eka-link-color: #405189;
+
+    --eka-card-bg: #FFFFFF;
+    --eka-card-border-color: #E9EBEC;
+    --eka-card-shadow: 0 1px 2px rgba(56, 65, 74, 0.15);
+
+    --eka-input-bg: #FFFFFF;
+    --eka-input-border: #CED4DA;
+    --eka-input-focus-border: #405189;
+    --eka-input-placeholder: #ADB5BD;
+
+    --eka-sidebar-bg: #405189;
+    --eka-sidebar-menu-item-color: rgba(255, 255, 255, 0.65);
+    --eka-sidebar-menu-item-active-color: #FFFFFF;
+    --eka-sidebar-menu-heading: rgba(255, 255, 255, 0.4);
+    --eka-sidebar-width: 260px;
+    --eka-sidebar-collapsed-width: 70px;
+
+    --eka-topbar-bg: #FFFFFF;
+    --eka-topbar-height: 70px;
+    --eka-topbar-shadow: 0 1px 2px rgba(56, 65, 74, 0.15);
+
+    --eka-footer-bg: #FFFFFF;
+    --eka-footer-color: #878A99;
+    --eka-footer-height: 60px;
+
+    --eka-font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    --eka-font-mono: 'Fira Code', 'Cascadia Code', 'Consolas', monospace;
+
+    --eka-fs-10: 0.625rem;
+    --eka-fs-11: 0.6875rem;
+    --eka-fs-12: 0.75rem;
+    --eka-fs-13: 0.8125rem;
+    --eka-fs-14: 0.875rem;
+    --eka-fs-15: 0.9375rem;
+    --eka-fs-16: 1rem;
+    --eka-fs-18: 1.125rem;
+    --eka-fs-20: 1.25rem;
+    --eka-fs-22: 1.375rem;
+    --eka-fs-24: 1.5rem;
+    --eka-fs-28: 1.75rem;
+    --eka-fs-32: 2rem;
+    --eka-fs-36: 2.25rem;
+    --eka-fs-40: 2.5rem;
+
+    --eka-fw-normal: 400;
+    --eka-fw-medium: 500;
+    --eka-fw-semibold: 600;
+    --eka-fw-bold: 700;
+
+    --eka-lh-sm: 1.25;
+    --eka-lh-base: 1.5;
+    --eka-lh-lg: 1.75;
+
+    --eka-space-1: 0.25rem;
+    --eka-space-2: 0.5rem;
+    --eka-space-3: 0.75rem;
+    --eka-space-4: 1rem;
+    --eka-space-5: 1.25rem;
+    --eka-space-6: 1.5rem;
+    --eka-space-8: 2rem;
+    --eka-space-10: 2.5rem;
+    --eka-space-12: 3rem;
+    --eka-space-16: 4rem;
+    --eka-space-20: 5rem;
+
+    --eka-radius-sm: 4px;
+    --eka-radius: 6px;
+    --eka-radius-md: 8px;
+    --eka-radius-lg: 12px;
+    --eka-radius-xl: 16px;
+    --eka-radius-full: 9999px;
+
+    --eka-shadow-sm: 0 1px 2px rgba(56, 65, 74, 0.15);
+    --eka-shadow: 0 2px 4px rgba(56, 65, 74, 0.12);
+    --eka-shadow-md: 0 5px 10px rgba(56, 65, 74, 0.12);
+    --eka-shadow-lg: 0 8px 16px rgba(56, 65, 74, 0.1);
+    --eka-shadow-xl: 0 16px 32px rgba(56, 65, 74, 0.08);
+
+    --eka-z-dropdown: 1000;
+    --eka-z-sticky: 1020;
+    --eka-z-fixed: 1030;
+    --eka-z-sidebar: 1040;
+    --eka-z-topbar: 1045;
+    --eka-z-modal-backdrop: 1050;
+    --eka-z-modal: 1055;
+    --eka-z-popover: 1060;
+    --eka-z-tooltip: 1070;
+    --eka-z-toast: 1080;
+    --eka-z-theme-panel: 1090;
+
+    --eka-transition-fast: 0.15s ease;
+    --eka-transition-base: 0.2s ease;
+    --eka-transition-smooth: 0.3s ease;
+    --eka-transition-slow: 0.5s ease;
+
+    --eka-table-bg: transparent;
+    --eka-table-striped-bg: rgba(var(--eka-primary-rgb), 0.03);
+    --eka-table-hover-bg: rgba(var(--eka-primary-rgb), 0.05);
+    --eka-table-border-color: var(--eka-border-color);
+}

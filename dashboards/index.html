@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard - EkaAdmin</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="../assets/css/eka-variables.css">
+<link rel="stylesheet" href="../assets/css/eka-base.css">
+<link rel="stylesheet" href="../assets/css/eka-layout.css">
+<link rel="stylesheet" href="../assets/css/eka-components.css">
+<link rel="stylesheet" href="../assets/css/eka-widgets.css">
+<link rel="stylesheet" href="../assets/css/eka-tables.css">
+<link rel="stylesheet" href="../assets/css/eka-forms.css">
+<link rel="stylesheet" href="../assets/css/eka-animations.css">
+<link rel="stylesheet" href="../assets/css/eka-dark.css">
+<link rel="stylesheet" href="../assets/css/eka-dashboard.css">
+<link rel="stylesheet" href="../assets/css/eka-responsive.css">
+<script src="https://cdn.lordicon.com/lordicon.js"></script>
+</head>
+<body>
+<div class="eka-app" id="ekaApp">
+<div class="eka-sidebar" id="ekaSidebar"></div>
+<div class="eka-overlay" id="ekaOverlay"></div>
+<div class="eka-main">
+<header class="eka-topbar" id="ekaTopbar"></header>
+<div class="eka-content">
+<div class="eka-greeting eka-animate-fade-in">
+<div class="d-flex justify-between align-center flex-wrap gap-4" style="position:relative;z-index:1">
+<div><h3>Good Morning, Richard!</h3><p>Here's what's happening with your projects today.</p></div>
+<div class="d-flex gap-3">
+<div class="eka-greeting-stat"><div class="gs-value">248</div><div class="gs-label">New Orders</div></div>
+<div class="eka-greeting-stat"><div class="gs-value">$5.2K</div><div class="gs-label">Today's Revenue</div></div>
+<div class="eka-greeting-stat"><div class="gs-value">94%</div><div class="gs-label">Satisfaction</div></div>
+</div></div></div>
+
+<div class="eka-row mb-4">
+<div class="eka-col-6 eka-col-md-4 eka-col-lg-4 eka-col-xl-2"><div class="eka-card eka-kpi-card kpi-primary eka-animate-fade-in-up eka-stagger-1"><div class="eka-card-body" style="padding:16px">
+<div class="d-flex justify-between align-center mb-2"><div class="eka-kpi-icon bg-soft-primary"><i class="fas fa-dollar-sign"></i></div><span class="eka-stat-trend eka-trend-up"><i class="fas fa-arrow-up"></i> 12.5%</span></div>
+<div class="eka-stat-value">$48,259</div><div class="eka-stat-label">Total Revenue</div>
+<div class="eka-mini-chart" id="spark1"></div>
+</div></div></div>
+<div class="eka-col-6 eka-col-md-4 eka-col-lg-4 eka-col-xl-2"><div class="eka-card eka-kpi-card kpi-success eka-animate-fade-in-up eka-stagger-2"><div class="eka-card-body" style="padding:16px">
+<div class="d-flex justify-between align-center mb-2"><div class="eka-kpi-icon bg-soft-success"><i class="fas fa-shopping-cart"></i></div><span class="eka-stat-trend eka-trend-up"><i class="fas fa-arrow-up"></i> 8.3%</span></div>
+<div class="eka-stat-value">2,456</div><div class="eka-stat-label">Total Orders</div>
+<div class="eka-mini-chart" id="spark2"></div>
+</div></div></div>
+<div class="eka-col-6 eka-col-md-4 eka-col-lg-4 eka-col-xl-2"><div class="eka-card eka-kpi-card kpi-warning eka-animate-fade-in-up eka-stagger-3"><div class="eka-card-body" style="padding:16px">
+<div class="d-flex justify-between align-center mb-2"><div class="eka-kpi-icon bg-soft-warning"><i class="fas fa-users"></i></div><span class="eka-stat-trend eka-trend-up"><i class="fas fa-arrow-up"></i> 5.7%</span></div>
+<div class="eka-stat-value">12,830</div><div class="eka-stat-label">Customers</div>
+<div class="eka-mini-chart" id="spark3"></div>
+</div></div></div>
+<div class="eka-col-6 eka-col-md-4 eka-col-lg-4 eka-col-xl-2"><div class="eka-card eka-kpi-card kpi-info eka-animate-fade-in-up eka-stagger-4"><div class="eka-card-body" style="padding:16px">
+<div class="d-flex justify-between align-center mb-2"><div class="eka-kpi-icon bg-soft-info"><i class="fas fa-chart-line"></i></div><span class="eka-stat-trend eka-trend-up"><i class="fas fa-arrow-up"></i> 4.7%</span></div>
+<div class="eka-stat-value">18.2%</div><div class="eka-stat-label">Growth Rate</div>
+<div class="eka-mini-chart" id="spark4"></div>
+</div></div></div>
+<div class="eka-col-6 eka-col-md-4 eka-col-lg-4 eka-col-xl-2"><div class="eka-card eka-kpi-card kpi-danger eka-animate-fade-in-up eka-stagger-5"><div class="eka-card-body" style="padding:16px">
+<div class="d-flex justify-between align-center mb-2"><div class="eka-kpi-icon bg-soft-danger"><i class="fas fa-redo"></i></div><span class="eka-stat-trend eka-trend-down"><i class="fas fa-arrow-down"></i> 2.1%</span></div>
+<div class="eka-stat-value">3.8%</div><div class="eka-stat-label">Churn Rate</div>
+<div class="eka-mini-chart" id="spark5"></div>
+</div></div></div>
+<div class="eka-col-6 eka-col-md-4 eka-col-lg-4 eka-col-xl-2"><div class="eka-card eka-kpi-card kpi-secondary eka-animate-fade-in-up eka-stagger-6"><div class="eka-card-body" style="padding:16px">
+<div class="d-flex justify-between align-center mb-2"><div class="eka-kpi-icon bg-soft-secondary"><i class="fas fa-ticket-alt"></i></div><span class="eka-stat-trend eka-trend-up"><i class="fas fa-arrow-up"></i> 22%</span></div>
+<div class="eka-stat-value">$86.40</div><div class="eka-stat-label">Avg. Order Value</div>
+<div class="eka-mini-chart" id="spark6"></div>
+</div></div></div>
+</div>
+<div class="eka-row">
+<div class="eka-col-8"><div class="eka-card"><div class="eka-card-header"><h6><i class="fas fa-chart-area me-2 text-primary"></i>Revenue & Profit Overview</h6>
+<div class="d-flex gap-2"><button class="eka-btn eka-btn-soft-primary eka-btn-sm">Monthly</button><button class="eka-btn eka-btn-light eka-btn-sm">Weekly</button><button class="eka-btn eka-btn-light eka-btn-sm">Daily</button></div>
+</div><div class="eka-card-body"><div id="revenueChart" style="height:350px"></div></div></div></div>
+<div class="eka-col-4">
+<div class="eka-card eka-revenue-card eka-hover-lift"><div class="eka-card-body" style="flex-direction:column;align-items:flex-start;gap:14px">
+<div class="d-flex align-center gap-3"><div class="eka-kpi-icon" style="background:rgba(255,255,255,.15)"><lord-icon src="https://cdn.lordicon.com/qhviklyi.json" trigger="loop" delay="2000" colors="primary:#ffffff,secondary:#ffffff" style="width:26px;height:26px"></lord-icon></div><div><div style="font-size:.8rem;opacity:.7">Monthly Earnings</div><div style="font-size:1.75rem;font-weight:800">,580</div></div></div>
+<span class="eka-stat-trend eka-trend-up"><i class="fas fa-arrow-up"></i> 16.4% vs last month</span>
+<div style="width:100%"><div class="d-flex justify-between mb-1" style="font-size:.75rem"><span>Target: ,000</span><span>78%</span></div><div class="eka-progress" style="background:rgba(255,255,255,.15)"><div class="eka-progress-bar" style="width:78%;background:#fff"></div></div></div>
+<div class="d-flex gap-4" style="width:100%;margin-top:4px"><div><div style="font-size:.7rem;opacity:.6">This Week</div><div style="font-weight:700">,240</div></div><div><div style="font-size:.7rem;opacity:.6">Last Week</div><div style="font-weight:700">,890</div></div></div>
+</div></div>
+<div class="eka-card"><div class="eka-card-header"><h6>Sales by Category</h6></div><div class="eka-card-body"><div id="categoryChart" style="height:200px"></div></div></div>
+</div></div>
+<div class="eka-row">
+<div class="eka-col-4"><div class="eka-card"><div class="eka-card-header"><h6><i class="fas fa-exchange-alt me-2 text-success"></i>Conversion Funnel</h6></div>
+<div class="eka-card-body"><div id="funnelChart" style="height:260px"></div></div></div></div>
+<div class="eka-col-4"><div class="eka-card"><div class="eka-card-header"><h6><i class="fas fa-bolt me-2 text-warning"></i>Quick Actions</h6></div><div class="eka-card-body">
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px">
+<a href="../invoices/create.html" class="eka-quick-action"><div class="eka-quick-action-icon bg-soft-primary"><i class="fas fa-file-invoice"></i></div><div class="eka-quick-action-label">New Invoice</div></a>
+<a href="../ecommerce/orders.html" class="eka-quick-action"><div class="eka-quick-action-icon bg-soft-success"><i class="fas fa-box"></i></div><div class="eka-quick-action-label">Orders</div></a>
+<a href="../apps/chat.html" class="eka-quick-action"><div class="eka-quick-action-icon bg-soft-info"><i class="fas fa-comments"></i></div><div class="eka-quick-action-label">Messages</div></a>
+<a href="../management/users.html" class="eka-quick-action"><div class="eka-quick-action-icon bg-soft-warning"><i class="fas fa-user-plus"></i></div><div class="eka-quick-action-label">Add User</div></a>
+<a href="../apps/tasks.html" class="eka-quick-action"><div class="eka-quick-action-icon bg-soft-danger"><i class="fas fa-tasks"></i></div><div class="eka-quick-action-label">Tasks</div></a>
+<a href="../apps/tickets.html" class="eka-quick-action"><div class="eka-quick-action-icon bg-soft-secondary"><i class="fas fa-headset"></i></div><div class="eka-quick-action-label">Support</div></a>
+</div></div></div></div>
+<div class="eka-col-4"><div class="eka-card"><div class="eka-card-header"><h6><i class="fas fa-globe me-2 text-info"></i>Top Countries</h6></div><div class="eka-card-body">
+<div class="eka-country-item"><span style="font-size:1.25rem">🇺🇸</span><div class="flex-fill"><div class="fw-semibold fs-13">United States</div></div><div class="text-end"><div class="fw-bold fs-13">,450</div><div class="fs-11 text-success"><i class="fas fa-arrow-up"></i> 14%</div></div></div>
+<div class="eka-country-item"><span style="font-size:1.25rem">🇬🇧</span><div class="flex-fill"><div class="fw-semibold fs-13">United Kingdom</div></div><div class="text-end"><div class="fw-bold fs-13">,320</div><div class="fs-11 text-success"><i class="fas fa-arrow-up"></i> 9%</div></div></div>
+<div class="eka-country-item"><span style="font-size:1.25rem">🇩🇪</span><div class="flex-fill"><div class="fw-semibold fs-13">Germany</div></div><div class="text-end"><div class="fw-bold fs-13">,180</div><div class="fs-11 text-danger"><i class="fas fa-arrow-down"></i> 3%</div></div></div>
+<div class="eka-country-item"><span style="font-size:1.25rem">🇫🇷</span><div class="flex-fill"><div class="fw-semibold fs-13">France</div></div><div class="text-end"><div class="fw-bold fs-13">,890</div><div class="fs-11 text-success"><i class="fas fa-arrow-up"></i> 7%</div></div></div>
+<div class="eka-country-item"><span style="font-size:1.25rem">🇹🇷</span><div class="flex-fill"><div class="fw-semibold fs-13">Turkey</div></div><div class="text-end"><div class="fw-bold fs-13">,740</div><div class="fs-11 text-success"><i class="fas fa-arrow-up"></i> 18%</div></div></div>
+</div></div></div></div>
+<div class="eka-row">
+<div class="eka-col-8"><div class="eka-card"><div class="eka-card-header"><h6><i class="fas fa-receipt me-2 text-primary"></i>Recent Orders</h6><a href="../ecommerce/orders.html" class="eka-btn eka-btn-soft-primary eka-btn-sm">View All <i class="fas fa-arrow-right ms-1"></i></a></div>
+<div class="eka-table-responsive"><table class="eka-table eka-table-hover"><thead><tr><th>Order ID</th><th>Customer</th><th>Product</th><th>Amount</th><th>Status</th><th>Date</th></tr></thead><tbody>
+<tr><td><a href="../ecommerce/order-details.html" class="fw-semibold text-primary">#EKA-2451</a></td><td><div class="eka-table-user"><img src="https://api.dicebear.com/7.x/avataaars/svg?seed=sarah" alt=""><div class="eka-table-user-info"><div class="eka-table-user-name">Sarah Wilson</div><div class="eka-table-user-email">sarah@company.com</div></div></div></td><td>Enterprise Suite</td><td class="fw-semibold">,299.00</td><td><span class="eka-badge eka-badge-soft-success">Completed</span></td><td class="text-muted fs-12">Apr 21, 2026</td></tr>
+<tr><td><a href="../ecommerce/order-details.html" class="fw-semibold text-primary">#EKA-2450</a></td><td><div class="eka-table-user"><img src="https://api.dicebear.com/7.x/avataaars/svg?seed=michael" alt=""><div class="eka-table-user-info"><div class="eka-table-user-name">Michael Chen</div><div class="eka-table-user-email">michael@startup.io</div></div></div></td><td>Pro Plan - Annual</td><td class="fw-semibold">.00</td><td><span class="eka-badge eka-badge-soft-warning">Pending</span></td><td class="text-muted fs-12">Apr 20, 2026</td></tr>
+<tr><td><a href="../ecommerce/order-details.html" class="fw-semibold text-primary">#EKA-2449</a></td><td><div class="eka-table-user"><img src="https://api.dicebear.com/7.x/avataaars/svg?seed=emma" alt=""><div class="eka-table-user-info"><div class="eka-table-user-name">Emma Davis</div><div class="eka-table-user-email">emma@agency.co</div></div></div></td><td>Team Plan</td><td class="fw-semibold">.00</td><td><span class="eka-badge eka-badge-soft-success">Completed</span></td><td class="text-muted fs-12">Apr 19, 2026</td></tr>
+<tr><td><a href="../ecommerce/order-details.html" class="fw-semibold text-primary">#EKA-2448</a></td><td><div class="eka-table-user"><img src="https://api.dicebear.com/7.x/avataaars/svg?seed=james" alt=""><div class="eka-table-user-info"><div class="eka-table-user-name">James Miller</div><div class="eka-table-user-email">james@corp.com</div></div></div></td><td>Starter Plan</td><td class="fw-semibold">.00</td><td><span class="eka-badge eka-badge-soft-danger">Cancelled</span></td><td class="text-muted fs-12">Apr 18, 2026</td></tr>
+<tr><td><a href="../ecommerce/order-details.html" class="fw-semibold text-primary">#EKA-2447</a></td><td><div class="eka-table-user"><img src="https://api.dicebear.com/7.x/avataaars/svg?seed=olivia" alt=""><div class="eka-table-user-info"><div class="eka-table-user-name">Olivia Brown</div><div class="eka-table-user-email">olivia@design.co</div></div></div></td><td>Pro Plan - Monthly</td><td class="fw-semibold">.00</td><td><span class="eka-badge eka-badge-soft-info">Processing</span></td><td class="text-muted fs-12">Apr 17, 2026</td></tr>
+</tbody></table></div></div></div>
+<div class="eka-col-4"><div class="eka-card"><div class="eka-card-header"><h6><i class="fas fa-stream me-2 text-warning"></i>Activity Timeline</h6></div><div class="eka-card-body">
+<div class="eka-timeline">
+<div class="eka-timeline-item"><div class="eka-timeline-dot"></div><div class="eka-timeline-content"><h6>New sale completed</h6><p>Sarah Wilson purchased Enterprise Suite</p><span class="eka-timeline-time"><i class="fas fa-clock me-1"></i>2 min ago</span></div></div>
+<div class="eka-timeline-item"><div class="eka-timeline-dot eka-dot-success"></div><div class="eka-timeline-content"><h6>Server deployed</h6><p>v2.4.1 deployed to production successfully</p><span class="eka-timeline-time"><i class="fas fa-clock me-1"></i>35 min ago</span></div></div>
+<div class="eka-timeline-item"><div class="eka-timeline-dot eka-dot-warning"></div><div class="eka-timeline-content"><h6>Support ticket opened</h6><p>Michael Chen reported billing issue #TK-892</p><span class="eka-timeline-time"><i class="fas fa-clock me-1"></i>1 hour ago</span></div></div>
+<div class="eka-timeline-item"><div class="eka-timeline-dot eka-dot-info"></div><div class="eka-timeline-content"><h6>New team member</h6><p>Rachel Green joined as QA Engineer</p><span class="eka-timeline-time"><i class="fas fa-clock me-1"></i>3 hours ago</span></div></div>
+<div class="eka-timeline-item"><div class="eka-timeline-dot eka-dot-danger"></div><div class="eka-timeline-content"><h6>Server alert resolved</h6><p>CPU usage normalized to 42%</p><span class="eka-timeline-time"><i class="fas fa-clock me-1"></i>5 hours ago</span></div></div>
+</div></div><div class="eka-card-footer text-center"><a href="../management/activity-logs.html" class="fs-13 text-primary fw-medium">View All Activity</a></div></div></div>
+</div>
+<div class="eka-row">
+<div class="eka-col-3"><div class="eka-card"><div class="eka-card-header"><h6><i class="fas fa-tasks me-2 text-danger"></i>Tasks</h6><span class="eka-badge eka-badge-soft-primary">12</span></div><div class="eka-card-body">
+<div class="eka-task-item"><div class="eka-task-checkbox checked"><i class="fas fa-check"></i></div><div class="eka-task-text">Review Q1 financial reports</div><span class="eka-badge eka-badge-soft-danger eka-badge-pill fs-10">High</span></div>
+<div class="eka-task-item"><div class="eka-task-checkbox"></div><div class="eka-task-text">Prepare marketing deck</div><span class="eka-badge eka-badge-soft-warning eka-badge-pill fs-10">Med</span></div>
+<div class="eka-task-item"><div class="eka-task-checkbox"></div><div class="eka-task-text">Update API docs v2.4</div><span class="eka-badge eka-badge-soft-info eka-badge-pill fs-10">Low</span></div>
+<div class="eka-task-item"><div class="eka-task-checkbox"></div><div class="eka-task-text">Deploy v2.1 to prod</div><span class="eka-badge eka-badge-soft-danger eka-badge-pill fs-10">High</span></div>
+<div class="eka-task-item completed"><div class="eka-task-checkbox checked"><i class="fas fa-check"></i></div><div class="eka-task-text">Team sync meeting</div><span class="eka-badge eka-badge-soft-success eka-badge-pill fs-10">Done</span></div>
+</div><div class="eka-card-footer text-center"><a href="../apps/tasks.html" class="fs-13 text-primary fw-medium">View All Tasks</a></div></div></div>
+<div class="eka-col-3"><div class="eka-card"><div class="eka-card-header"><h6><i class="fas fa-tachometer-alt me-2 text-success"></i>Performance</h6></div><div class="eka-card-body">
+<div class="eka-progress-widget"><div class="eka-progress-widget-header"><span class="eka-progress-widget-label">Acquisition</span><span class="eka-progress-widget-value text-primary">78%</span></div><div class="eka-progress eka-progress-sm"><div class="eka-progress-bar" style="width:78%;background:var(--eka-primary)"></div></div></div>
+<div class="eka-progress-widget"><div class="eka-progress-widget-header"><span class="eka-progress-widget-label">Retention</span><span class="eka-progress-widget-value text-success">65%</span></div><div class="eka-progress eka-progress-sm"><div class="eka-progress-bar" style="width:65%;background:var(--eka-success)"></div></div></div>
+<div class="eka-progress-widget"><div class="eka-progress-widget-header"><span class="eka-progress-widget-label">Engagement</span><span class="eka-progress-widget-value text-warning">82%</span></div><div class="eka-progress eka-progress-sm"><div class="eka-progress-bar" style="width:82%;background:var(--eka-warning)"></div></div></div>
+<div class="eka-progress-widget"><div class="eka-progress-widget-header"><span class="eka-progress-widget-label">Conversion</span><span class="eka-progress-widget-value text-info">45%</span></div><div class="eka-progress eka-progress-sm"><div class="eka-progress-bar" style="width:45%;background:var(--eka-info)"></div></div></div>
+<div class="eka-progress-widget"><div class="eka-progress-widget-header"><span class="eka-progress-widget-label">Satisfaction</span><span class="eka-progress-widget-value text-danger">91%</span></div><div class="eka-progress eka-progress-sm"><div class="eka-progress-bar" style="width:91%;background:var(--eka-danger)"></div></div></div>
+</div></div></div>
+<div class="eka-col-3"><div class="eka-card"><div class="eka-card-header"><h6><i class="fas fa-crown me-2 text-warning"></i>Top Customers</h6></div><div class="eka-card-body">
+<div class="eka-user-list-item"><div class="eka-avatar eka-avatar-sm"><img src="https://api.dicebear.com/7.x/avataaars/svg?seed=alex" alt=""></div><div class="eka-user-list-info"><div class="eka-user-list-name">Alex Thompson</div><div class="eka-user-list-role">32 orders</div></div><span class="fw-bold fs-13 text-success">,240</span></div>
+<div class="eka-user-list-item"><div class="eka-avatar eka-avatar-sm"><img src="https://api.dicebear.com/7.x/avataaars/svg?seed=jessica" alt=""></div><div class="eka-user-list-info"><div class="eka-user-list-name">Jessica Park</div><div class="eka-user-list-role">28 orders</div></div><span class="fw-bold fs-13 text-success">,890</span></div>
+<div class="eka-user-list-item"><div class="eka-avatar eka-avatar-sm"><img src="https://api.dicebear.com/7.x/avataaars/svg?seed=david" alt=""></div><div class="eka-user-list-info"><div class="eka-user-list-name">David Kim</div><div class="eka-user-list-role">24 orders</div></div><span class="fw-bold fs-13 text-success">,430</span></div>
+<div class="eka-user-list-item"><div class="eka-avatar eka-avatar-sm"><img src="https://api.dicebear.com/7.x/avataaars/svg?seed=rachel" alt=""></div><div class="eka-user-list-info"><div class="eka-user-list-name">Rachel Green</div><div class="eka-user-list-role">19 orders</div></div><span class="fw-bold fs-13 text-success">,120</span></div>
+</div><div class="eka-card-footer text-center"><a href="../ecommerce/customers.html" class="fs-13 text-primary fw-medium">View All Customers</a></div></div></div>
+<div class="eka-col-3"><div class="eka-card"><div class="eka-card-header"><h6><i class="fas fa-calendar-check me-2 text-secondary"></i>Today's Schedule</h6></div><div class="eka-card-body">
+<div class="eka-schedule-item"><div class="eka-schedule-time">09:30</div><div class="eka-schedule-dot" style="background:var(--eka-primary)"></div><div><div class="fw-semibold fs-13">Team standup</div><div class="fs-12 text-muted">Engineering team</div></div></div>
+<div class="eka-schedule-item"><div class="eka-schedule-time">11:00</div><div class="eka-schedule-dot" style="background:var(--eka-success)"></div><div><div class="fw-semibold fs-13">Client demo</div><div class="fs-12 text-muted">Acme Corp - Pro Plan</div></div></div>
+<div class="eka-schedule-item"><div class="eka-schedule-time">14:00</div><div class="eka-schedule-dot" style="background:var(--eka-warning)"></div><div><div class="fw-semibold fs-13">Sprint planning</div><div class="fs-12 text-muted">Product team</div></div></div>
+<div class="eka-schedule-item"><div class="eka-schedule-time">16:30</div><div class="eka-schedule-dot" style="background:var(--eka-info)"></div><div><div class="fw-semibold fs-13">Design review</div><div class="fs-12 text-muted">UI/UX feedback</div></div></div>
+</div><div class="eka-card-footer text-center"><a href="../apps/calendar.html" class="fs-13 text-primary fw-medium">View Calendar</a></div></div></div>
+</div>
+<div class="eka-row">
+<div class="eka-col-4"><div class="eka-card"><div class="eka-card-header"><h6><i class="fas fa-server me-2 text-danger"></i>System Status</h6><span class="eka-badge eka-badge-soft-success">All Systems OK</span></div><div class="eka-card-body">
+<div class="eka-server-bar"><div style="min-width:80px" class="fs-13 fw-medium">CPU</div><div class="bar-fill"><span style="width:42%;background:var(--eka-success)"></span></div><span class="fs-12 fw-semibold" style="min-width:36px">42%</span></div>
+<div class="eka-server-bar"><div style="min-width:80px" class="fs-13 fw-medium">Memory</div><div class="bar-fill"><span style="width:68%;background:var(--eka-warning)"></span></div><span class="fs-12 fw-semibold" style="min-width:36px">68%</span></div>
+<div class="eka-server-bar"><div style="min-width:80px" class="fs-13 fw-medium">Storage</div><div class="bar-fill"><span style="width:55%;background:var(--eka-info)"></span></div><span class="fs-12 fw-semibold" style="min-width:36px">55%</span></div>
+<div class="eka-server-bar"><div style="min-width:80px" class="fs-13 fw-medium">Bandwidth</div><div class="bar-fill"><span style="width:31%;background:var(--eka-primary)"></span></div><span class="fs-12 fw-semibold" style="min-width:36px">31%</span></div>
+<div class="eka-server-bar"><div style="min-width:80px" class="fs-13 fw-medium">Uptime</div><div class="bar-fill"><span style="width:99%;background:var(--eka-success)"></span></div><span class="fs-12 fw-semibold" style="min-width:36px">99%</span></div>
+</div></div></div>
+<div class="eka-col-4"><div class="eka-card"><div class="eka-card-header"><h6><i class="fas fa-share-alt me-2 text-info"></i>Social Overview</h6></div><div class="eka-card-body d-flex flex-column gap-3">
+<div class="eka-social-stat"><div class="eka-kpi-icon" style="background:#1877f2;color:#fff;border-radius:10px;width:40px;height:40px;font-size:1rem"><i class="fab fa-facebook-f"></i></div><div class="flex-fill"><div class="fw-semibold fs-13">Facebook</div><div class="fs-12 text-muted">12.4K followers</div></div><span class="eka-badge eka-badge-soft-success">+8.2%</span></div>
+<div class="eka-social-stat"><div class="eka-kpi-icon" style="background:#1da1f2;color:#fff;border-radius:10px;width:40px;height:40px;font-size:1rem"><i class="fab fa-twitter"></i></div><div class="flex-fill"><div class="fw-semibold fs-13">Twitter</div><div class="fs-12 text-muted">8.7K followers</div></div><span class="eka-badge eka-badge-soft-success">+5.1%</span></div>
+<div class="eka-social-stat"><div class="eka-kpi-icon" style="background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);color:#fff;border-radius:10px;width:40px;height:40px;font-size:1rem"><i class="fab fa-instagram"></i></div><div class="flex-fill"><div class="fw-semibold fs-13">Instagram</div><div class="fs-12 text-muted">15.2K followers</div></div><span class="eka-badge eka-badge-soft-success">+12.4%</span></div>
+<div class="eka-social-stat"><div class="eka-kpi-icon" style="background:#0a66c2;color:#fff;border-radius:10px;width:40px;height:40px;font-size:1rem"><i class="fab fa-linkedin-in"></i></div><div class="flex-fill"><div class="fw-semibold fs-13">LinkedIn</div><div class="fs-12 text-muted">6.3K followers</div></div><span class="eka-badge eka-badge-soft-warning">+2.8%</span></div>
+</div></div></div>
+<div class="eka-col-4"><div class="eka-card"><div class="eka-card-header"><h6><i class="fas fa-trophy me-2 text-warning"></i>Top Products</h6></div><div class="eka-card-body">
+<div class="eka-user-list-item"><div class="eka-kpi-icon bg-soft-primary" style="width:40px;height:40px;border-radius:10px;font-size:.9rem"><i class="fas fa-gem"></i></div><div class="eka-user-list-info"><div class="eka-user-list-name">Enterprise Suite</div><div class="eka-user-list-role">142 sales</div></div><span class="fw-bold fs-13">,890</span></div>
+<div class="eka-user-list-item"><div class="eka-kpi-icon bg-soft-success" style="width:40px;height:40px;border-radius:10px;font-size:.9rem"><i class="fas fa-rocket"></i></div><div class="eka-user-list-info"><div class="eka-user-list-name">Pro Plan</div><div class="eka-user-list-role">328 sales</div></div><span class="fw-bold fs-13">,640</span></div>
+<div class="eka-user-list-item"><div class="eka-kpi-icon bg-soft-warning" style="width:40px;height:40px;border-radius:10px;font-size:.9rem"><i class="fas fa-users"></i></div><div class="eka-user-list-info"><div class="eka-user-list-name">Team Plan</div><div class="eka-user-list-role">256 sales</div></div><span class="fw-bold fs-13">,920</span></div>
+<div class="eka-user-list-item"><div class="eka-kpi-icon bg-soft-info" style="width:40px;height:40px;border-radius:10px;font-size:.9rem"><i class="fas fa-paper-plane"></i></div><div class="eka-user-list-info"><div class="eka-user-list-name">Starter Plan</div><div class="eka-user-list-role">489 sales</div></div><span class="fw-bold fs-13">,350</span></div>
+</div><div class="eka-card-footer text-center"><a href="../ecommerce/products.html" class="fs-13 text-primary fw-medium">View All Products</a></div></div></div>
+</div>
+
+<div class="eka-row">
+<div class="eka-col-4"><div class="eka-card"><div class="eka-card-header"><h6><i class="fas fa-bullseye me-2 text-primary"></i>Revenue by Channel</h6></div><div class="eka-card-body">
+<div class="eka-channel-item"><div class="eka-channel-icon bg-soft-primary"><i class="fas fa-globe"></i></div><div class="flex-fill"><div class="d-flex justify-between mb-1"><span class="fw-semibold fs-13">Direct Traffic</span><span class="fw-bold fs-13">$18,420</span></div><div class="eka-channel-bar"><span style="width:72%;background:var(--eka-primary)"></span></div></div></div>
+<div class="eka-channel-item"><div class="eka-channel-icon bg-soft-success"><i class="fas fa-search"></i></div><div class="flex-fill"><div class="d-flex justify-between mb-1"><span class="fw-semibold fs-13">Organic Search</span><span class="fw-bold fs-13">$14,280</span></div><div class="eka-channel-bar"><span style="width:58%;background:var(--eka-success)"></span></div></div></div>
+<div class="eka-channel-item"><div class="eka-channel-icon bg-soft-info"><i class="fas fa-ad"></i></div><div class="flex-fill"><div class="d-flex justify-between mb-1"><span class="fw-semibold fs-13">Paid Ads</span><span class="fw-bold fs-13">$9,850</span></div><div class="eka-channel-bar"><span style="width:40%;background:var(--eka-info)"></span></div></div></div>
+<div class="eka-channel-item"><div class="eka-channel-icon bg-soft-warning"><i class="fas fa-envelope"></i></div><div class="flex-fill"><div class="d-flex justify-between mb-1"><span class="fw-semibold fs-13">Email Campaign</span><span class="fw-bold fs-13">$5,709</span></div><div class="eka-channel-bar"><span style="width:24%;background:var(--eka-warning)"></span></div></div></div>
+</div></div></div>
+<div class="eka-col-4"><div class="eka-card"><div class="eka-card-header"><h6><span class="eka-live-dot"></span>Live Visitors</h6><span class="eka-badge eka-badge-soft-success">342 online</span></div><div class="eka-card-body">
+<div class="text-center mb-3"><div style="font-size:2.5rem;font-weight:800;color:var(--eka-heading-color)">342</div><div class="fs-12 text-muted">Active users right now</div></div>
+<div id="liveChart" style="height:120px"></div>
+<div class="mt-3">
+<div class="eka-visitor-row"><div class="eka-visitor-page">/dashboards/</div><div class="eka-visitor-count">87</div><div class="eka-visitor-bar"><span style="width:85%"></span></div></div>
+<div class="eka-visitor-row"><div class="eka-visitor-page">/products/</div><div class="eka-visitor-count">54</div><div class="eka-visitor-bar"><span style="width:52%"></span></div></div>
+<div class="eka-visitor-row"><div class="eka-visitor-page">/checkout/</div><div class="eka-visitor-count">38</div><div class="eka-visitor-bar"><span style="width:37%"></span></div></div>
+<div class="eka-visitor-row"><div class="eka-visitor-page">/blog/</div><div class="eka-visitor-count">29</div><div class="eka-visitor-bar"><span style="width:28%"></span></div></div>
+</div>
+</div></div></div>
+<div class="eka-col-4"><div class="eka-card"><div class="eka-card-header"><h6><i class="fas fa-bell me-2 text-danger"></i>Notifications & Events</h6><span class="eka-badge eka-badge-soft-danger">5 new</span></div><div class="eka-card-body" style="max-height:400px;overflow-y:auto">
+<div class="eka-notif-feed-item"><div class="eka-notif-feed-icon bg-soft-success"><i class="fas fa-check"></i></div><div class="eka-notif-feed-body"><div class="eka-notif-feed-title">Payment Received</div><div class="eka-notif-feed-text">$1,299 from Sarah Wilson for Enterprise Suite</div><div class="eka-notif-feed-time"><i class="fas fa-clock me-1"></i>2 min ago</div></div></div>
+<div class="eka-notif-feed-item"><div class="eka-notif-feed-icon bg-soft-warning"><i class="fas fa-exclamation-triangle"></i></div><div class="eka-notif-feed-body"><div class="eka-notif-feed-title">Server CPU Spike</div><div class="eka-notif-feed-text">CPU usage reached 89% on production server</div><div class="eka-notif-feed-time"><i class="fas fa-clock me-1"></i>15 min ago</div></div></div>
+<div class="eka-notif-feed-item"><div class="eka-notif-feed-icon bg-soft-primary"><i class="fas fa-user-plus"></i></div><div class="eka-notif-feed-body"><div class="eka-notif-feed-title">New User Registered</div><div class="eka-notif-feed-text">David Chen signed up for a Pro Plan trial</div><div class="eka-notif-feed-time"><i class="fas fa-clock me-1"></i>32 min ago</div></div></div>
+<div class="eka-notif-feed-item"><div class="eka-notif-feed-icon bg-soft-info"><i class="fas fa-code-branch"></i></div><div class="eka-notif-feed-body"><div class="eka-notif-feed-title">Deployment Complete</div><div class="eka-notif-feed-text">v2.4.2 deployed to staging environment</div><div class="eka-notif-feed-time"><i class="fas fa-clock me-1"></i>1 hour ago</div></div></div>
+<div class="eka-notif-feed-item"><div class="eka-notif-feed-icon bg-soft-danger"><i class="fas fa-bug"></i></div><div class="eka-notif-feed-body"><div class="eka-notif-feed-title">Bug Report #1247</div><div class="eka-notif-feed-text">Checkout page rendering issue on Safari</div><div class="eka-notif-feed-time"><i class="fas fa-clock me-1"></i>2 hours ago</div></div></div>
+</div><div class="eka-card-footer text-center"><a href="../management/notifications.html" class="fs-13 text-primary fw-medium">View All Notifications</a></div></div></div>
+</div>
+
+<div class="eka-row">
+<div class="eka-col-6 eka-col-lg-3"><div class="eka-comparison-card"><div class="eka-comparison-icon bg-soft-primary"><i class="fas fa-eye"></i></div><div class="eka-comparison-info"><div class="eka-comparison-title">Page Views</div><div class="eka-comparison-value">284K</div><div class="eka-comparison-change"><span class="eka-stat-trend eka-trend-up"><i class="fas fa-arrow-up"></i> 12.4%</span><span class="fs-11 text-muted">vs last month</span></div></div></div></div>
+<div class="eka-col-6 eka-col-lg-3"><div class="eka-comparison-card"><div class="eka-comparison-icon bg-soft-success"><i class="fas fa-mouse-pointer"></i></div><div class="eka-comparison-info"><div class="eka-comparison-title">Click Rate</div><div class="eka-comparison-value">4.6%</div><div class="eka-comparison-change"><span class="eka-stat-trend eka-trend-up"><i class="fas fa-arrow-up"></i> 3.2%</span><span class="fs-11 text-muted">vs last month</span></div></div></div></div>
+<div class="eka-col-6 eka-col-lg-3"><div class="eka-comparison-card"><div class="eka-comparison-icon bg-soft-warning"><i class="fas fa-clock"></i></div><div class="eka-comparison-info"><div class="eka-comparison-title">Avg. Session</div><div class="eka-comparison-value">4m 32s</div><div class="eka-comparison-change"><span class="eka-stat-trend eka-trend-down"><i class="fas fa-arrow-down"></i> 1.8%</span><span class="fs-11 text-muted">vs last month</span></div></div></div></div>
+<div class="eka-col-6 eka-col-lg-3"><div class="eka-comparison-card"><div class="eka-comparison-icon bg-soft-info"><i class="fas fa-undo"></i></div><div class="eka-comparison-info"><div class="eka-comparison-title">Bounce Rate</div><div class="eka-comparison-value">28.3%</div><div class="eka-comparison-change"><span class="eka-stat-trend eka-trend-up"><i class="fas fa-arrow-down"></i> 5.1%</span><span class="fs-11 text-muted">vs last month</span></div></div></div></div>
+</div>
+
+</div>
+<footer class="eka-footer" id="ekaFooter"></footer>
+</div></div>
+<div class="eka-theme-panel" id="ekaThemePanel"></div>
+<button class="eka-theme-panel-trigger" id="ekaThemePanelTrigger"><i class="fas fa-cog"></i></button>
+<script>var EKA_BASE='../';var EKA_ACTIVE='dashboards/index.html';</script>
+<script src="../assets/js/eka-app.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+var sparkOpts=function(id,color,data){new ApexCharts(document.querySelector('#'+id),{chart:{type:'area',height:50,sparkline:{enabled:true}},series:[{data:data}],colors:[color],fill:{type:'gradient',gradient:{opacityFrom:0.5,opacityTo:0.1}},stroke:{width:2,curve:'smooth'},tooltip:{fixed:{enabled:false},y:{formatter:function(v){return v}}}}).render()};
+sparkOpts('spark1','#405189',[18,22,28,25,35,32,42,38,48,45,52,58]);
+sparkOpts('spark2','#0AB39C',[120,145,160,155,180,175,200,195,220,210,240,256]);
+sparkOpts('spark3','#F7B84B',[800,850,920,890,980,950,1050,1020,1100,1080,1180,1240]);
+sparkOpts('spark4','#299CDB',[8,9,11,10,13,12,14,13,16,15,17,18]);
+sparkOpts('spark5','#F06548',[5.2,4.8,4.5,4.7,4.2,4.4,4.0,4.1,3.9,4.0,3.8,3.8]);
+sparkOpts('spark6','#3577F1',[62,65,68,70,72,75,78,76,80,82,84,86]);
+
+new ApexCharts(document.querySelector('#revenueChart'),{
+chart:{type:'area',height:350,toolbar:{show:false},fontFamily:'Inter,sans-serif'},
+series:[{name:'Revenue',data:[28,35,42,38,48,45,55,52,60,58,65,72]},{name:'Profit',data:[12,16,20,18,24,22,28,26,32,30,34,38]},{name:'Expenses',data:[16,19,22,20,24,23,27,26,28,28,31,34]}],
+colors:['#405189','#0AB39C','#F7B84B'],
+fill:{type:'gradient',gradient:{shadeIntensity:1,opacityFrom:0.4,opacityTo:0.05}},
+stroke:{width:2,curve:'smooth'},
+xaxis:{categories:['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],labels:{style:{colors:'#878a99',fontSize:'11px'}}},
+yaxis:{labels:{style:{colors:'#878a99',fontSize:'11px'},formatter:function(v){return'$'+v+'K'}}},
+grid:{borderColor:'#e9ebec',strokeDashArray:4},
+legend:{position:'top',horizontalAlign:'right',fontSize:'12px',markers:{radius:12}},
+tooltip:{y:{formatter:function(v){return'$'+v+'K'}}},dataLabels:{enabled:false}
+}).render();
+
+new ApexCharts(document.querySelector('#categoryChart'),{
+chart:{type:'donut',height:200,fontFamily:'Inter,sans-serif'},
+series:[35,25,22,18],labels:['Software','Services','Hardware','Support'],
+colors:['#405189','#0AB39C','#F7B84B','#299CDB'],
+legend:{position:'bottom',fontSize:'11px'},
+plotOptions:{pie:{donut:{size:'72%',labels:{show:true,total:{show:true,label:'Total',fontSize:'12px',fontWeight:600,formatter:function(){return'.2K'}}}}}},
+dataLabels:{enabled:false},stroke:{width:0}
+}).render();
+
+new ApexCharts(document.querySelector('#funnelChart'),{
+chart:{type:'bar',height:260,toolbar:{show:false},fontFamily:'Inter,sans-serif'},
+series:[{name:'Users',data:[12400,8200,5600,3200,1800]}],
+colors:['#405189'],
+plotOptions:{bar:{borderRadius:6,horizontal:true,distributed:true,barHeight:'70%'}},
+xaxis:{categories:['Visitors','Leads','Qualified','Proposals','Closed']},
+yaxis:{labels:{style:{fontSize:'12px'}}},
+grid:{borderColor:'#e9ebec',strokeDashArray:4},
+dataLabels:{enabled:true,formatter:function(v){return v.toLocaleString()},style:{fontSize:'11px'}},
+legend:{show:false},
+colors:['#405189','#4f6199','#6579ad','#7b91c1','#95aad5']
+}).render();
+
+document.querySelectorAll('.eka-task-checkbox').forEach(function(cb){
+cb.addEventListener('click',function(){cb.classList.toggle('checked');var i=cb.closest('.eka-task-item');i.classList.toggle('completed');cb.innerHTML=cb.classList.contains('checked')?'<i class="fas fa-check"></i>':'';});
+});
+
+if(document.querySelector('#liveChart')){
+new ApexCharts(document.querySelector('#liveChart'),{
+chart:{type:'area',height:120,sparkline:{enabled:true},fontFamily:'Inter,sans-serif'},
+series:[{name:'Visitors',data:[280,310,295,340,320,350,342,360,330,345,355,342]}],
+colors:['#0AB39C'],
+fill:{type:'gradient',gradient:{shadeIntensity:1,opacityFrom:0.45,opacityTo:0.05}},
+stroke:{width:2.5,curve:'smooth'},
+tooltip:{y:{formatter:function(v){return v+' users'}}}
+}).render();
+}
+});
+</script>
+</body></html>
+
