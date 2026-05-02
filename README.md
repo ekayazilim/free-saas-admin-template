@@ -239,7 +239,7 @@ A built-in **live customizer panel** lets you:
 
 ## 🌐 Browser Support
 
-| <img src="https://raw.githubusercontent.com/nicedoc/browser-logos/main/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" /> Chrome | <img src="https://raw.githubusercontent.com/nicedoc/browser-logos/main/src/firefox/firefox_48x48.png" alt="Firefox" width="24px" /> Firefox | <img src="https://raw.githubusercontent.com/nicedoc/browser-logos/main/src/safari/safari_48x48.png" alt="Safari" width="24px" /> Safari | <img src="https://raw.githubusercontent.com/nicedoc/browser-logos/main/src/edge/edge_48x48.png" alt="Edge" width="24px" /> Edge | <img src="https://raw.githubusercontent.com/nicedoc/browser-logos/main/src/opera/opera_48x48.png" alt="Opera" width="24px" /> Opera |
+| <img src="https://raw.githubusercontent.com/alrra/browser-logos/main/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" /> Chrome | <img src="https://raw.githubusercontent.com/alrra/browser-logos/main/src/firefox/firefox_48x48.png" alt="Firefox" width="24px" /> Firefox | <img src="https://raw.githubusercontent.com/alrra/browser-logos/main/src/safari/safari_48x48.png" alt="Safari" width="24px" /> Safari | <img src="https://raw.githubusercontent.com/alrra/browser-logos/main/src/edge/edge_48x48.png" alt="Edge" width="24px" /> Edge | <img src="https://raw.githubusercontent.com/alrra/browser-logos/main/src/opera/opera_48x48.png" alt="Opera" width="24px" /> Opera |
 |:---:|:---:|:---:|:---:|:---:|
 | ✅ Latest | ✅ Latest | ✅ Latest | ✅ Latest | ✅ Latest |
 
@@ -363,6 +363,6 @@ SOFTWARE.
 </p>
 
 <p align="center">
-  <a href="https://github.com/ekayazilim/free-saas-admin-template/stargazers"><img src="https://img.shields.io/github/stars/ekayazilim/free-saas-admin-template?style=for-the-badge&color=f7b84b&label=⭐%20Stars" /></a>
-  <a href="https://github.com/ekayazilim/free-saas-admin-template/network/members"><img src="https://img.shields.io/github/forks/ekayazilim/free-saas-admin-template?style=for-the-badge&color=405189&label=🍴%20Forks" /></a>
+  <a href="https://github.com/ekayazilim/free-saas-admin-template/stargazers"><img src="https://img.shields.io/github/stars/ekayazilim/free-saas-admin-template?style=for-the-badge&color=f7b84b&label=Stars" /></a>
+  <a href="https://github.com/ekayazilim/free-saas-admin-template/network/members"><img src="https://img.shields.io/github/forks/ekayazilim/free-saas-admin-template?style=for-the-badge&color=405189&label=Forks" /></a>
 </p>
